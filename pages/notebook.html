@@ -1,0 +1,2629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks</title>
+    <!-- CSS -->
+    <link href="../asserts/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asserts/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- loading -->
+    <div class="loading-body">
+        <!-- 绘制齿轮 -->
+        <div class="load">
+            <div class="gear first">
+                <svg id="purple" viewbox="0 0 100 100" fill="#afb4db">
+                    <path
+                        d="m88.22905,52.73842l12.66081,-6.69624c-0.24889,-2.48103 -0.7299,-4.88779 -1.33165,-7.25374l-14.06435,-1.94757c-1.21732,-2.93246 -2.82483,-5.65223 -4.71443,-8.14886l5.36114,-13.18525c-1.76284,-1.71922 -3.66664,-3.28664 -5.67042,-4.72891l-11.94246,7.49732c-2.80052,-1.47273 -5.81781,-2.59129 -8.98524,-3.30968l-4.31582,-13.37042c-1.22401,-0.09243 -2.44766,-0.19008 -3.69591,-0.19008s-2.46845,0.0954 -3.69613,0.19008l-4.27306,13.25199c-3.25234,0.69537 -6.33625,1.82692 -9.20876,3.31783l-11.75647,-7.38703c-2.00124,1.44227 -3.90496,3.0097 -5.66766,4.72891l5.2136,12.82104c-2.03201,2.60429 -3.73326,5.47776 -5.01105,8.57467l-13.62035,1.8837c-0.59921,2.36263 -1.08274,4.76684 -1.32906,7.25345l12.2246,6.46784c0.1385,3.4047 0.70298,6.7044 1.70254,9.8117l-9.22158,10.19626c1.07271,2.22493 2.26701,4.38264 3.64861,6.40699l13.5767,-2.91464c2.226,2.422 4.76215,4.54406 7.56029,6.29894l-0.51461,13.89098c2.22975,1.00564 4.54649,1.84729 6.93396,2.52003l8.5892,-11.04055c1.52399,0.19456 3.06723,0.3256 4.64128,0.3256c1.70519,0 3.37278,-0.15405 5.01352,-0.37947l8.63392,11.1018c2.39122,-0.67196 4.70444,-1.51356 6.93395,-2.51926l-0.52454,-14.14044c2.66699,-1.72661 5.08534,-3.79226 7.21739,-6.12444l13.92978,2.98893c1.38161,-2.02403 2.57607,-4.17945 3.64839,-6.40624l-9.52026,-10.5301c0.91453,-2.94323 1.42539,-6.05022 1.57412,-9.25513l0,0l0.00001,-0.00001zm-21.0432,16.08496l-6.00271,3.90775l-3.69207,-5.67259c-1.92067,0.73877 -3.98849,1.18799 -6.1683,1.18799c-9.52022,0 -17.23546,-7.71828 -17.23546,-17.23701c0,-9.51912 7.71525,-17.23441 17.23546,-17.23441c9.51773,0 17.2358,7.71529 17.2358,17.23441c0,4.75679 -1.92697,9.05688 -5.04179,12.17683l3.66907,5.63703z">
+                    </path>
+                </svg>
+            </div>
+            <div class="gear second">
+                <svg id="pink" viewbox="0 0 100 100" fill="#FFB5C5">
+                    <path
+                        d="m88.22905,52.73842l12.66081,-6.69624c-0.24889,-2.48103 -0.7299,-4.88779 -1.33165,-7.25374l-14.06435,-1.94757c-1.21732,-2.93246 -2.82483,-5.65223 -4.71443,-8.14886l5.36114,-13.18525c-1.76284,-1.71922 -3.66664,-3.28664 -5.67042,-4.72891l-11.94246,7.49732c-2.80052,-1.47273 -5.81781,-2.59129 -8.98524,-3.30968l-4.31582,-13.37042c-1.22401,-0.09243 -2.44766,-0.19008 -3.69591,-0.19008s-2.46845,0.0954 -3.69613,0.19008l-4.27306,13.25199c-3.25234,0.69537 -6.33625,1.82692 -9.20876,3.31783l-11.75647,-7.38703c-2.00124,1.44227 -3.90496,3.0097 -5.66766,4.72891l5.2136,12.82104c-2.03201,2.60429 -3.73326,5.47776 -5.01105,8.57467l-13.62035,1.8837c-0.59921,2.36263 -1.08274,4.76684 -1.32906,7.25345l12.2246,6.46784c0.1385,3.4047 0.70298,6.7044 1.70254,9.8117l-9.22158,10.19626c1.07271,2.22493 2.26701,4.38264 3.64861,6.40699l13.5767,-2.91464c2.226,2.422 4.76215,4.54406 7.56029,6.29894l-0.51461,13.89098c2.22975,1.00564 4.54649,1.84729 6.93396,2.52003l8.5892,-11.04055c1.52399,0.19456 3.06723,0.3256 4.64128,0.3256c1.70519,0 3.37278,-0.15405 5.01352,-0.37947l8.63392,11.1018c2.39122,-0.67196 4.70444,-1.51356 6.93395,-2.51926l-0.52454,-14.14044c2.66699,-1.72661 5.08534,-3.79226 7.21739,-6.12444l13.92978,2.98893c1.38161,-2.02403 2.57607,-4.17945 3.64839,-6.40624l-9.52026,-10.5301c0.91453,-2.94323 1.42539,-6.05022 1.57412,-9.25513l0,0l0.00001,-0.00001zm-21.0432,16.08496l-6.00271,3.90775l-3.69207,-5.67259c-1.92067,0.73877 -3.98849,1.18799 -6.1683,1.18799c-9.52022,0 -17.23546,-7.71828 -17.23546,-17.23701c0,-9.51912 7.71525,-17.23441 17.23546,-17.23441c9.51773,0 17.2358,7.71529 17.2358,17.23441c0,4.75679 -1.92697,9.05688 -5.04179,12.17683l3.66907,5.63703z">
+                    </path>
+                </svg>
+            </div>
+            <div class="gear third">
+                <svg id="orange" viewbox="0 0 100 100" fill="#fedcbd">
+                    <path
+                        d="m88.22905,52.73842l12.66081,-6.69624c-0.24889,-2.48103 -0.7299,-4.88779 -1.33165,-7.25374l-14.06435,-1.94757c-1.21732,-2.93246 -2.82483,-5.65223 -4.71443,-8.14886l5.36114,-13.18525c-1.76284,-1.71922 -3.66664,-3.28664 -5.67042,-4.72891l-11.94246,7.49732c-2.80052,-1.47273 -5.81781,-2.59129 -8.98524,-3.30968l-4.31582,-13.37042c-1.22401,-0.09243 -2.44766,-0.19008 -3.69591,-0.19008s-2.46845,0.0954 -3.69613,0.19008l-4.27306,13.25199c-3.25234,0.69537 -6.33625,1.82692 -9.20876,3.31783l-11.75647,-7.38703c-2.00124,1.44227 -3.90496,3.0097 -5.66766,4.72891l5.2136,12.82104c-2.03201,2.60429 -3.73326,5.47776 -5.01105,8.57467l-13.62035,1.8837c-0.59921,2.36263 -1.08274,4.76684 -1.32906,7.25345l12.2246,6.46784c0.1385,3.4047 0.70298,6.7044 1.70254,9.8117l-9.22158,10.19626c1.07271,2.22493 2.26701,4.38264 3.64861,6.40699l13.5767,-2.91464c2.226,2.422 4.76215,4.54406 7.56029,6.29894l-0.51461,13.89098c2.22975,1.00564 4.54649,1.84729 6.93396,2.52003l8.5892,-11.04055c1.52399,0.19456 3.06723,0.3256 4.64128,0.3256c1.70519,0 3.37278,-0.15405 5.01352,-0.37947l8.63392,11.1018c2.39122,-0.67196 4.70444,-1.51356 6.93395,-2.51926l-0.52454,-14.14044c2.66699,-1.72661 5.08534,-3.79226 7.21739,-6.12444l13.92978,2.98893c1.38161,-2.02403 2.57607,-4.17945 3.64839,-6.40624l-9.52026,-10.5301c0.91453,-2.94323 1.42539,-6.05022 1.57412,-9.25513l0,0l0.00001,-0.00001zm-21.0432,16.08496l-6.00271,3.90775l-3.69207,-5.67259c-1.92067,0.73877 -3.98849,1.18799 -6.1683,1.18799c-9.52022,0 -17.23546,-7.71828 -17.23546,-17.23701c0,-9.51912 7.71525,-17.23441 17.23546,-17.23441c9.51773,0 17.2358,7.71529 17.2358,17.23441c0,4.75679 -1.92697,9.05688 -5.04179,12.17683l3.66907,5.63703z">
+                    </path>
+                </svg>
+            </div>
+
+            <!-- 绘制圆形水珠 -->
+            <div class="lil-circle"></div>
+            <svg class="blur-circle">
+                <filter id="blur">
+                    <fegaussianblur in="SourceGraphic" stddeviation="13"></fegaussianblur>
+                </filter>
+            </svg>
+        </div>
+        <div class="loading-text">Loading · · ·</div>
+    </div>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-scrolled justify-content-between">
+        <a class="navbar-brand" href="#">
+            <img src="../asserts/img/logo-light.svg" alt="Logo" class="logo dark-logo">
+            <img src="../asserts/img/logo-dark.svg" alt="Logo" class="logo light-logo ">
+        </a>
+
+        <!-- 汉堡按钮 -->
+        <button class="navbar-toggler p-0 border-0" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <?xml version="1.0" standalone="no"?>
+            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg
+                t="1695294825594" class="icon menu-icon" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="4266" xmlns:xlink="http://www.w3.org/1999/xlink" width="200"
+                height="200">
+                <path
+                    d="M815 192.7H207.3c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16H815c8.8 0 16-7.2 16-16v-32c0-8.9-7.1-16-16-16zM815 480.8H463.8c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16H815c8.8 0 16-7.2 16-16v-32c0-8.9-7.1-16-16-16zM815 767.9H207.3c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16H815c8.8 0 16-7.2 16-16v-32c0-8.8-7.1-16-16-16zM303.8 618.1c14.4 12.2 36.5 2 36.5-16.9V421.1c0-18.9-22.2-29.1-36.5-16.8l-101.1 86.4c-11.5 11.5-11.5 30.2 0.1 41.7l101 85.7z"
+                    p-id="4267"></path>
+            </svg>
+        </button>
+
+
+
+        <div class="collapse navbar-collapse justify-content-center nav-right" id="navbarNav">
+            <ul class="navbar-nav d-flex align-items-center">
+                <li class="nav-item dropdown ">
+                    <a class="nav-link en" href="../home.html" i18n="home">Home</a>
+                    <a class="nav-link d-none cn" href="../home.html" i18n="home">主页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link en" href="#">Project</a>
+                    <a class="nav-link d-none cn" href="#">项目</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item en" href="./description.html">Desciption</a>
+                        <a class="dropdown-item d-none cn" href="./description.html">描述</a>
+                        <a class="dropdown-item en" href="./design.html">Design</a>
+                        <a class="dropdown-item d-none cn" href="./design.html">设计</a>
+                        <a class="dropdown-item en" href="./model.html">Model</a>
+                        <a class="dropdown-item d-none cn" href="./model.html">模型</a>
+                        <!-- <a class="dropdown-item en" href="./hardware.html">Hardware</a> -->
+                        <!-- <a class="dropdown-item d-none cn" href="./hardware.html">硬件</a> -->
+                        <!-- <a class="dropdown-item en" href="./results.html" >Results</a> -->
+                        <!-- <a class="dropdown-item d-none cn" href="./results.html" >结果</a> -->
+                        <a class="dropdown-item en" href="./reports.html">Reports</a>
+                        <a class="dropdown-item d-none cn" href="./reports.html" ">报告</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link en" href="#">Wet lab</a>
+                    <a class="nav-link cn d-none" href="#">湿实验室</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item en" href="./protocols.html" i18n="protocos">Protocols</a>
+                        <a class="dropdown-item cn d-none" href="./protocols.html" i18n="protocos">实验方案</a>
+                        <a class="dropdown-item en" href="./notebook.html" i18n="notebooks">Notebooks</a>
+                        <a class="dropdown-item cn d-none" href="./notebook.html" i18n="notebooks">实验记录</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link en" href="./team.html" i18n="team">Team</a>
+                    <a class="nav-link cn d-none" href="./team.html" i18n="team">团队</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <!-- 月亮图标 -->
+                    <i class="theme-toggle">
+                        <?xml version="1.0" standalone="no"?>
+                        <!DOCTYPE svg
+                            PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg
+                            t="1695295953556" class="moon" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="11622" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="200" height="200">
+                            <path
+                                d="M529.611373 1023.38565c-146.112965 0-270.826063-51.707812-374.344078-155.225827C51.74928 764.641808 0.041469 639.826318 0.041469 493.815745c0-105.053891 29.693595-202.326012 88.978393-292.22593 59.38719-89.797526 137.000103-155.942569 232.83874-198.63991 6.041111-4.607627 12.184613-3.788493 18.225724 2.252618 7.576986 4.607627 9.931996 11.365479 6.860244 20.580733C322.677735 83.736961 310.493122 142.202626 310.493122 201.589815c0 135.464227 48.328885 251.474031 144.986656 348.131801 96.657771 96.657771 212.667574 144.986656 348.131801 144.986656 74.541162 0 139.252721-11.365479 194.032283-34.19883C1003.684974 655.799424 1009.726084 656.618558 1015.767195 662.659669c7.576986 4.607627 9.931996 11.365479 6.860244 20.580733C983.104241 786.758417 918.802249 869.286132 829.721465 930.925939 740.743072 992.565746 640.706375 1023.38565 529.611373 1023.38565zM296.772633 55.47685c-79.148789 44.130825-142.324472 105.770633-189.424657 184.919422C60.1454 319.545061 36.595308 404.018219 36.595308 493.815745c0 135.464227 48.328885 251.474031 144.986656 348.131801 96.657771 96.657771 212.667574 144.986656 348.131801 144.986656 97.374513 0 185.636163-25.085968 264.784952-75.360296C873.545115 861.299579 932.829913 793.618661 972.455503 708.32637 925.252927 723.582734 868.937488 731.15972 803.509188 731.15972c-146.112965 0-270.826063-51.707812-374.344078-155.225827C325.647095 472.415878 273.939283 347.70278 273.939283 201.589815 273.939283 158.994865 281.516269 110.256413 296.772633 55.47685z"
+                                p-id="11623"></path>
+                        </svg>
+                    </i>
+                    <!-- 太阳图标 -->
+                    <i class="theme-toggle dropdown">
+                        <svg t="1695295862627" class="sun" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="9560" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="200" height="200">
+                            <path
+                                d="M512 950.857143c241.371429 0 438.857143-197.485714 438.857143-438.857143s-197.485714-438.857143-438.857143-438.857143-438.857143 197.485714-438.857143 438.857143 197.485714 438.857143 438.857143 438.857143z m0 73.142857c-285.257143 0-512-226.742857-512-512s226.742857-512 512-512 512 226.742857 512 512-226.742857 512-512 512z"
+                                fill="#333333" p-id="9561"></path>
+                        </svg>
+                    </i>
+                </li>
+                <!-- 语言图标 -->
+                <li class="nav-item dropdown">
+                    <i class="lang-toggle">
+                        <svg t="1691029428947" class="translate-icon" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="10939"
+                            data-spm-anchor-id="a313x.search_index.0.i13.76c63a81JzoK4S"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                            <path
+                                d="M358.912 223.914667h84.309333c17.442133 0 31.3344 14.336 31.3344 31.812266v76.1856a31.4368 31.4368 0 0 1-31.368533 31.3344h-84.2752v95.914667a18.944 18.944 0 0 1-18.807467 18.773333 18.944 18.944 0 0 1-18.8416-18.773333v-95.914667H236.987733a31.8464 31.8464 0 0 1-31.368533-31.778133V255.2832c0-16.9984 13.892267-31.3344 31.402667-31.3344h84.241066v-33.1776c0-10.308267 8.533333-18.773333 18.8416-18.773333 10.308267 0 18.807467 8.465067 18.807467 18.773333v33.1776zM243.268267 325.632h77.994666V262.007467H243.268267V325.632z m115.643733 0h78.0288V262.007467h-78.0288V325.632z m304.810667 396.936533l34.952533-88.2688 34.065067 88.2688h-69.0176z"
+                                fill="#10656B" p-id="10940" data-spm-anchor-id="a313x.search_index.0.i10.76c63a81JzoK4S"
+                                class=""></path>
+                            <path
+                                d="M408.234667 615.936H133.461333a69.188267 69.188267 0 0 1-69.461333-69.4272V133.4272c0-38.5024 30.9248-69.4272 69.461333-69.4272h413.2864c38.536533 0 69.4272 30.9248 69.4272 69.4272v275.114667h265.386667a78.506667 78.506667 0 0 1 78.4384 78.370133v394.683733a78.506667 78.506667 0 0 1-78.4384 78.404267H486.673067a78.506667 78.506667 0 0 1-78.4384-78.404267v-265.659733z m39.253333-39.185067l129.501867-129.501866V133.461333a30.071467 30.071467 0 0 0-30.242134-30.242133H133.461333a30.037333 30.037333 0 0 0-30.242133 30.242133v413.0816c0 16.861867 13.346133 30.242133 30.242133 30.242134h314.026667z m354.304 221.525334L716.117333 575.146667a18.978133 18.978133 0 0 0-17.476266-12.117334 18.909867 18.909867 0 0 0-17.476267 12.117334l-88.302933 223.095466a18.807467 18.807467 0 0 0 10.752 24.644267 18.807467 18.807467 0 0 0 24.644266-10.752l20.1728-51.541333h98.2016l19.694934 51.541333a18.7392 18.7392 0 0 0 24.644266 10.752 18.773333 18.773333 0 0 0 10.752-24.644267zM716.117333 176.913067a19.114667 19.114667 0 0 1-17.476266-20.616534 19.285333 19.285333 0 0 1 20.1728-17.476266c57.344 4.471467 167.185067 46.148267 170.325333 171.588266a18.602667 18.602667 0 1 1-37.205333 0.887467c-3.584-121.856-130.423467-133.9392-135.816534-134.382933z"
+                                fill="#10656B" p-id="10941"></path>
+                            <path
+                                d="M318.122667 830.976a19.0464 19.0464 0 0 1 6.485333 34.338133 18.602667 18.602667 0 0 1-13.653333 2.833067c-140.458667-27.136-162.474667-160.699733-164.317867-172.1344l-0.170667-0.785067a19.0464 19.0464 0 0 1 16.622934-21.060266 19.012267 19.012267 0 0 1 21.026133 16.5888l0.1024 0.682666c1.706667 10.5472 18.944 116.906667 133.9392 139.537067z"
+                                fill="#10656B" p-id="10942"></path>
+                        </svg>
+                    </i> <!-- 语言图标 -->
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- 侧边栏 -->
+    <!-- <img src="../asserts/img/sidebar.png" alt="sidebar" class="sidenav-top-img"> -->
+    <div class="sidenav sidenav-bg toptransparent">
+        <svg id="mySVG" class="mySVG-sidebar">
+            <circle fill="none" cx="120" cy="115" r="67" stroke="#F29700" stroke-width="5" id="triangle"
+                transform="rotate(270 120 115)"></circle>
+            <circle fill="#363636" cx="120" cy="115" r="63" stroke="#363636" stroke-width="5" / class="circle-SVG">
+                Sorry, your browser does not support inline SVG.
+        </svg>
+
+        <a class="navbar-brand justify-content-center" href="../home.html">
+            <img src="../asserts/img/sidenav-logo.svg" alt="logo" class="sidenav-logo logo justify-content-center">
+        </a>
+        <div>
+            <h2 class="justify-content-center" style="color:#F29700; display:flex;margin-top:150px;">
+                Notebooks
+            </h2>
+            <a href="#01" class=" ">Week 1</a>
+            <a href="#02" class=" ">Week 2</a>
+            <a href="#03" class=" ">Week 3</a>
+            <a href="#04" class=" ">Week 4</a>
+            <a href="#05" class=" ">Week 5</a>
+            <a href="#06" class=" ">Week 6</a>
+            <a href="#07" class=" ">Week 7</a>
+            <a href="#08" class=" ">Week 8</a>
+            <a href="#09" class=" ">Week 9</a>
+            <a href="#10" class=" ">Week 10</a>
+            <a href="#11" class=" ">Week 11</a>
+            <a href="#12" class=" ">Week 12</a>
+            <a href="#overview" class="">Back to top ⬆ </a>
+        </div>
+    </div>
+    <!-- 主要内容 -->
+    <article class="main" id="notebook">
+        <div id="overview" class="section-header">
+            <img src="../asserts/img/myoverview.png" alt="overview_bg" class="img-fluid " style="width:100vw;"></img>
+            <h1 class="leader img-fluid">Notebooks</h1>
+        </div>
+        <div class="section header" style="padding-top: 4rem;">
+            <div id="" class="" style="min-height: 20vh; margin-bottom: 0px;">
+                <div class="overview-bg">
+                    <div class="overview-logo">
+                        <img id="overview" src="../asserts/img/overview.png" class="overview-img">
+                    </div>
+                    <p>On this page, all experiments performed in our wet lab are recorded by date. Detailed experiment protocols are provided on <a href="./experiments.html" alt="experiments">experiment page</a> so not described on this page.</p>
+                </div>
+            </div>
+            <!-- Header Section Content -->
+        </div>
+        <div class="container">
+        <div class="module" id="01" style="padding-top: 2rem;"></div>
+            <div class="accordion-container">
+                <button class="accordion">week-1 7.24~7.30</button>
+                <div class="panel">
+                    <h2>7.27</h2>
+                    <h3>V.natriegens activation</h3>
+                    <p>Freeze-dried V.natriegens ATCC14048 ordered from CCIC was activated in LB+v2 salts overnight.</p>
+                    <h2>7.28</h2>
+                    <h3>Glycerol stock</h3>
+                    <p>Overnight culture of V.natriegens was stored as glycerol stock for later use.</p>
+                    <h3>Growth curve measurement</h3>
+                    <p>Three different mediums were inoculated with overnight V.natriegens culture to measure the growth curve. The result was as follows:</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-2"></div>
+                        <img src="../asserts/img/notebook/figure_7.28.PNG" alt="" class="img-fluid col-md-8">
+                    </div>
+                </div>
+            </div>
+            <div class="module" id="02" style="padding-top: 2rem;"></div>
+            <div class="accordion-container">
+                <button class="accordion">week-2 7.31~8.06</button>
+                <div class="panel">
+                    <h2>8.3</h2>
+                    <h3>Stab culture activation</h3>
+                    <p>Top 10 strains carrying plasmids ordered from Azenta are activated from stab culture into liquid culture(LB broth with appropriate antibiotics).</p>
+                    <h2>8.4</h2>
+                    <h3>Plasmid extraction</h3>
+                    <p>Plasmids pGFP, pdCas9-sg1 and pPilin were extracted from Top 10 liquid culture. Concentration and quality of the plasmids were measured with Nanodrop.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3></h3>
+                                    </th>
+                                    <th>
+                                        <h3>pGFP</h3>
+                                    </th>
+                                    <th>
+                                        <h3>pdCas9-sg1</h3>
+                                    </th>
+                                    <th>
+                                        <h3>pPilin</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td> concentration(ng/μL)</td>
+                                <td> 352.9 </td>
+                                <td> 38.5 </td>
+                                <td>371.8</td>
+
+                            </tr>
+                            <tr>
+                                <td> OD260/280 </td>
+                                <td>1.89</td>
+                                <td>1.77</td>
+                                <td>1.90</td>
+                            </tr>
+                            <tr>
+                                <td> OD260/230 </td>
+                                <td>2.18</td>
+                                <td>2.31</td>
+                                <td>1.15</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <p>pdCas9-sg1 can not be used for transformation.</p>
+                    <h3>Glycerol stock</h3>
+                    <p>3 Top 10 strains were stored as glycerol stock for later use.</p>
+                    <h3>Chemical competent cell preparation</h3>
+                    <p>Prepare chemical competent V.natriegens for transformation.The chemical competent cells were stored at -80℃ until use.</p>
+                    <h2>8.5</h2>
+                    <h3>Transformation of chemical competent cells</h3>
+                    <p>The transformation was performed on home-made chemical competent V.natriegens and comercial DH5α with the following parameters</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Cell type</h3>
+                                    </th>
+                                    <th>
+                                        <h3>plasmid name</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Plasmid concentration(μg/μL)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Plasmid quantity(μL)</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>DH5α</td>
+                                    <td>pPilin</td>
+                                    <td>371.8</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>DH5α</td>
+                                    <td>pPilin</td>
+                                    <td>37.18</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>V.natriegens</td>
+                                    <td>pPilin</td>
+                                    <td>371.8</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>V.natriegens</td>
+                                    <td>pPilin</td>
+                                    <td>37.18</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>DH5α</td>
+                                    <td>pGFP</td>
+                                    <td>352.9</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>DH5α</td>
+                                    <td>pGFP</td>
+                                    <td>35.29</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>V.natriegens</td>
+                                    <td>pGFP</td>
+                                    <td>352.9</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>V.natriegens</td>
+                                    <td>pGFP</td>
+                                    <td>35.29</td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h2>8.6</h2>
+                    <h3>Colony PCR</h3>
+                    <p>The result of the overnight Agar plate cultures was as follows.There were several colonies on the plates corresponding to DH5α transformations but only one colony on transformation 7.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-2"></div>
+                        <img src="../asserts/img/notebook/figure_8.6_1.jpg" alt="" class="img-fluid col-md-8">
+                    </div>
+                    <p>Several colonies were selected to conduct colony PCR with appropriate Primers.The result is as follows:</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-2"></div>
+                        <img src="../asserts/img/notebook/figure_8.6_2.jpg" alt="" class="img-fluid col-md-8">
+                    </div>
+                    <p>All positive strains were stored as glycerol stock. DH5α cells transformed with pPilin were designated as EP1,EP2,EP3 and DH5α cells transformed with pGFP were designated as EG1,EG2,EG3.</p>
+                    <h3>EP2 overnight culture</h3>
+                    <p>Strain EP2 was inoculated in 2mL of LB broth culture with 100μg/mL of Ampicilin for pilin induction.</p>
+                    <h3>Transformation of chemical competent cells</h3>
+                    <p>The transformation was performed on home-made chemical competent V.natriegens with the following parameters</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Cell type</h3>
+                                    </th>
+                                    <th>
+                                        <h3>plasmid name</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Plasmid concentration(μg/μL)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Plasmid quantity(μL)</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>V.natriegens</td>
+                                    <td>pGFP</td>
+                                    <td>352.9</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>V.natriegens</td>
+                                    <td>pGFP</td>
+                                    <td>35.29</td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                </div>
+            </div>
+            <div class="module" id="03" style="padding-top: 2rem;"></div>
+            <div class="accordion-container">
+                <button class="accordion">week-3 8.07~8.13</button>
+                <div class="panel">
+                    <h2>8.7</h2>
+                    <h3>Colony PCR</h3>
+                    <p>There were 2 colonies on the plate corresponding to transformation 1. Colony PCR was conducted on these 2 colonies with appropriate Primers. But no band was seen.</p>
+                    <h3>EP2  extended culture and pilin induction</h3>
+                    <p>2×30 mL of LB broth with 100μg/mL of Ampicilin were inoculated with overnight EP2 liquid culture. Arabinose solution, the inducer, was added to one tube when OD600 of the liquid culture in it reached 0.5. And then the culture continued for 5h before harvest.</p>
+                    <h3>Protein extraction from EP2</h3>
+                    <p>Soluable proteins were extracted and collected from EP2 after the induction.</p>
+                    <h3>Pilus harvest</h3>
+                    <p>Pilus were harvested according to the protocol from EP2 culture.</p>
+                    <h3>BCA test of soluable proteins extracted from EP2</h3>
+                    <div class="row">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_8.7_1.png" alt="" class="img-fluid col-md-6">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_8.7_2.png" alt="" class="img-fluid col-md-4">
+                    </div>
+                    <p>BCA test of soluable proteins extracted from EP2</p>
+                    <h2>8.9</h2>
+                    <h3>Whole cell lysates WB for Pilin identification</h3>
+                    <p>Overnight culture of EP2 was inoculated to the following culture mediums, 1.5mL for each condition:</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Culturing time\induction concentration</h3>
+                                    </th>
+                                    <th>
+                                        <h3>0</h3>
+                                    </th>
+                                    <th>
+                                        <h3>10mM</h3>
+                                    </th>
+                                    <th>
+                                        <h3>20mM</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10h</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>24h</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <p>The induction of pilin expression was performed when the OD600 reached 0.5 by arabinose solution.</p>
+                    <p>After stained with coomassie brilliant blue, no significant difference was seen between groups. The following steps were performed according to the protocols. No band was seen.</p>
+                    <h2>8.12</h2>
+                    <p>Glycerol stocks of the top 10 strains carrying plasmids ordered from Azenta were inoculated into liquid culture (LB broth with appropriate antibiotics). A glycerol stock of wild type Vibrio natriegens was inoculated into LB+v2 salt liquid medium for tomorrow's electrocompetent cells preparation.</p>
+                    <h2>8.13</h2>
+                    <h3>Plasmid extraction</h3>
+                    <p>Plasmids pGFP, pdCas9-sg1 and pPilin were extracted from Top 10 liquid culture. Concentrations and qualities of the plasmids were measured with Nanodrop.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3></h3>
+                                    </th>
+                                    <th>
+                                        <h3>pGFP</h3>
+                                    </th>
+                                    <th>
+                                        <h3>pdCas9-sg1</h3>
+                                    </th>
+                                    <th>
+                                        <h3>pPilin</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>concentration(ng/μL)</td>
+                                    <td>220.5</td>
+                                    <td>159.7</td>
+                                    <td>180.3</td>
+                                </tr>
+                                <tr>
+                                    <td>OD260/280</td>
+                                    <td>1.82</td>
+                                    <td>1.88</td>
+                                    <td>1.88</td>
+                                </tr>
+                                <tr>
+                                    <td>OD260/230</td>
+                                    <td>1.95</td>
+                                    <td>2.01</td>
+                                    <td>2.14</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h3>Ectrocompetent cells preparation(protocol 1)</h3>
+                    <p>Electrocompetent Vibrio natriegens were prepared as described in the protocol.</p>
+                    <h3>Electroporation</h3>
+                    <p>Electroporation was performed according to the protocol with the following parameters:</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>voltage(v)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>time(ms)</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>700</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>700</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>700</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>700</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section> 
+                </div>
+            </div>
+            <div class="module" id="04" style="padding-top: 2rem;"></div>
+            <div class="accordion-container">
+                <button class="accordion">week-4 8.14~8.20</button>
+                <div class="panel">
+                    <h2>8.14</h2>
+                    <h3>Electroporation result</h3>
+                    <p>There was no colony on the plates.</p>
+                    <h3>Electrocompetent cells preparation(protocol 1)</h3>
+                    <p>Electrocompetent Vibrio natriegens were prepared as described in the protocol.</p>
+                    <h2>8.15</h2>
+                    <h3>Electroporation</h3>
+                    <p>Electroporation was performed according to the protocol with the following parameters:</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>voltage(v)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>time(ms)</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>700</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>700</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>800</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>800</td>
+                                    <td>1.7</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>820</td>
+                                    <td>1.8</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>900</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h3>Whole cell lysates WB for pilin identification</h3>
+                    <p>Overnight culture of EP2 was inoculated into the following mediums:</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Inducer concentration</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Culturing time after induction</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0mM</td>
+                                    <td>5h</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>10mM</td>
+                                    <td>5h</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>20mM</td>
+                                    <td>5h</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>0mM</td>
+                                    <td>15h</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>10mM</td>
+                                    <td>15h</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>20mM</td>
+                                    <td>15h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <p>After transfer, the PVDF membrane was stained with Ponceau S. No band was seen, perhaps due to the unstable current of the electrophoresis system.</p>
+                    <h2>8.17</h2>
+                    <h3>Electroporation result</h3>
+                    <p>There was no colony on the plates.</p>
+                    <h3>electroporation</h3>
+                    <p>Electroporation was performed according to the protocol with the following parameters:</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>voltage(v)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>time(ms)</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>700</td>
+                                    <td>2.2</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>790</td>
+                                    <td>2.2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>900</td>
+                                    <td>2.2</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>800</td>
+                                    <td>2.3</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>740</td>
+                                    <td>2.2</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>840</td>
+                                    <td>2.2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h3>Transformation of chemical competent BL21(DE3) cells</h3>
+                    <p>Comercial chemical competent BL21(DE3) cells were transformed with 3μL(684 ng) of pPilin according to the protocol.</p>
+                    <h2>8.18</h2>
+                    <h3>Colony PCR</h3>
+                    <p>There were several colonies on the plate of BL21 transformation. Colony PCR was conducted on 4 of these colonies with appropriate Primers. The result was as follows.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-2"></div>
+                        <img src="../asserts/img/notebook/figure_8.18_.png" alt="" class="img-fluid col-md-8">
+                    </div>
+                    <p>Strain corresponding to band 1 was designated as BP1.</p>
+                    <h3>BP2  extended culture and pilin induction</h3>
+                    <p>2×30 mL of LB broth with 100μg/mL of Ampicilin were inoculated with overnight EP2 liquid culture. Arabinose solution, the inducer, was added to one tube when OD600 of the liquid culture in it reached 0.5. And then the culture continued for 5h and 15h before harvest.</p>
+                    <h2>8.19</h2>
+                    <h3>Whole cell lysates SDS-PAGE for pilin identification</h3>
+                    <p>Samples for SDS-PAGE were prepared from the following mediums:</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Inducer concentration</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Culturing time after induction</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0mM</td>
+                                    <td>5h</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>20mM</td>
+                                    <td>5h</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>0mM</td>
+                                    <td>15h</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>20mM</td>
+                                    <td>15h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <p>No significant difference in the molecular weight of pilin was seen between the lanes.</p>
+                    <h3>Electrocompetent cell preparation (protocol 2)</h3>
+                    <p>Electrocompetent cells were prepared according to the protocol.</p>
+                    <h3>Electroporation</h3>
+                    <p>Electroporation was performed according to the protocol with the following parameters:</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Plasmid</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Plasmid volume(μL)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>voltage(v)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>time(ms)</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pPililn</td>
+                                    <td>5</td>
+                                    <td>700</td>
+                                    <td>2.2</td>
+                                </tr>
+                                <tr>
+                                    <td>pPilin</td>
+                                    <td>5</td>
+                                    <td>790</td>
+                                    <td>2.2</td>
+                                </tr>
+                                <tr>
+                                    <td>pGFP</td>
+                                    <td>5</td>
+                                    <td>900</td>
+                                    <td>2.2</td>
+                                </tr>
+                                <tr>
+                                    <td>pGFP</td>
+                                    <td>5</td>
+                                    <td>800</td>
+                                    <td>2.3</td>
+                                </tr>
+                                <tr>
+                                    <td>pdCas9-sg1</td>
+                                    <td>5</td>
+                                    <td>740</td>
+                                    <td>2.2</td>
+                                </tr>
+                                <tr>
+                                    <td>pdCas9-sg1</td>
+                                    <td>5</td>
+                                    <td>840</td>
+                                    <td>2.2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h2>8.20</h2>
+                    <h3>Colony PCR</h3>
+                    <p>There were several colonies on the plates. Colony PCR was conducted on 11 of these colonies with appropriate primers. The result was as follows.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_8.20_1jpg.jpg" alt="" class="img-fluid col-md-4">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_8.20_2.jpg" alt="" class="img-fluid col-md-6">
+                    </div>
+                    <p>Strains tested positive were designated as V.CR1, V.CR2, V.CR3, V.CR4, V.CR5, V.PL V.GF3 and V.GF4.</p>
+                </div>
+            </div>
+            <div class="module" id="05" style="padding-top: 2rem;"></div>
+            <div class="accordion-container">
+                <button class="accordion">week-5 8.21~8.27</button>
+                <div class="panel">
+                    <h2>8.21</h2>
+                    <h3>V. CR1 extended culture and dCas9 induction</h3>
+                    <p>Overnight V. CR1 culture was inoculated into the following mediums.Inducer was added when the OD600 reached 0.5.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Inducer concentration(mg/mL)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Culturing time after induction</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>5h</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>0.5</td>
+                                    <td>5h</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>5h</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>0</td>
+                                    <td>15h</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>0.5</td>
+                                    <td>15h</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>1</td>
+                                    <td>15h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h2>8.22</h2>
+                    <h3>Whole cell lysates SDS-PAGE for dCas9 identification</h3>
+                    <p>1 mL of each V.CR1 culture was centrfuged and the pellets were resuspended with 35 μL of ddH2O.</p>
+                    <p>10 μL of 5×loading buffer was added to each of the tubes and the tubes were incubated at 95℃ for 5 min. 10 μL of prepared samples were loaded.</p>
+                    <p>There was no significant difference in the molecular weight of dCas9 between lanes.</p>
+                    <h2>8.24</h2>
+                    <h3>Green fluorescence observation</h3>
+                    <p>Overnight V.GF4 culture and Vibrio natriegens 14048 culture were enlarged for 2 hours.</p>
+                    <p>The fluorescence was observed with fluorescence microscope. There was no significant difference between strain 14048 and V.GF4.</p>
+                    <h3>Pilin induction in V.PL </h3>
+                    <p>Overnight V.PL culture was inoculated into the following mediums at a dilution ratio of 1:100. Induction was performed 2h after the inoculation.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>inducer(arabinose) concentration</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Culturing time after induction</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Medium volume</h3>
+                                    </th>
+                                    <th>
+                                        <h3>temperature</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0mM</td>
+                                    <td>11h</td>
+                                    <td>30mL</td>
+                                    <td>37℃</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>0mM</td>
+                                    <td>11h</td>
+                                    <td>30m</td>
+                                    <td>37℃</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>20mM</td>
+                                    <td>11h</td>
+                                    <td>30mL</td>
+                                    <td>37℃</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>20mM</td>
+                                    <td>11h</td>
+                                    <td>30mL</td>
+                                    <td>37℃</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h2>8.25</h2>
+                    <h3>Pilus harvestion</h3>
+                    <p>Culture number 1 and 2 were consolidated while number 3 and 4 were consolidated. Pilus were harvested according to the protocol. The BCA test result of the two acquired samples was as follows.</p>
+                    <p>Sample1 was from uninduced culture while sample2 was from induced culture. The final concentrations of the two samples were 0.39μg/μL and 0.28μg/μL, respectively.</p>
+                    <p>1.5mL of sample1  and sample 2 were centrifuged to prepare whole cell lysate samples designated as sample1-1 ans sample2-1</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_8.25.jpg" alt="" class="img-fluid col-md-10">
+                    </div>
+                    <h3>Pilin WB</h3>
+                    <p>WB of pilin was performed on sample1, sample1-1, sample2 and sample2-1 according to the protocol.</p>
+                    <h2>8.26</h2>
+                    <h3>WB result</h3>
+                    <p>There was no band on the membrane. The secondary antibody was not adequately washed off and small protein bands were too obscure to be observed. Tris-tricine SDS-PAGE should be used for pilin WB.</p>
+                    <h3>Extended culture of V.CR1 and dCas9 induction</h3>
+                    <p>Overnight V.CR1 culture was inoculated into the following mediums. Inducer was added when the OD600 reached 0.5.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Inducer concentration(mg/mL)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Culturing time after induction</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>6h</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>0.5</td>
+                                    <td>6h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h2>8.27</h2>
+                    <h3>Whole cell lysates SDS-PAGE for sfGFP identification</h3>
+                    <p>1 mL of overnight V.GF4 culture and 14048 culture were centrifuged and the pellets were resuppended with ddH2O. 5 μL of 5×loading buffer was added to the tubes which were then incubated at 95℃ for 5mins. 5 μL of each of the prepared samples was loaded for SDS-PAGE.</p>
+                    <p>There were too many bands to distinguish the differences.</p>
+                    <h3>Electrocompetent cell preparation (protocol 2) </h3>
+                    <p>Overnight V.PL and V.CR1 culture were used for electro competent cell preparation according to the protocol.</p>
+                    <h3>Electroporation</h3>
+                    <p>Electroporation was performed according to the following parameters.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Competent cell</h3>
+                                    </th>
+                                    <th>
+                                        <h3>plasmid</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Plasmid volume(μL)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>time(ms)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>voltage(v)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>antibiotics</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>V.CR1</td>
+                                    <td>pPilin</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>790</td>
+                                    <td>Ampicilin</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>V.CR1</td>
+                                    <td>pPilin</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>790</td>
+                                    <td>Ampicilin</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>V.PL</td>
+                                    <td>pdCas9-sg1</td>
+                                    <td>5</td>
+                                    <td>3.8</td>
+                                    <td>790</td>
+                                    <td>Kanamycin</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>V.PL</td>
+                                    <td>pdCas9-sg1</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>790</td>
+                                    <td>Kanamycin</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+            <div class="module" id="06" style="padding-top: 2rem;"></div>
+            <div class="accordion-container">
+                <button class="accordion">week-6 8.28~9.3</button>
+                <div class="panel">
+                    <h2>8.28</h2>
+                    <h3>V. CR1 extended culture and dCas9 induction</h3>
+                    <p>Overnight V. CR1 and ATCC14048 culture was inoculated into the following mediums. Inducer was added when the OD600 reached 0.5.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>cell</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Inducer concentration(mg/mL)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Culturing time after induction</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>WT</td>
+                                    <td>0</td>
+                                    <td>5h</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>V.CR1</td>
+                                    <td>0</td>
+                                    <td>5h</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>V.CR1</td>
+                                    <td>0.5</td>
+                                    <td>5h</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>V.CR1</td>
+                                    <td>0.5</td>
+                                    <td>10h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h3>SDS-PAGE of dCas9</h3>
+                    <p>Soluable proteins were extracted from 1.5 mL of the cultures above. The result of SDS-PAGE was as follows:</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-3"></div>
+                        <img src="../asserts/img/notebook/figure_8.28.jpg" alt="" class="img-fluid col-md-6">
+                    </div>
+                    <p>There was no significant difference between the 4 lanes.</p>
+                    <h3>SDS-PAGE of sfGFP</h3>
+                    <p>1 mL of overnight V.GF4 and ATCC14048 culture were centrifuged and then resuspended with 35 μL of ddH2O. 1.5 mL of overnight V.GF4 and ATCC14048 culture were used for soluable protein extraction. The result of SDS-PAGE was as follows.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-3"></div>
+                        <img src="../asserts/img/notebook/figure_8.28_2.jpg" alt="" class="img-fluid col-md-6">
+                    </div>
+                    <p>There was a significant darker band on the lane of V.GF4 soluable proteins(marked with).The molecular weight of the modified sfGFP is about 31kD,between 25kD and 35kD. The experiment would be repeated 2 times to ensure the result.</p>
+                </div>
+            </div>
+            <div class="module" id="07" style="padding-top: 2rem;"></div>
+            <div class="accordion-container">
+                <button class="accordion">week-7 9.4~9.10</button>
+                <div class="panel">
+                    <h2>9.8</h2>
+                    <h3>pGFP modification</h3>
+                    <p>Reversed PCR<p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2 × Phanta Flash Master Mix</td>
+                                    <td>25μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>20μL</td>
+                                </tr>
+                                <tr>
+                                    <td>CutF+R(5μM)</td>
+                                    <td>4μL</td>
+                                </tr>
+                                <tr>
+                                    <td>pGFP</td>
+                                    <td>1μL</td>
+                                </tr>
+                                <tr>
+                                    <td>annealing temperature</td>
+                                    <td>59℃</td>
+                                </tr>
+                                <tr>
+                                    <td>elongation time</td>
+                                    <td>20sec</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h3>Gel extraction</h3>
+                    <p>The linearized pGFPcut was purified from PCR mix.</p>
+                    <h3>Gibson assembly</h3>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Linearized pGFP</td>
+                                    <td>1 μL(333ng)</td>
+                                </tr>
+                                <tr>
+                                    <td>2×CE mix</td>
+                                    <td>5μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>4μL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <p>The recombinant product (desingated as pGFPcut) was transformed into electrocompetent V.natriegens cells.</p>
+                    <h3>SDS-PAGE of sfGFP</h3>
+                    <p>1 mL of overnight V.GF4 and ATCC14048 culture were centrifuged and then resuspended with 35 μL ddH2O. 1.5mL overnight V.GF4 and ATCC14048 culture were used for soluable protein extraction. The result of SDS-PAGE was as follows.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-3"></div>
+                        <img src="../asserts/img/notebook/figure_9.8.jpg" alt="" class="img-fluid col-md-6">
+                    </div>
+                    <p>There was a significantly darker band in the lane of V.GF4 soluable proteins (marked with'*').The molecular weight of the modified sfGFP is about 31kD, between 25kD and 35kD. The experiment will be repeated one more time to confirm the result.</p>
+                    <h3>Electroporation</h3>
+                    <p>Electroporation was performed according to the following parameters.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Competent cell</h3>
+                                    </th>
+                                    <th>
+                                        <h3>plasmid</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Plasmid volume(μL)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>time(ms)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>voltage(v)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>antibiotics</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>V.CR1</td>
+                                    <td>pPilin</td>
+                                    <td>5</td>
+                                    <td>3.7</td>
+                                    <td>790</td>
+                                    <td>Amp(40μg/mL)</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>V.PL</td>
+                                    <td>pdCas9-sg1</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>790</td>
+                                    <td>Kan(50μg/mL)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <h3>Pilin induction in V.PL</h3>
+                    <p>Overnight V.PL culture was inoculated into the following mediums at a dilution ratio of 1:100. Induction was performed 2h after the inoculation.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Cell type</h3>
+                                    </th>
+                                    <th>
+                                        <h3>inducer(arabinose) concentration</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Culturing time after induction</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Medium volume</h3>
+                                    </th>
+                                    <th>
+                                        <h3>temperature</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>WT</td>
+                                    <td>20mM</td>
+                                    <td>16h</td>
+                                    <td>30mL</td>
+                                    <td>37℃</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>V.PL</td>
+                                    <td>20mM</td>
+                                    <td>16h</td>
+                                    <td>30m</td>
+                                    <td>37℃</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h2>9.9</h2>
+                    <h3>Colony PCR</h3>
+                    <p>There were several colonies on the plate supplemented with Kanamycin. 2 colonies were chosen to conduct colony PCR with the following parameters：</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        <h3>pPilin verification</h3>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2 × Taq Master Mix</td>
+                                    <td>25μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>20μL</td>
+                                </tr>
+                                <tr>
+                                    <td>PLR+PLF(5μM)</td>
+                                    <td>4μL</td>
+                                </tr>
+                                <tr>
+                                    <td>colony</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        <h3>pdCas9-sg1 verification</h3>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2 × Taq Master Mix</td>
+                                    <td>25μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>20μL</td>
+                                </tr>
+                                <tr>
+                                    <td>CRR+CRF(5μM)</td>
+                                    <td>4μL</td>
+                                </tr>
+                                <tr>
+                                    <td>colony</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <p>Bands were only seen on the lanes corresponding to pdCas9-sg1 verification. The electroporation was not successful.</p>
+                    <h3>SDS-PAGE of Pilin</h3>
+                    <p>1.5 mL of each of the 4 cultures were used for soluable protein extraction. 10μL of prepared sample was loaded. The result of SDS-PAGE was as follows. The issue may lie in the gel or loading buffer.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-3"></div>
+                        <img src="../asserts/img/notebook/figure_9.9.jpg" alt="" class="img-fluid col-md-6">
+                    </div>
+                    <h2>9.10</h2>
+                    <h3>SDS-PAGE of sfGFP</h3>
+                    <p>1 mL of overnight V.GF4 and ATCC14048 culture were centrifugedand then resuspended with 35 μL ddH2O. 1.5mL of overnight V.GF4 and ATCC14048 culture were used for soluable protein extraction. The result of SDS-PAGE was as follows. a stands for all proteins and s stands for extracted soluable proteins.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_9.9.jpg" alt="" class="img-fluid col-md-5">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_9.9.jpg" alt="" class="img-fluid col-md-4">
+                        <div class="img-fluid col-md-1"></div>
+                    </div>
+                    <p>There was a significant darker band on the lane of V.GF4 soluable proteins (marked with'*' ).The molecular weight of the modified sfGFP is about 31kD,between 25kD and 35kD.</p>
+                    <h3>Gibson assembly</h3>
+                    <p>The linearized pGFP solution was diluted to 67.26 μg/mL.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Linearized pGFP(diluted)</td>
+                                    <td>4 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>2×CE mix</td>
+                                    <td>5 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>1 μL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h3>Chemical and electrocompetent cell prepareation (protocol 2)</h3>
+                    <p>Electroporation competent V.PL and V.CR1 were prepared according to the protocols.</p>
+                    <h3>Electroporation</h3>
+                    <p>Electroporation competent V.PL and V.CR1 were prepared according to the protocols.</p>
+                    <h3>Electroporation</h3>
+                    <p>Electroporation was performed according to the protocol with the following parameters.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Cell type</h3>
+                                    </th>
+                                    <th>
+                                        <h3>plasmid</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Plasmid volume(μL)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>voltage(v)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>time(ms)</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>V.CR1</td>
+                                    <td>pPilin</td>
+                                    <td>5</td>
+                                    <td>790</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>V.CR1</td>
+                                    <td>pGFPcut</td>
+                                    <td>5</td>
+                                    <td>790</td>
+                                    <td>3.9</td>
+                                </tr>
+                                <tr>
+                                    <td>V.PL</td>
+                                    <td>pdCas9-sg1</td>
+                                    <td>5</td>
+                                    <td>790</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <h3>Transformation of chemical competent DH5α</h3>
+                    <p>2 μL of modified pET-24b(+) was added to 50 μL of chemical competent DH5α for transformation.</p>
+                    <h3>Pilin induction in V.PL</h3>
+                    <p>Overnight V.PL culture was inoculated into the following mediums at a dilution ratio of 1:100. Induction was performed 2h after the inoculation.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Cell type</h3>
+                                    </th>
+                                    <th>
+                                        <h3>inducer(arabinose) concentration</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Culturing time after induction</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Medium volume</h3>
+                                    </th>
+                                    <th>
+                                        <h3>temperature</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>WT</td>
+                                    <td>20mM</td>
+                                    <td>20h     </td>
+                                    <td>2×30mL </td>
+                                    <td>16℃     </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>V.PL</td>
+                                    <td>20mM</td>
+                                    <td>20h   </td>
+                                    <td>2×30mL</td>
+                                    <td>16℃   </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+            <div class="module" id="08" style="padding-top: 2rem;"></div>
+            <div class="accordion-container">
+                <button class="accordion">week-8 9.11~9.17</button>
+                <div class="panel">
+                    <h2>9.11</h2>
+                    <h3>Modified pET-24(+) carrying strain storage.</h3>
+                    <p>There was no colony on the plates of electroporation, maybe due to the overly used electroporation cuvettes. There were many colonies on the plate of DH5α transformation and 5 colonies were chosen to be strored.</p>
+                    <h3>Pilus harvest and SDS-PAGE of pilin</h3>
+                    <p>Pilus were harvested according to the protocol. The BCA test result of the harvested pilus solution was as follows.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_9.11.png" alt="" class="img-fluid col-md-10">
+                    </div>
+                    <p>According to the result, the concentration of sample1 (induced V.PL) was 0.46μg/μL and the concentration of sample2(WT) was 1.04μg/μL.</p>
+                    <h3>Electroporation</h3>
+                    <p>Electroporation was performed according to the protocol with the following parameters.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Cell type</h3>
+                                    </th>
+                                    <th>
+                                        <h3>plasmid</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Plasmid volume(μL)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>voltage(v)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>time(ms)</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>V.CR1</td>
+                                    <td>pPilin</td>
+                                    <td>5</td>
+                                    <td>790</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>V.PL</td>
+                                    <td>pdCas9-sg1</td>
+                                    <td>5</td>
+                                    <td>790</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <h2>9.12</h2>
+                    <h3>Colony PCR</h3>
+                    <p>5 colonies on the plates were chosen for colony PCR with the following parameters</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        <h3>pPilin verification</h3>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2 × Taq Master Mix</td>
+                                    <td>25μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>20μL</td>
+                                </tr>
+                                <tr>
+                                    <td>PLR+PLF(5μM)</td>
+                                    <td>4μL</td>
+                                </tr>
+                                <tr>
+                                    <td>colony</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        <h3>pdCas9-sg1 verification</h3>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2 × Taq Master Mix</td>
+                                    <td>25μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>20μL</td>
+                                </tr>
+                                <tr>
+                                    <td>CRR+CRF(5μM)</td>
+                                    <td>4μL</td>
+                                </tr>
+                                <tr>
+                                    <td>colony</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <p>The result was as follows. Strains that had bands in both PCR tests were stored as glycerol stock and designated as V.PC1, V.PC3, V.PC5, V.PC6 and V.PC7, respectively.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_9.12.jpg" alt="" class="img-fluid col-md-10">
+                    </div>
+                    <h3>WB of harvested pilin</h3>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Step</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Details</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>blocking</td>
+                                    <td>5% silk milk dissolved in TBST, 1.5h at RT</td>
+                                </tr>
+                                <tr>
+                                    <td>Primary antibody</td>
+                                    <td>1:4000, overnight at 4℃</td>
+                                </tr>
+                                <tr>
+                                    <td>Secondary antibody</td>
+                                    <td>1:5000, 1h at RT</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h2>9.13</h2>
+                    <h3>WB of harvested pilin</h3>
+                    <p>The result of the WB was as follows. Marker bands of low molecular weight could not be seen, maybe because the transfer buffer was not supplemented with 20% of methanol.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-4"></div>
+                        <img src="../asserts/img/notebook/figure_9.13.png" alt="" class="img-fluid col-md-4">
+                    </div>
+                    <h3>Plasmid exraction</h3>
+                    <p>Plasmids were extracted from overnight culture of V.PC1,V.PC3,V.PC5,V.PC6,V.PC7 for sequencing.</p>
+                    <h3>Electroporation</h3>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Cell type</h3>
+                                    </th>
+                                    <th>
+                                        <h3>plasmid</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Plasmid volume</h3>
+                                    </th>
+                                    <th>
+                                        <h3>voltage</h3>
+                                    </th>
+                                    <th>
+                                        <h3>time</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>V.CR1</td>
+                                    <td>pGFPcut</td>
+                                    <td>5 μL</td>
+                                    <td>790v</td>
+                                    <td>4ms</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>ATCC14048</td>
+                                    <td>Control plasmid</td>
+                                    <td>5 μL</td>
+                                    <td>790v</td>
+                                    <td>4ms</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <h3>V.CR1 extended culture and dCas9 induction</h3>
+                    <p>Overnight V.CR1 culture was inoculated into the following mediums. Inducer was added when the OD600 reached 0.5.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>number</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Cell type</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Inducer concentration(mg/mL)</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Culturing time after induction</h3>
+                                    </th>
+                                    <th>
+                                        <h3>temperature</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>WT</td>
+                                    <td>0</td>
+                                    <td>20h</td>
+                                    <td>20 ℃</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>V.CR1</td>
+                                    <td>0.5</td>
+                                    <td>20h</td>
+                                    <td>20℃</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                                       
+                    <h2>9.15</h2>
+                    <h3>pGFP modification</h3>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        <h3>Reversed PCR</h3>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume/Details</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2 × Phanta Flash Master Mix</td>
+                                    <td>25μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>20 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>modF1+R1(5μM)</td>
+                                    <td>4 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>pGFP</td>
+                                    <td>1 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>annealing temperature</td>
+                                    <td>53℃</td>
+                                </tr>
+                                <tr>
+                                    <td>elongation time</td>
+                                    <td>21sec</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <p>Gel extraction:Linearized pGFPmod1 was purified from PCR mix.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        <h3>Gibson assembly</h3>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume/Details</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Linearized pGFP</td>
+                                    <td>2 μL(256ng)</td>
+                                </tr>
+                                <tr>
+                                    <td>2×CE mix</td>
+                                    <td>5 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>3 μL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <p>The recombinant product (desingated as pGFPmod1) was transformed into chemical competent DH5α cells according to the protocol.</p>
+                    <h3>Pilin induction in V.PC6</h3>
+                    <p>Overnight V.PC6 culture was inoculated into the following mediums at a dilution ratio of 1:100. Induction was performed 2h after inoculation.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Parameter</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Details</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cell type</td>
+                                    <td>V.PC6</td>
+                                </tr>
+                                <tr>
+                                    <td>inducer(arabinose) concentration</td>
+                                    <td>20mM</td>
+                                </tr>
+                                <tr>
+                                    <td>Culturing time after induction</td>
+                                    <td>24h</td>
+                                </tr>
+                                <tr>
+                                    <td>Medium volume</td>
+                                    <td>2×200 mL</td>
+                                </tr>
+                                <tr>
+                                    <td>temperature</td>
+                                    <td>20℃</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <h3>SDS-PAGE of dCas9</h3>
+                    <p>1 mL of induced V.CR1 and ATCC14048 culture were centrifuged and then resuspended with 35 μL of ddH2O. 1.5mL of overnight V.GF4 and ATCC14048 culture were used for soluable protein extraction. The result of SDS-PAGE was as follows. There was no significant difference between the two lanes.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-3"></div>
+                        <img src="../asserts/img/notebook/figure_9.15.jpg" alt="" class="img-fluid col-md-6">
+                    </div>
+                    <h2>9.16</h2>
+                    <h3>Pilus harvest</h3>
+                    <p>Pilus were harvested according to the protocol. The BCA test result of the harvested pilus solutions was as follows. Concentration was 4.92μg/μL of sample1 ,4.62μg/μL of sample2, and 0.88μg/μL of sample3.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_9.16.png" alt="" class="img-fluid col-md-10">
+                    </div>
+                    <h3>Chemical competent DH5α preparation</h3>
+                    <p>Chemical competent DH5α was prepared according to the protocols.</p>
+                    <h3>DH5α transformation</h3>
+                    <p>Recombinant pGFPmod1 was transferomed into chemical competent DH5α cells accroding to the protocol.</p>
+                    <h2>9.17</h2>
+                    <h3>WB of pilus</h3>
+                    <p>10 μL 2×tricine loading buffer was added to 40 μL of sample1 and sample2 respectively. Then the tubes were incubated at 95℃ for 5mins. 20.3μL of prepared sample1 and 21.8μL of prepared sample2 were loaded for SDS-PAGE. The primary antibody was diluted at 1:500.</p>
+                    <h3>Colony PCR</h3>
+                    <p>7 colonies on the plates were chosen for colony PCR with the following parameters</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        <h3>pPilin verification</h3>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume/Details</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2 × Taq Master Mix</td>
+                                    <td>25μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>20μL</td>
+                                </tr>
+                                <tr>
+                                    <td>GFR+GFF(5μM)</td>
+                                    <td>4μL</td>
+                                </tr>
+                                <tr>
+                                    <td>colony</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <p>The result was as follows.All colonies tested positive. Strains corresponding to band 1 and band 2 were chosen to conduct the following experiments and were designated as V.mod1-1 and V.mod1-2.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_9.17.png" alt="" class="img-fluid col-md-10">
+                    </div>
+                    <h3>Pilin induction in V.PC6</h3>
+                    <p>Overnight V.PL culture was inoculated into the following mediums at a dilution ratio of 1:100. Induction was performed 2h after inoculation.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Cell type</h3>
+                                    </th>
+                                    <th>
+                                        <h3>V.PC6</h3>
+                                    </th>
+                                    <th>
+                                        <h3>ATCC14048</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>inducer(arabinose) concentration</td>
+                                    <td>20mM</td>
+                                    <td>20mM</td>
+                                </tr>
+                                <tr>
+                                    <td>Culturing time after induction</td>
+                                    <td>24h</td>
+                                    <td>24h</td>
+                                </tr>
+                                <tr>
+                                    <td>Medium volume</td>
+                                    <td>100 mL</td>
+                                    <td>100mL</td>
+                                </tr>
+                                <tr>
+                                    <td>temperature</td>
+                                    <td>20℃</td>
+                                    <td>20℃</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                </div>
+            </div>
+            <div class="module" id="09" style="padding-top: 2rem;"></div>
+            <div class="accordion-container">
+                <button class="accordion">week-9 9.18~9.24</button>
+                <div class="panel">
+                    <h2>9.18</h2>
+                    <h3>WB of pilus</h3>
+                    <p>The secondary antibody was diluted at 1:5000. No band was seen on the membrane.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-3"></div>
+                        <img src="../asserts/img/notebook/figure_9.18_1.png" alt="" class="img-fluid col-md-6">
+                    </div>
+                    <h3>Gibson assembly and DH5α transformation</h3>
+                    <p>gibson assembly</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume/Details</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Linearized pGFP</td>
+                                    <td>2 μL(256ng)</td>
+                                </tr>
+                                <tr>
+                                    <td>2×CE mix</td>
+                                    <td>5 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>3 μL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <p>The recombinant product (desingated as pGFPcut) was transformed into chemical competent DH5α cells according to the protocol.</p>
+                    <h2>9.19</h2>
+                    <h3>Plasmid extraction</h3>
+                    <p>Plasmids were extracted from overnight culture of V.mod1-1 and V.mod1-2. </p>
+                    <h3>Pilus harvest and SDS-PAGE of pilin</h3>
+                    <p>Pilus were harvested according to the protocol. The BCA test result was as follows. Sample 1 was harvested from V.PC6 culture and sample 2 was harvested from ATCC14048 culture.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_9.19.png" alt="" class="img-fluid col-md-10">
+                    </div>
+                    <h3>Colony PCR</h3>
+                    <p>One  colony on the plates was chosen for colony PCR with the following parameters.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        <h3>pPilin verification</h3>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume/Details</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2 × Taq Master Mix</td>
+                                    <td>25μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>20μL</td>
+                                </tr>
+                                <tr>
+                                    <td>GFR+GFF(5μM)</td>
+                                    <td>4μL</td>
+                                </tr>
+                                <tr>
+                                    <td>colony</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <p>The result was as follows.The colony tested positive and was designated  as V.cut.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-3"></div>
+                        <img src="../asserts/img/notebook/figure_9.19_2.png" alt="" class="img-fluid col-md-6">
+                    </div>
+                    <h3>pGFP modification</h3>
+                    <strong>Reversed PCR</strong>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        <h3>PCR Parameters</h3>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume/Details</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2 × Phanta Flash Master Mix</td>
+                                    <td>25μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>20 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>modF2+R2(5μM)</td>
+                                    <td>4 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>pGFPmod1</td>
+                                    <td>1 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>annealing temperature</td>
+                                    <td>56℃</td>
+                                </tr>
+                                <tr>
+                                    <td>elongation time</td>
+                                    <td>21sec</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <strong>Gel extraction</strong>
+                    <p>Linearized pGFPmod2 was purified from PCR mix.</p>
+                    <strong>Gibson assembly</strong>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume/Details</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Linearized pGFPmod1</td>
+                                    <td>2 μL(256ng)</td>
+                                </tr>
+                                <tr>
+                                    <td>2×CE mix</td>
+                                    <td>5 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>3 μL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <p>The recombinant product (desingated as pGFPmod2) was transformed into chemical competent DH5α cells according to the protocol.</p>
+                    <h3>DH5α transformation</h3>
+                    <p>Recombinant pGFPmod2 was transferomed into chemical competent DH5α cells accroding to the protocol.</p>
+                    <h2>9.20</h2>
+                    <h3>Chemical competent DH5α preparation</h3>
+                    <p>Chemical competent DH5α was prepared according to the protocols.</p>
+                    <h3>Plamisd extraction</h3>
+                    <p>Plamis was extracted from overnight culture of V.cut</p>
+                    <h3>DH5α transformation</h3>
+                    <p>Recombinant pGFPmod2 was transferomed into chemical competent DH5α cells accroding to the protocol.</p>
+                    <h2>9.21</h2>
+                    <h3>Colony PCR</h3>
+                    <p>Five colonies on the plates was chosen for colony PCR with the following parameters.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        <h3>pPilin verification</h3>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume/Details</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2 × Taq Master Mix</td>
+                                    <td>25μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>20μL</td>
+                                </tr>
+                                <tr>
+                                    <td>GFR+GFF(5μM)</td>
+                                    <td>4μL</td>
+                                </tr>
+                                <tr>
+                                    <td>colony</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <p>The result was as follows.One of the colonies tested positive was chosen for the following experiments.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-3"></div>
+                        <img src="../asserts/img/notebook/figure_9.21.png" alt="" class="img-fluid col-md-6">
+                    </div>
+                    <h3>Spread plate</h3>
+                    <p>Overnight V.PC1 culture was spread out on twenty agar plates supplement with kanacymin, ampicillin,0.5% glycerol and 2% arabinose. 300μL of culture was spread for each plate.The plates were cultured at 37℃ for 24 h before pilus harvest.</p>
+                    <h3>Electroporation</h3>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Cell type</h3>
+                                    </th>
+                                    <th>
+                                        <h3>ATCC14048</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>plasmid</td>
+                                    <td>pGFPcut</td>
+                                </tr>
+                                <tr>
+                                    <td>Plasmid volume</td>
+                                    <td>5 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>voltage</td>
+                                    <td>790 v</td>
+                                </tr>
+                                <tr>
+                                    <td>time</td>
+                                    <td>4 ms</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h2>9.22</h2>
+                    <h3>Electroporation</h3>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>no.</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Cell type</h3>
+                                    </th>
+                                    <th>
+                                        <h3>plasmid</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Plasmid volume</h3>
+                                    </th>
+                                    <th>
+                                        <h3>voltage</h3>
+                                    </th>
+                                    <th>
+                                        <h3>time</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>V.CR1</td>
+                                    <td>pGFPcut</td>
+                                    <td>5 μL</td>
+                                    <td>790 v</td>
+                                    <td>4 ms</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>V.CR1</td>
+                                    <td>pGFPmod2</td>
+                                    <td>5 μL</td>
+                                    <td>790 v</td>
+                                    <td>4 ms</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h3>Pilus harvest</h3>
+                    <p>The cells were harvested from the plates with 1 mL of LB+v2 salts medium for each plate.The following procedures were the same as the previous harvest protocol.</p>
+                    <p>The concentration of harvested pilus solution was tested using the previous standard curve.The concentration of original pilus solution was about 4.8μg/μL</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_9.22.png" alt="" class="img-fluid col-md-10">
+                    </div>
+                    <h2>9.23</h2>
+                    <h3>Electroporation</h3>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>no.</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Cell type</h3>
+                                    </th>
+                                    <th>
+                                        <h3>plasmid</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Plasmid volume</h3>
+                                    </th>
+                                    <th>
+                                        <h3>voltage</h3>
+                                    </th>
+                                    <th>
+                                        <h3>time</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>V.CR1</td>
+                                    <td>pGFPcut</td>
+                                    <td>5 μL</td>
+                                    <td>790 v</td>
+                                    <td>4 ms</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>V.CR1</td>
+                                    <td>pGFPmod2</td>
+                                    <td>5 μL</td>
+                                    <td>790 v</td>
+                                    <td>4 ms</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <h3>electrocompetent cell prepareation (protocol 2)</h3>
+                    <p>Electroporation competent V.CR1 were prepared according to the protocols.</p>
+                    <h2>9.24</h2>
+                    <h3>Colony PCR</h3>
+                    <p>Six colonies from the plate of electroporation no.1 and five from no.2 were chosen for colony PCR.</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        <h3>pPilin verification</h3>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume/Details</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2 × Taq Master Mix</td>
+                                    <td>25μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>20μL</td>
+                                </tr>
+                                <tr>
+                                    <td>GFR+GFF(5μM)</td>
+                                    <td>4μL</td>
+                                </tr>
+                                <tr>
+                                    <td>colony</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <img src="" alt="">
+                    <p>The result is as follows. Two strains(designated as V.CR-cut and V.CR-mod respectively) were chosen to perform the following experiments.</p>                    
+                    <h3>Spread plate</h3>
+                    <p>Overnight V.PC1 culture was spread out on twenty agar plates supplement with kanacymin, ampicillin,0.5% glycerol and 2% arabinose. 300μL of culture was spread for each plate.The plates were cultured at 37℃ for 24 h before pilus harvest.</p>
+                    <h3>electrocompetent cell prepareation (protocol 2)</h3>
+                    <p>Electroporation competent ATCC14048 were prepared according to the protocols.</p>
+                </div>
+            </div>
+            <div class="module" id="10" style="padding-top: 2rem;"></div>
+            <div class="accordion-container">
+                <button class="accordion">week-10 9.25~10.1</button>
+                <div class="panel">
+                    <h2>9.25</h2>
+                    <h3>Electroporation</h3>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>no.</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Cell type</h3>
+                                    </th>
+                                    <th>
+                                        <h3>plasmid</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Plasmid volume</h3>
+                                    </th>
+                                    <th>
+                                        <h3>voltage</h3>
+                                    </th>
+                                    <th>
+                                        <h3>time</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ATCC14048</td>
+                                    <td>pGFPcut</td>
+                                    <td>5 μL</td>
+                                    <td>790 v</td>
+                                    <td>3 ms</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>ATCC14048</td>
+                                    <td>pGFPmod2</td>
+                                    <td>5 μL</td>
+                                    <td>790 v</td>
+                                    <td>3 ms</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <h3>Green fluorescence measurement</h3>
+                    <p>Overnight culture of V.CR-cut and V.CR were used for green fluorescence measurement with microplate reader.The excitation light was 488 nm and emitted light was 535 nm.the The result was as follows.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_9.25.png" alt="" class="img-fluid col-md-6">
+                        <img src="../asserts/img/notebook/figure_9.25_2.png" alt="" class="img-fluid col-md-4">
+                    </div>
+                    <h2>9.26</h2>
+                    <h3>Pilus harvest</h3>
+                    <p>The cells were harvested from the plates with 1 mL of LB+v2 salts medium for each plate.The following procedures were the same as the previous harvest protocol.The BCA test result was as follows.The concentration of harvested pilin solution was 4.42 μg/μL.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-1"></div>
+                        <img src="../asserts/img/notebook/figure_9.26.png" alt="" class="img-fluid col-md-10">
+                    </div>
+                    <h3>Sample preparation for TEM</h3>
+                    <p>The pilin solution was seriously diluted. 5 μL of each sample was dropped on 200-mesh carbon-coated copper</p>
+                    <p>grids and let air-dry for 2 h.Then the samples were stained by uranium acetate and dried at 4 ℃ overnight.</p>
+                    <h3>Colony PCR</h3>
+                    <p>Five colonies from the plate of electroporation no.1 and two from no.2 were chosen for colony PCR.</p>
+                    <img src="" alt="">
+                    <p>The result is as follows. Two strains(designated as V.cut and V.mod respectively) were chosen to perform the following experiments.</p>
+                    <h2>9.27</h2>
+                    <h3>Transmission electron microscopy</h3>
+                    <p>The result of TEM was as follows.There was too much impurity in our sample, so we could not acquire the structure of our pilus film.</p>
+                    <div class="row">
+                        <div class="img-fluid col-md-3"></div>
+                        <img src="../asserts/img/notebook/figure_9.27.jpg" alt="" class="img-fluid col-md-6">
+                    </div>
+                    <h2>9.28</h2>
+                    <h3>Spread plate</h3>
+                    <p>Overnight V.PC1 culture was spread out on twenty agar plates supplement with kanacymin, ampicillin,0.5% glycerol and 2% arabinose. 300μL of culture was spread for each plate.The plates were cultured at 30℃ for 24 h before pilus harvest.</p>
+                    <h2>9.29</h2>
+                    <h3>Spread plate</h3>
+                    <p>Overnight culture of V.cut and V.mod was spread out on agar plates supplement with Ampicillin and cultured for 24 h before harvest to test the fluorscence intensity.</p>
+                    <h3>Pilus harvest</h3>
+                    <p>The cells were harvested from the plates with 1 mL of LB+v2 salts medium for each plate.The following procedures was performed according to Pilin harvest protocol 2.</p>
+                </div>
+            </div>
+            <div class="module" id="11" style="padding-top: 2rem;"></div>
+            <div class="accordion-container">
+                <button class="accordion">week-11 10.2~10.8</button>
+                <div class="panel">
+                    <p>Content for section 1.</p>
+                </div>
+            </div>
+            <div class="module" id="12" style="padding-top: 2rem;"></div>
+            <div class="accordion-container">
+                <button class="accordion">week-12 10.9~10.12</button>
+                <div class="panel">
+                    <p>Content for section 1.</p>
+                </div>
+            </div>
+    </article>
+    <footer>
+        <div class="footers">
+            <div class="footer-content main">
+                <h2>Links</h2>
+                <div class="circle">
+                    <h3>Home</h3>
+                </div>
+                <h2>Contact Us</h2>
+            </div>
+        </div>
+    </footer>
+    <!-- JS -->
+    <script src="../asserts/js/jquery-3.7.0.js"></script>
+    <script src="../asserts/js/bootstrap.bundle.min.js"></script>
+    <script src="../asserts/js/my.js"></script>
+
+</body>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_2" data-name="图层 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 115.27 124.65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00c1b2;
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #f29700;
+      }
+
+      .cls-3 {
+        filter: url(#drop-shadow-3);
+      }
+
+      .cls-5 {
+        filter: url(#drop-shadow-2);
+      }
+    </style>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="1.42" dy="1.42"/>
+      <feGaussianBlur result="blur" stdDeviation=".85"/>
+      <feFlood flood-color="#0a9f9f" flood-opacity=".5"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="1.42" dy="1.42"/>
+      <feGaussianBlur result="blur-2" stdDeviation="1.42"/>
+      <feFlood flood-color="#9e7836" flood-opacity=".7"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-3" filterUnits="userSpaceOnUse">
+      <feOffset dx="2.27" dy="2.27"/>
+      <feGaussianBlur result="blur-3" stdDeviation="2.27"/>
+      <feFlood flood-color="#0db9cb" flood-opacity=".75"/>
+      <feComposite in2="blur-3" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="description">
+    <circle class="cls-2" cx="57.64" cy="57.64" r="57.64"/>
+    <g>
+      <path class="cls-1" d="M65.75,28.66c-20.45,0-37.03,16.58-37.03,37.03v58.95s14.88-1.23,18.99-6.99c4.11-5.75,2.74-29.97,2.74-29.97-5.5-2.77-5.73-8.77-.2-13.49,0,0-7.95-5.06,5.67-5.23,0,0,3.29-18.58,16.5-6.91,9.97-8.09,26.37,5.87,15.84,18.58,2.83,3.54,2.78,9.91-.5,14.19l.32,.48c8.98-6.75,14.71-17.49,14.71-29.61,0-20.45-16.58-37.03-37.03-37.03Z"/>
+      <g class="cls-5">
+        <path class="cls-4" d="M88.84,63.16c7.91-5.47,18.44-13.02,18.44-13.02l-7.03-8.59,7.87-16.09-24.81,12.86,11.6,15.13s-4.08,4.06-8.07,8.19c.67,.5,1.51,1,2.01,1.53Z"/>
+      </g>
+      <path class="cls-3" d="M55.99,68.92s3.31-18.54,16.48-6.87c9.96-8.05,26.31,5.9,15.78,18.56,5.15,6.46,.67,22.33-15.42,17.67,0,0-3.08,8.95-5.38,1.92-5.24,4.44-16.95,2.49-16.94-12.62-5.49-2.77-5.71-8.76-.18-13.46,0,0-7.92-5.07,5.66-5.21Z"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protocols</title>
+    <!-- CSS -->
+    <link href="../asserts/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asserts/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- loading -->
+    <div class="loading-body">
+        <!-- 绘制齿轮 -->
+        <div class="load">
+            <div class="gear first">
+                <svg id="purple" viewbox="0 0 100 100" fill="#afb4db">
+                    <path
+                        d="m88.22905,52.73842l12.66081,-6.69624c-0.24889,-2.48103 -0.7299,-4.88779 -1.33165,-7.25374l-14.06435,-1.94757c-1.21732,-2.93246 -2.82483,-5.65223 -4.71443,-8.14886l5.36114,-13.18525c-1.76284,-1.71922 -3.66664,-3.28664 -5.67042,-4.72891l-11.94246,7.49732c-2.80052,-1.47273 -5.81781,-2.59129 -8.98524,-3.30968l-4.31582,-13.37042c-1.22401,-0.09243 -2.44766,-0.19008 -3.69591,-0.19008s-2.46845,0.0954 -3.69613,0.19008l-4.27306,13.25199c-3.25234,0.69537 -6.33625,1.82692 -9.20876,3.31783l-11.75647,-7.38703c-2.00124,1.44227 -3.90496,3.0097 -5.66766,4.72891l5.2136,12.82104c-2.03201,2.60429 -3.73326,5.47776 -5.01105,8.57467l-13.62035,1.8837c-0.59921,2.36263 -1.08274,4.76684 -1.32906,7.25345l12.2246,6.46784c0.1385,3.4047 0.70298,6.7044 1.70254,9.8117l-9.22158,10.19626c1.07271,2.22493 2.26701,4.38264 3.64861,6.40699l13.5767,-2.91464c2.226,2.422 4.76215,4.54406 7.56029,6.29894l-0.51461,13.89098c2.22975,1.00564 4.54649,1.84729 6.93396,2.52003l8.5892,-11.04055c1.52399,0.19456 3.06723,0.3256 4.64128,0.3256c1.70519,0 3.37278,-0.15405 5.01352,-0.37947l8.63392,11.1018c2.39122,-0.67196 4.70444,-1.51356 6.93395,-2.51926l-0.52454,-14.14044c2.66699,-1.72661 5.08534,-3.79226 7.21739,-6.12444l13.92978,2.98893c1.38161,-2.02403 2.57607,-4.17945 3.64839,-6.40624l-9.52026,-10.5301c0.91453,-2.94323 1.42539,-6.05022 1.57412,-9.25513l0,0l0.00001,-0.00001zm-21.0432,16.08496l-6.00271,3.90775l-3.69207,-5.67259c-1.92067,0.73877 -3.98849,1.18799 -6.1683,1.18799c-9.52022,0 -17.23546,-7.71828 -17.23546,-17.23701c0,-9.51912 7.71525,-17.23441 17.23546,-17.23441c9.51773,0 17.2358,7.71529 17.2358,17.23441c0,4.75679 -1.92697,9.05688 -5.04179,12.17683l3.66907,5.63703z">
+                    </path>
+                </svg>
+            </div>
+            <div class="gear second">
+                <svg id="pink" viewbox="0 0 100 100" fill="#FFB5C5">
+                    <path
+                        d="m88.22905,52.73842l12.66081,-6.69624c-0.24889,-2.48103 -0.7299,-4.88779 -1.33165,-7.25374l-14.06435,-1.94757c-1.21732,-2.93246 -2.82483,-5.65223 -4.71443,-8.14886l5.36114,-13.18525c-1.76284,-1.71922 -3.66664,-3.28664 -5.67042,-4.72891l-11.94246,7.49732c-2.80052,-1.47273 -5.81781,-2.59129 -8.98524,-3.30968l-4.31582,-13.37042c-1.22401,-0.09243 -2.44766,-0.19008 -3.69591,-0.19008s-2.46845,0.0954 -3.69613,0.19008l-4.27306,13.25199c-3.25234,0.69537 -6.33625,1.82692 -9.20876,3.31783l-11.75647,-7.38703c-2.00124,1.44227 -3.90496,3.0097 -5.66766,4.72891l5.2136,12.82104c-2.03201,2.60429 -3.73326,5.47776 -5.01105,8.57467l-13.62035,1.8837c-0.59921,2.36263 -1.08274,4.76684 -1.32906,7.25345l12.2246,6.46784c0.1385,3.4047 0.70298,6.7044 1.70254,9.8117l-9.22158,10.19626c1.07271,2.22493 2.26701,4.38264 3.64861,6.40699l13.5767,-2.91464c2.226,2.422 4.76215,4.54406 7.56029,6.29894l-0.51461,13.89098c2.22975,1.00564 4.54649,1.84729 6.93396,2.52003l8.5892,-11.04055c1.52399,0.19456 3.06723,0.3256 4.64128,0.3256c1.70519,0 3.37278,-0.15405 5.01352,-0.37947l8.63392,11.1018c2.39122,-0.67196 4.70444,-1.51356 6.93395,-2.51926l-0.52454,-14.14044c2.66699,-1.72661 5.08534,-3.79226 7.21739,-6.12444l13.92978,2.98893c1.38161,-2.02403 2.57607,-4.17945 3.64839,-6.40624l-9.52026,-10.5301c0.91453,-2.94323 1.42539,-6.05022 1.57412,-9.25513l0,0l0.00001,-0.00001zm-21.0432,16.08496l-6.00271,3.90775l-3.69207,-5.67259c-1.92067,0.73877 -3.98849,1.18799 -6.1683,1.18799c-9.52022,0 -17.23546,-7.71828 -17.23546,-17.23701c0,-9.51912 7.71525,-17.23441 17.23546,-17.23441c9.51773,0 17.2358,7.71529 17.2358,17.23441c0,4.75679 -1.92697,9.05688 -5.04179,12.17683l3.66907,5.63703z">
+                    </path>
+                </svg>
+            </div>
+            <div class="gear third">
+                <svg id="orange" viewbox="0 0 100 100" fill="#fedcbd">
+                    <path
+                        d="m88.22905,52.73842l12.66081,-6.69624c-0.24889,-2.48103 -0.7299,-4.88779 -1.33165,-7.25374l-14.06435,-1.94757c-1.21732,-2.93246 -2.82483,-5.65223 -4.71443,-8.14886l5.36114,-13.18525c-1.76284,-1.71922 -3.66664,-3.28664 -5.67042,-4.72891l-11.94246,7.49732c-2.80052,-1.47273 -5.81781,-2.59129 -8.98524,-3.30968l-4.31582,-13.37042c-1.22401,-0.09243 -2.44766,-0.19008 -3.69591,-0.19008s-2.46845,0.0954 -3.69613,0.19008l-4.27306,13.25199c-3.25234,0.69537 -6.33625,1.82692 -9.20876,3.31783l-11.75647,-7.38703c-2.00124,1.44227 -3.90496,3.0097 -5.66766,4.72891l5.2136,12.82104c-2.03201,2.60429 -3.73326,5.47776 -5.01105,8.57467l-13.62035,1.8837c-0.59921,2.36263 -1.08274,4.76684 -1.32906,7.25345l12.2246,6.46784c0.1385,3.4047 0.70298,6.7044 1.70254,9.8117l-9.22158,10.19626c1.07271,2.22493 2.26701,4.38264 3.64861,6.40699l13.5767,-2.91464c2.226,2.422 4.76215,4.54406 7.56029,6.29894l-0.51461,13.89098c2.22975,1.00564 4.54649,1.84729 6.93396,2.52003l8.5892,-11.04055c1.52399,0.19456 3.06723,0.3256 4.64128,0.3256c1.70519,0 3.37278,-0.15405 5.01352,-0.37947l8.63392,11.1018c2.39122,-0.67196 4.70444,-1.51356 6.93395,-2.51926l-0.52454,-14.14044c2.66699,-1.72661 5.08534,-3.79226 7.21739,-6.12444l13.92978,2.98893c1.38161,-2.02403 2.57607,-4.17945 3.64839,-6.40624l-9.52026,-10.5301c0.91453,-2.94323 1.42539,-6.05022 1.57412,-9.25513l0,0l0.00001,-0.00001zm-21.0432,16.08496l-6.00271,3.90775l-3.69207,-5.67259c-1.92067,0.73877 -3.98849,1.18799 -6.1683,1.18799c-9.52022,0 -17.23546,-7.71828 -17.23546,-17.23701c0,-9.51912 7.71525,-17.23441 17.23546,-17.23441c9.51773,0 17.2358,7.71529 17.2358,17.23441c0,4.75679 -1.92697,9.05688 -5.04179,12.17683l3.66907,5.63703z">
+                    </path>
+                </svg>
+            </div>
+
+            <!-- 绘制圆形水珠 -->
+            <div class="lil-circle"></div>
+            <svg class="blur-circle">
+                <filter id="blur">
+                    <fegaussianblur in="SourceGraphic" stddeviation="13"></fegaussianblur>
+                </filter>
+            </svg>
+        </div>
+        <div class="loading-text">Loading · · ·</div>
+    </div>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-scrolled justify-content-between">
+        <a class="navbar-brand" href="#">
+            <img src="../asserts/img/logo-light.svg" alt="Logo" class="logo dark-logo">
+            <img src="../asserts/img/logo-dark.svg" alt="Logo" class="logo light-logo ">
+        </a>
+
+        <!-- 汉堡按钮 -->
+        <button class="navbar-toggler p-0 border-0" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <?xml version="1.0" standalone="no"?>
+            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg
+                t="1695294825594" class="icon menu-icon" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="4266" xmlns:xlink="http://www.w3.org/1999/xlink" width="200"
+                height="200">
+                <path
+                    d="M815 192.7H207.3c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16H815c8.8 0 16-7.2 16-16v-32c0-8.9-7.1-16-16-16zM815 480.8H463.8c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16H815c8.8 0 16-7.2 16-16v-32c0-8.9-7.1-16-16-16zM815 767.9H207.3c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16H815c8.8 0 16-7.2 16-16v-32c0-8.8-7.1-16-16-16zM303.8 618.1c14.4 12.2 36.5 2 36.5-16.9V421.1c0-18.9-22.2-29.1-36.5-16.8l-101.1 86.4c-11.5 11.5-11.5 30.2 0.1 41.7l101 85.7z"
+                    p-id="4267"></path>
+            </svg>
+        </button>
+
+
+
+        <div class="collapse navbar-collapse justify-content-center nav-right" id="navbarNav">
+            <ul class="navbar-nav d-flex align-items-center">
+                <li class="nav-item dropdown ">
+                    <a class="nav-link en" href="../home.html" i18n="home">Home</a>
+                    <a class="nav-link d-none cn" href="../home.html" i18n="home">主页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link en" href="#">Project</a>
+                    <a class="nav-link d-none cn" href="#">项目</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item en" href="./description.html">Desciption</a>
+                        <a class="dropdown-item d-none cn" href="./description.html">描述</a>
+                        <a class="dropdown-item en" href="./design.html">Design</a>
+                        <a class="dropdown-item d-none cn" href="./design.html">设计</a>
+                        <a class="dropdown-item en" href="./model.html">Model</a>
+                        <a class="dropdown-item d-none cn" href="./model.html">模型</a>
+                        <!-- <a class="dropdown-item en" href="./hardware.html">Hardware</a> -->
+                        <!-- <a class="dropdown-item d-none cn" href="./hardware.html">硬件</a> -->
+                        <!-- <a class="dropdown-item en" href="./results.html" >Results</a> -->
+                        <!-- <a class="dropdown-item d-none cn" href="./results.html" >结果</a> -->
+                        <a class="dropdown-item en" href="./reports.html">Reports</a>
+                        <a class="dropdown-item d-none cn" href="./reports.html" ">报告</a>
+                    </div>
+                </li>
+                <li class=" nav-item dropdown">
+                            <a class="nav-link en" href="#">Wet lab</a>
+                            <a class="nav-link cn d-none" href="#">湿实验室</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item en" href="./protocols.html" i18n="protocos">Protocols</a>
+                                <a class="dropdown-item cn d-none" href="./protocols.html" i18n="protocos">实验方案</a>
+                                <a class="dropdown-item en" href="./notebook.html" i18n="notebooks">Notebooks</a>
+                                <a class="dropdown-item cn d-none" href="./notebook.html" i18n="notebooks">实验记录</a>
+                            </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link en" href="./team.html" i18n="team">Team</a>
+                    <a class="nav-link cn d-none" href="./team.html" i18n="team">团队</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <!-- 月亮图标 -->
+                    <i class="theme-toggle">
+                        <?xml version="1.0" standalone="no"?>
+                        <!DOCTYPE svg
+                            PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg
+                            t="1695295953556" class="moon" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="11622" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="200" height="200">
+                            <path
+                                d="M529.611373 1023.38565c-146.112965 0-270.826063-51.707812-374.344078-155.225827C51.74928 764.641808 0.041469 639.826318 0.041469 493.815745c0-105.053891 29.693595-202.326012 88.978393-292.22593 59.38719-89.797526 137.000103-155.942569 232.83874-198.63991 6.041111-4.607627 12.184613-3.788493 18.225724 2.252618 7.576986 4.607627 9.931996 11.365479 6.860244 20.580733C322.677735 83.736961 310.493122 142.202626 310.493122 201.589815c0 135.464227 48.328885 251.474031 144.986656 348.131801 96.657771 96.657771 212.667574 144.986656 348.131801 144.986656 74.541162 0 139.252721-11.365479 194.032283-34.19883C1003.684974 655.799424 1009.726084 656.618558 1015.767195 662.659669c7.576986 4.607627 9.931996 11.365479 6.860244 20.580733C983.104241 786.758417 918.802249 869.286132 829.721465 930.925939 740.743072 992.565746 640.706375 1023.38565 529.611373 1023.38565zM296.772633 55.47685c-79.148789 44.130825-142.324472 105.770633-189.424657 184.919422C60.1454 319.545061 36.595308 404.018219 36.595308 493.815745c0 135.464227 48.328885 251.474031 144.986656 348.131801 96.657771 96.657771 212.667574 144.986656 348.131801 144.986656 97.374513 0 185.636163-25.085968 264.784952-75.360296C873.545115 861.299579 932.829913 793.618661 972.455503 708.32637 925.252927 723.582734 868.937488 731.15972 803.509188 731.15972c-146.112965 0-270.826063-51.707812-374.344078-155.225827C325.647095 472.415878 273.939283 347.70278 273.939283 201.589815 273.939283 158.994865 281.516269 110.256413 296.772633 55.47685z"
+                                p-id="11623"></path>
+                        </svg>
+                    </i>
+                    <!-- 太阳图标 -->
+                    <i class="theme-toggle dropdown">
+                        <svg t="1695295862627" class="sun" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="9560" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="200" height="200">
+                            <path
+                                d="M512 950.857143c241.371429 0 438.857143-197.485714 438.857143-438.857143s-197.485714-438.857143-438.857143-438.857143-438.857143 197.485714-438.857143 438.857143 197.485714 438.857143 438.857143 438.857143z m0 73.142857c-285.257143 0-512-226.742857-512-512s226.742857-512 512-512 512 226.742857 512 512-226.742857 512-512 512z"
+                                fill="#333333" p-id="9561"></path>
+                        </svg>
+                    </i>
+                </li>
+                <!-- 语言图标 -->
+                <li class="nav-item dropdown">
+                    <i class="lang-toggle">
+                        <svg t="1691029428947" class="translate-icon" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="10939"
+                            data-spm-anchor-id="a313x.search_index.0.i13.76c63a81JzoK4S"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                            <path
+                                d="M358.912 223.914667h84.309333c17.442133 0 31.3344 14.336 31.3344 31.812266v76.1856a31.4368 31.4368 0 0 1-31.368533 31.3344h-84.2752v95.914667a18.944 18.944 0 0 1-18.807467 18.773333 18.944 18.944 0 0 1-18.8416-18.773333v-95.914667H236.987733a31.8464 31.8464 0 0 1-31.368533-31.778133V255.2832c0-16.9984 13.892267-31.3344 31.402667-31.3344h84.241066v-33.1776c0-10.308267 8.533333-18.773333 18.8416-18.773333 10.308267 0 18.807467 8.465067 18.807467 18.773333v33.1776zM243.268267 325.632h77.994666V262.007467H243.268267V325.632z m115.643733 0h78.0288V262.007467h-78.0288V325.632z m304.810667 396.936533l34.952533-88.2688 34.065067 88.2688h-69.0176z"
+                                fill="#10656B" p-id="10940" data-spm-anchor-id="a313x.search_index.0.i10.76c63a81JzoK4S"
+                                class=""></path>
+                            <path
+                                d="M408.234667 615.936H133.461333a69.188267 69.188267 0 0 1-69.461333-69.4272V133.4272c0-38.5024 30.9248-69.4272 69.461333-69.4272h413.2864c38.536533 0 69.4272 30.9248 69.4272 69.4272v275.114667h265.386667a78.506667 78.506667 0 0 1 78.4384 78.370133v394.683733a78.506667 78.506667 0 0 1-78.4384 78.404267H486.673067a78.506667 78.506667 0 0 1-78.4384-78.404267v-265.659733z m39.253333-39.185067l129.501867-129.501866V133.461333a30.071467 30.071467 0 0 0-30.242134-30.242133H133.461333a30.037333 30.037333 0 0 0-30.242133 30.242133v413.0816c0 16.861867 13.346133 30.242133 30.242133 30.242134h314.026667z m354.304 221.525334L716.117333 575.146667a18.978133 18.978133 0 0 0-17.476266-12.117334 18.909867 18.909867 0 0 0-17.476267 12.117334l-88.302933 223.095466a18.807467 18.807467 0 0 0 10.752 24.644267 18.807467 18.807467 0 0 0 24.644266-10.752l20.1728-51.541333h98.2016l19.694934 51.541333a18.7392 18.7392 0 0 0 24.644266 10.752 18.773333 18.773333 0 0 0 10.752-24.644267zM716.117333 176.913067a19.114667 19.114667 0 0 1-17.476266-20.616534 19.285333 19.285333 0 0 1 20.1728-17.476266c57.344 4.471467 167.185067 46.148267 170.325333 171.588266a18.602667 18.602667 0 1 1-37.205333 0.887467c-3.584-121.856-130.423467-133.9392-135.816534-134.382933z"
+                                fill="#10656B" p-id="10941"></path>
+                            <path
+                                d="M318.122667 830.976a19.0464 19.0464 0 0 1 6.485333 34.338133 18.602667 18.602667 0 0 1-13.653333 2.833067c-140.458667-27.136-162.474667-160.699733-164.317867-172.1344l-0.170667-0.785067a19.0464 19.0464 0 0 1 16.622934-21.060266 19.012267 19.012267 0 0 1 21.026133 16.5888l0.1024 0.682666c1.706667 10.5472 18.944 116.906667 133.9392 139.537067z"
+                                fill="#10656B" p-id="10942"></path>
+                        </svg>
+                    </i> <!-- 语言图标 -->
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- 侧边栏 -->
+    <!-- <img src="../asserts/img/sidebar.png" alt="sidebar" class="sidenav-top-img"> -->
+    <div class="sidenav sidenav-bg toptransparent">
+        <svg id="mySVG" class="mySVG-sidebar">
+            <circle fill="none" cx="120" cy="115" r="67" stroke="#F29700" stroke-width="5" id="triangle"
+                transform="rotate(270 120 115)"></circle>
+            <circle fill="#363636" cx="120" cy="115" r="63" stroke="#363636" stroke-width="5" / class="circle-SVG">
+                Sorry, your browser does not support inline SVG.
+        </svg>
+
+        <a class="navbar-brand justify-content-center" href="../home.html">
+            <img src="../asserts/img/sidenav-logo.svg" alt="logo" class="sidenav-logo logo justify-content-center">
+        </a>
+        <div>
+            <h2 class="justify-content-center" style="color:#F29700; display:flex;margin-top:150px;">
+                protocols
+            </h2>
+            <a href="#01" class=" ">Chemical competent Vibrio natriegens preparation</a>
+            <a href="#02" class=" ">Chemical competent Vibrio natriegens tansformation</a>
+            <a href="#03" class=" ">Chemical conpetent DH5α preparation</a>
+            <a href="#04" class=" ">Chemical competent DH5α transformation</a>
+            <a href="#05" class=" ">Electrocompetent Vibrio natriegens preparation</a>
+            <a href="#06" class=" ">Electroporation </a>
+            <a href="#07" class=" ">Colony PCR</a>
+            <a href="#08" class=" ">Pilin expression </a>
+            <a href="#09" class=" ">SpdCas9 expression</a>
+            <a href="#10" class=" ">Pilus harvest</a>
+            <a href="#11" class=" ">SDS-PAGE analysis</a>
+            <a href="#12" class=" ">Western blot analysis of pilin</a>
+            <a href="#13" class=" ">Gibson assembly</a>
+            <a href="#14" class=" ">Gel DNA extraction</a>
+            <a href="#15" class=" ">Supplement note</a>
+            <a href="#overview" class="">Back to top ⬆ </a>
+        </div>
+    </div>
+    <!-- 主要内容 -->
+    <article class="main" id="protocols">
+        <div id="overview" class="section-header">
+            <img src="../asserts/img/myoverview.png" alt="overview_bg" class="img-fluid " style="width:100vw;"></img>
+            <h1 class="leader img-fluid">protocols</h1>
+        </div>
+        <div class="section header" style="padding-top: 4rem;">
+            <div id="" class="" style="min-height: 20vh; margin-bottom: 0px;">
+                <div class="overview-bg">
+                    <div class="overview-logo">
+                        <img id="overview" src="../asserts/img/overview.png" class="overview-img">
+                    </div>
+                    <p>On this page ,we list detailed descriptions about all experiments we carried out during our
+                        project and some supplement information.We hope that these protocols and information could be of
+                        some help to other teams.</p>
+                </div>
+            </div>
+            <!-- Header Section Content -->
+        </div>
+        <div class="container">
+            <div class="module" id="01" style="padding-top: 2rem;"></div>
+            <div class="accordion-container">
+                <button class="accordion">
+                    Chemical competent <em>Vibrio natriegens</em> preparation
+                </button>
+                <div class="panel">
+                    <p>
+                        1. 150 mL of BHI + v2 salts(supplement 1) is inoculated directly from
+                        a glycerol stock of <em>V. natriegens</em> and incubated at 37 °C with
+                        agitation at 200 r.p.m. to an OD600 of 0.4 (~2 h).
+                    </p>
+                    <p>
+                        (All subsequent steps are performed quickly at room temperature. )
+                    </p>
+
+                    <p>
+                        2. The culture is split into three 50-mL conical tubes, and
+                        centrifugated at 3,000 × g for 5 min.
+                    </p>
+                    <p>
+                        3. Remove the supernatant carefully and gently suspend the
+                        precipitation with 5 mL 100 mM MgCl2.
+                    </p>
+                    <p>
+                        4. Consolidate the cells into two 50-mL conical tubes, and the volume
+                        in each tube is brought up to 30 mL with 100 mM MgCl2 and mixed by
+                        gentle inversion.
+                    </p>
+                    <p>5. Centrifugation at 3,000 × g for 4 min.</p>
+                    <p>
+                        6. Suspend the precipitation in 5 mL 100 mM CaCl2, consolidate them
+                        into one tube, and then brought the volume up to 30 ml with additional
+                        100 mM CaCl2.
+                    </p>
+                    <p>
+                        7. Mix the tube gently by inversion and then incubate it at room
+                        temperature for 20 min.
+                    </p>
+                    <p>8. Centrifugation at 3,000 × g for 4 min.</p>
+                    <p>
+                        9. Remove the supernatant, and the cells are resuspended in ~1.5 mL .
+                        The cells are then aliquoted into chilled tubes, frozen in a dry ice
+                        bath, and stored at −80 °C until use.
+                    </p>
+                </div>
+            </div>
+            <div class="module" id="02" style="padding-top: 2rem"></div>
+
+            <div class="accordion-container">
+                <button class="accordion">Chemical competent <em>Vibrio natriegens</em> tansformation</button>
+                <div class="panel">
+                    <p>1. Take a vial of competent cells and thaw it on ice. </p>
+                    <p>2. Add the plasmid into 50 μL of competent cells and gently mix them, then incubate on ice for
+                        20–30 min.</p>
+                    <p>(During incubation, 1 mL BHI + v2 salts without antibiotics is warmed to 37 °C in a water bath.)
+                    </p>
+                    <p>3. The cells and DNA are incubated at 42 °C for 45 s in a water bath and returned to ice for 2
+                        min.</p>
+                    <p>4. 37 °C-warmed medium is used to transfer the cells out of the microcentrifuge tube and into the
+                        culture tube. </p>
+                    <p>5. Once transferred, the culture tube is maintained in a 37 °C water bath for 1 min and then
+                        allowed to recover by being incubated at 37 °C for 2 h with an agitation of 200 rpm. Cell
+                        dilutions are plated on warmed selective plates and incubated overnight at 37 °C.</p>
+                </div>
+            </div>
+            <div class="module" id="03" style="padding-top: 2rem"></div>
+
+            <div class="accordion-container">
+                <button class="accordion">Chemical conpetent DH5α preparation</button>
+                <div class="panel">
+                    <p>1. Inoculate DH5α strain in LB liquid medium overnight;</p>
+                    <p>2. Expanded inoculation in 3mL LB liquid medium at a ratio of 1:100 until OD600 ≈ 0.5 (about 2
+                        hours);</p>
+                    <p>3. Ice bath for 20 min;</p>
+                    <p>4. Take 1mL of bacterial solution, centrifuge at 5000 rpm, 4℃ for 5min, repeat 3 times;</p>
+                    <p>5. Discard the supernatant, carefully resuspend the bacterial precipitate with 1mL of 1M CaCl2
+                        and incubate on ice for 30 min;</p>
+                    <p>6. Centrifuge at 5000 rpm, centrifuge at 4℃ for 5min;</p>
+                    <p>7. Discard the supernatant, carefully resuspend the bacterial precipitate with 200 μL 1M CaCl2,
+                        equally divided into 2 centrifuge tubes, which can be stored at -80℃ by adding 50% glycerol at
+                        1:1.</p>
+                </div>
+            </div>
+            <div class="module" id="04" style="padding-top: 2rem"></div>
+
+            <div class="accordion-container">
+                <button class="accordion">Chemical competent DH5α transformation</button>
+                <div class="panel">
+                    <p>
+                        1. Take 100μl of the competent cell from -80℃ then thaw it on ice.
+                    </p>
+                    <p>
+                        2. Add plasmid DNA solution (5μL about 600ng), mix gently and leave on
+                        ice for 30 minutes.
+                    </p>
+                    <p>
+                        3. Heat shock at 42℃ water bath for 90 seconds. After heat shock,
+                        quickly put on ice to cool for 2 minutes.
+                    </p>
+                    <p>
+                        4. Add 1ml of LB liquid medium (without antibiotics) into the tube,
+                        mix and incubate at 37℃ for 1 hour to recover.
+                    </p>
+                    <p>
+                        5. Cell dilutions are plated on warmed selective plates and incubated
+                        overnight at 37 °C for the colonies to appear.
+                    </p>
+                </div>
+            </div>
+            <div class="module" id="05" style="padding-top: 2rem"></div>
+
+            <div class="accordion-container">
+                <button class="accordion">
+                    Electrocompetent <em>Vibrio natriegens</em> preparation
+                </button>
+                <div class="panel">
+                    <p>
+                        1. 100μL of seed solution was inoculated in 50mL LB+v2(supplement 1)
+                        liquid medium and incubated at 37℃, 250RPM until OD600=0.4-0.6.
+                    </p>
+                    <p>
+                        2. The bacterial solution was transferred to a pre-cooled 50mL
+                        centrifuge tube and ice-bathed for 5 mins.
+                    </p>
+                    <p>
+                        3. Centrifuge at 4℃, 2000RCF for 5 mins, and discard the supernatant.
+                    </p>
+                    <p>
+                        4. The bacterial precipitate was gently resuspended in 1mL pre-cooled
+                        1M sorbitol buffer.
+                    </p>
+                    <p>
+                        5. Centrifuge at 5000 RCF for 5 mins at 4℃ and discard the
+                        supernatant.
+                    </p>
+                    <p>
+                        6. The bacterial precipitate was gently resuspended in 1mL pre-cooled
+                        1M sorbitol buffer.
+                    </p>
+                    <p>
+                        7. Centrifuge at 5000 RCF for 5 mins at 4℃, and discard the
+                        supernatant.
+                    </p>
+                    <p>
+                        8. The bacterial precipitate was gently resuspended in 250 μL
+                        pre-cooled 1 M sorbitol buffer.
+                    </p>
+                    <p>
+                        9. Dispense 50μL into each tube and store the tubes at -80℃ until use.
+                    </p>
+                </div>
+            </div>
+            <div class="module" id="06" style="padding-top: 2rem"></div>
+
+            <div class="accordion-container">
+                <button class="accordion">Electroporation</button>
+                <div class="panel">
+                    <p>
+                        1. A vial of electrocompetent cell (50 μL) is retrieved from storage at
+                        -80 °C and thawwd on ice.
+                    </p>
+                    <p>
+                        2. About 100ng plasmid is added into the cell and the 1.5 mL centrifuge
+                        tube is incubated on ice for 3 mins.
+                    </p>
+                    <p>
+                        3. The mix is gently transferred into chilled electroporation cuvette
+                        with a 0.1-cm gap size and allowed to stand for three minutes.
+                    </p>
+                    <p>
+                        4. Cells are electroporated at a voltage of 790v and a constant time of
+                        4ms (Bio-Rad,MicroPulserTM).
+                    </p>
+                    <p>
+                        5. The cells are immediately transferred into 1 mL chilled LB+v2 salts
+                        medium and cultured at 37℃ with agitation at 250 r.p.m for 1 h.
+                    </p>
+                    <p>
+                        6. 50 μL of the recovery culture is plated out on a warm agar plate with
+                        appropriate antibiotic.
+                    </p>
+                    <p>7. The plate is incubated at 37℃ overnight for the colonies to grow.</p>
+                </div>
+            </div>
+            <div class="module" id="07" style="padding-top: 2rem"></div>
+
+            <div class="accordion-container">
+                <button class="accordion">Colony PCR</button>
+                <div class="panel">
+                    <p>1. Preparation of culture medium：</p>
+                    <p>
+                        Add 2 mL LB+v2 salts medium with appropriate antibiotic (supplemet
+                        note 2) into several 15 mL centrifuge tubes (according to the number
+                        of colonies) and prewarm the medium at room temperature.
+                    </p>
+                    <p>2. Preparation of PCR mix: for 50 μL PCR</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Component</th>
+                                    <th>Volume</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2×Taq Master Mix（dye plus）</td>
+                                    <td>25 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>20 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>Forward primer(10 μM)</td>
+                                    <td>2 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>Reversed primer(10 μM)</td>
+                                    <td>2 μL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <p>
+                        3. A small colony is suspended in the PCR mix, and the pipette tip is
+                        tipped into the medium with appropriate antibiotic.
+                    </p>
+                    <p>
+                        4. Culture medium with the pipette tip is cultured at 37 ℃ with an
+                        agitation of 210 r.p.m.
+                    </p>
+                    <p>5. Set up the PCR program:</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Step</th>
+                                    <th>Temp(℃)</th>
+                                    <th>Time</th>
+                                    <th>Cycles</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Initial denaturation</td>
+                                    <td>95</td>
+                                    <td>3 min</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>denaturation</td>
+                                    <td>95</td>
+                                    <td>15 sec</td>
+                                    <td>20-35</td>
+                                </tr>
+                                <tr>
+                                    <td>annealing</td>
+                                    <td>Tm-2 ℃</td>
+                                    <td>15 sec</td>
+                                    <td>20-35</td>
+                                </tr>
+                                <tr>
+                                    <td>extension</td>
+                                    <td>72</td>
+                                    <td>60 sec/kb <sub>a</sub></td>
+                                    <td>20-35</td>
+                                </tr>
+                                <tr>
+                                    <td>Final extension</td>
+                                    <td>72</td>
+                                    <td>5 min</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>cooling</td>
+                                    <td>4</td>
+                                    <td>20 min</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <p>
+                        a: For 2× Phanta Flash Master Mix(Dye Plus), the extending speed is 5
+                        sec/kb.
+                    </p>
+                    <p>
+                        6. Choose appropriate culture according to the PCR result to conduct
+                        the following experiments.
+                    </p>
+                </div>
+            </div>
+            <div class="module" id="08" style="padding-top: 2rem"></div>
+
+            <div class="accordion-container">
+                <button class="accordion">Pilin expression</button>
+                <div class="panel">
+                    <p>
+                        1. 2 mL LB+v2 salts with an Ampicilin concentration of 100 μg/mL is
+                        inoculated with V.natriegens containing appropriate plasmid and
+                        cultured at 37℃ with an agitation of 210 r.p.m overnight.
+                    </p>
+                    <p>
+                        2. 60 mL of LB+v2 salts with 100 μg/mL of Ampicilin is inoculated with
+                        the overnight culture at a dilution of 1:100, and cultured at 37℃ with
+                        an agitation of 210 r.p.m for about 1.5 h till its OD600 reached 0.5.
+                    </p>
+                    <p>
+                        3. Arabinose storage solution (1 M) is added to the culture at a
+                        dilution of 1:50 to induce the expression of pilin.
+                    </p>
+                    <p>
+                        4. The culture is continuously incubated at 37 ℃ with an agitation of
+                        210 r.p.m overnight to prepare for the harvest.
+                    </p>
+                </div>
+            </div>
+            <div class="module" id="09" style="padding-top: 2rem"></div>
+            <div class="accordion-container">
+                <button class="accordion">SpdCas9 expression</button>
+                <div class="panel">
+                    <p>1. 2mL LB+v2 salts with 100μg/mL kanamycin is inoculated with V.natriegens containing appropriate
+                        plasmids and cultured at 37℃ with an agitation of 210 r.p.m overnight.</p>
+                    <p>2. 60 mL LB+v2 salts with 100μg/mL of kanamycin is inoculated with the overnight culture at a
+                        dilution of 1:100, and cultured at 37℃ with an agitation of 210 r.p.m for about 1.5 h till its
+                        OD600 reached 0.5.</p>
+                    <p>3. IPTG storage solution (50 mg/ml) is added to the culture at a dilution of 1:100 to induce the
+                        expression of SpdCas9.</p>
+                    <p>4. The culture is continuously incubated at 37℃ with an agitation of 210 r.p.m for 5h to prepare
+                        for the harvest.</p>
+                </div>
+            </div>
+            <div class="module" id="10" style="padding-top: 2rem"></div>
+
+            <div class="accordion-container">
+                <button class="accordion">Pilus harvest</button>
+                <div class="panel">
+                    <p>
+                        1. 60 mL of overnight culture is centrifuged at 4000×g for 15 min at 4
+                        °C.
+                    </p>
+                    <p>
+                        2. The cells are resuspended in 30 mL 150 mM ethanolamine buffer (pH
+                        10.5).
+                    </p>
+                    <p>3. The suspension is transferred into a warring blender.</p>
+                    <p>
+                        4. Wash the centrifuge tube with 20 mL 50 mM ethanolamine buffer(
+                        which is also added to the blender) three times.
+                    </p>
+                    <p>
+                        5. The 90 mL suspension was blended for 2 min at a low speed to shear
+                        pilus from the cells.
+                    </p>
+                    <p>
+                        6. The contents of the blender are transferred to a centrifuge bottle
+                        along with a wash of the blender with 10mL of ethanolamine buffer.
+                    </p>
+                    <p>
+                        7. The blended material is centrifuged at 5000×g for 30 min at 4 °C to
+                        remove the cells.
+                    </p>
+                    <p>
+                        8. The supernatant is collected and Triton X-100 detergent is added to
+                        a final concentration of 6 mM to solubilize any remaining cellular
+                        debris.
+                    </p>
+                    <p>
+                        9. The tube is shaken at 100 r.p.m at room temperature for 45 min.
+                    </p>
+                    <p>
+                        10. Contents in the tube are added to a stirring filtration unit that
+                        has a membrane filter with a 100 kDa- molecular-weight cutoff .
+                    </p>
+                    <p>
+                        11. Additional ethanolamine buffer is added to the mixture to yield a
+                        final 2 mM concentration of Triton X-100.
+                    </p>
+                    <p>12. The mixture is filtered in nitrogen gas (1.5MPa)</p>
+                    <p>
+                        13. The pilins are collected from the filter membrane by scraping the
+                        surface into 1mL water.
+                    </p>
+                </div>
+            </div>
+            <div class="module" id="11" style="padding-top: 2rem"></div>
+
+            <div class="accordion-container">
+                <button class="accordion">SDS-PAGE analysis</button>
+                <div class="panel">
+                    <p>1. Sample preparation</p>
+                    <p>a. Soluable bacterial native proteins:</p>
+                    <p>extracted by Bacterial Active Protein Extraction Reagent.</p>
+                    <p>b. Cell bodies:</p>
+                    <p>
+                        1 mL of bacteria culture is transferred into a 1.5mL centrifuge tube
+                        and cells are pelleted at 10000 r.p.m for 1 mins.The cell pellets then
+                        are collected and resuspended with 80 μL ddH2O.
+                    </p>
+                    <p>c. Purified pilus solution:</p>
+                    <p>Pilus solution is prepared as described above.</p>
+                    <p>
+                        2. protein loading buffer is added to the sample according to the
+                        volume.a
+                    </p>
+                    <p>
+                        3. Mix the contents by vortexing and contrifuge the tube to get the
+                        contents at the bottom.
+                    </p>
+                    <p>
+                        4. Heat the samples at 100 ℃ for 5 mins in metal bath to denature the
+                        proteins.
+                    </p>
+                    <p>5. Gel preparation:</p>
+                    <p>
+                        Tris-Gly SDS-PAGE gels are prepared for SpdCas9 analysis. Tris-tricine
+                        SDS-PAGE gels are prepared for pilin monomer analysis.
+                    </p>
+                    <p>
+                        6. Load 10 µL of the prepared loading samples to the gel, and load 5 μL
+                        of prestained protein marker to the gel.
+                    </p>
+                    <p>
+                        7. Run the gel at 80 v for about 30 mins until the samples reach the
+                        boundary between stacking gel and separating gel.
+                    </p>
+                    <p>
+                        8. Run the gel at 150 v for about 60 mins until the Bromophenol blue
+                        reaches the bottom of the gel.
+                    </p>
+                    <p>9. Take the gel out of the casting frame and put it in a tray.</p>
+                    <p>
+                        10. Add about 30 mL of ddH<sub>2</sub>O (accoring to the volume of the
+                        tray. Make sure that the gel is completely submerged in ddH2O) and
+                        heat in microwave till the water boils.
+                    </p>
+                    <p>11. Put the tray on a shaker to incubate the gel for about 5 min.</p>
+                    <p>
+                        12. Discard the water and add about 20mL of Coomassie brilliant blue R-250
+                        solution into the tray, then put the tray on a shaker to incubate the
+                        gel for about 10 min.
+                    </p>
+                    <p>
+                        13. Discard the Coomassie brilliant blue R-250 solution and add 20 mL of
+                        ddH2O. Put the tray on a shaker to incubate for about 10 min.
+                    </p>
+                    <p>
+                        14. Discard ddH<sub>2</sub>O and add 20 mL of destaining
+                        solution(supplement note 2) to wash the gel on a shaker 3 times(10
+                        mins each time).
+                    </p>
+                </div>
+            </div>
+            <div class="module" id="12" style="padding-top: 2rem"></div>
+
+            <div class="accordion-container">
+                <button class="accordion">Western blot analysis of pilin</button>
+                <div class="panel">
+                    <h3 id="sds-page">SDS-PAGE</h3>
+                    <p>
+                        1. SDS-PAGE protocols are the same as previously described in steps 1-9
+                        of SDS-PAGE analysis.
+                    </p>
+
+                    <h3 id="wet-transfer">wet transfer</h3>
+                    <p>
+                        1. Cut the upper right corner of the gel and PVDF membrane (0.22 μm) to
+                        mark their direction.
+                    </p>
+                    <p>2. Activate the PVDF membrane in methyl alcohol for 20 sec.</p>
+                    <p>
+                        3. Make the “sandwich” as follows: cathode-sponge-filter paper-gel-filter
+                        paper-sponge-canode. Keep the “sandwich” hydrated while making it to
+                        avoid the formation of bubbles between the layers.
+                    </p>
+                    <p>
+                        4. Assemble the device and transfer the proteins at 200mA for 50 mins
+                    </p>
+                    <p>
+                        5. Carefully put the membrane in a clean tray (make sure that the side
+                        containing proteins is upward) and stain the PVDF membrane in ponceau
+                        S staining solution for 10 mins, then wash the membrane with TBST
+                        several times until the protein bands appears.
+                    </p>
+
+                    <h3 id="blocking-and-antibody-incubation">
+                        Blocking and antibody incubation
+                    </h3>
+                    <p>
+                        1. Add 30 mL 5% skim milk solution to the tray and incubate the membrane
+                        on a shaker at room temperature for 1 h.
+                    </p>
+                    <p>
+                        2. Discard the skim milk solution and wash the membrane with TBST three
+                        times, for 5 mins each time.
+                    </p>
+                    <p>
+                        3. Discard TBST and add 10 mL primary antibody solution(diluted with TBST
+                        at 1:5000) to the tray, then incubate the membrane at 4 ℃ overnight.
+                    </p>
+                    <p>4. Recycle the primary antibody solution and store it at 4 ℃.</p>
+                    <p>5. Wash the membrane with TBST three times, for 5 mins each time.</p>
+                    <p>6.
+                        Discard TBST and add 10 mL secondary antibody solution(diluted with
+                        TBST at 1:10000) to the tray, then incubate the membrane at room
+                        temperature for 1.5 h.
+                    </p>
+                    <p>7. Wash the membrane with TBST three times, for 5 mins each time.</p>
+
+                    <h3 id="image-development-chemiluminescence">
+                        Image development (Chemiluminescence)
+                    </h3>
+                    <p>
+                        1. Mix equal volume of Luminol solution and eroxide solution to a total
+                        volume of 1 mL.
+                    </p>
+                    <p>
+                        2. Discard TBST in the tray and add the mixture to the surface of the
+                        membrane.
+                    </p>
+                    <p>
+                        3. Put the membrane into ChemiDoc MP system（Bio-rad）and develop the
+                        image according to instructions from the manufacturer.
+                    </p>
+                </div>
+            </div>
+            <div class="module" id="13" style="padding-top: 2rem"></div>
+
+            <div class="accordion-container">
+                <button class="accordion">Gibson assembly</button>
+                <div class="panel">
+                    <h3 id="sds-page">Linearized plasmid self-association assembly</h3>
+                    <p>
+                        1. DNA fragment of the linearized plasmids is obtained by high-fidelity
+                        PCR reaction (reverse PCR) with the addition of homology arms.
+                    </p>
+                    <p>
+                        2. Prepare the following reaction system on ice (Using ClonExpress Ultra
+                        One Step Cloning Kit V2):
+                    </p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Component</th>
+                                    <th>Volume</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Linearized vector fragment</td>
+                                    <td>2x 1 μL (~2x100 ng)</td>
+                                </tr>
+                                <tr>
+                                    <td>2×CE Mix</td>
+                                    <td>5 μL</td>
+                                </tr>
+                                <tr>
+                                    <td>dd H2O</td>
+                                    <td>3 μL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <p>
+                        3. Mix by gentle suction and beating with a pipette (do not shake to mix)
+                        and briefly centrifuge to collect the reaction solution at the bottom
+                        of the tube.
+                    </p>
+                    <p>
+                        4. Incubate at 50°C for 5 mins; cool to 4°C or immediately put the tube
+                        on ice.
+                    </p>
+                    <p>5. Thaw the cloned chemoreceptor cells on ice.</p>
+                    <p>
+                        6. Add 5 -10 μL recombinant product to 100 μL competent cells, flick the
+                        wall of the tube to mix (do not oscillate to mix), and leave it on ice
+                        for 30 mins.
+                    </p>
+                    <p>
+                        7. After heat shock in 42℃ water bath for 30 sec, immediately put the
+                        tube on ice to cool for 2 - 3 min.
+                    </p>
+                    <p>
+                        8. Add 900 μl of LB liquid medium (without antibiotics) and shake the
+                        bacteria at 37°C for 1 h (200 - 250 rpm).
+                    </p>
+                    <p>
+                        9. Ampicillin-resistant LB solid medium plates were pre-warmed in a 37°C
+                        incubator.
+                    </p>
+                    <p>
+                        10. The plates were centrifuged at 5,000 rpm (2,500 × g) for 5 min and 900
+                        μl of the supernatant was discarded. Bacteria were resuspended with
+                        the remaining medium and gently spread with a sterile applicator stick
+                        on plates containing ampicillin resistance.
+                    </p>
+                    <p>
+                        11. The plates were inverted and incubated at 37°C for 12 - 16 h in an
+                        incubator.
+                    </p>
+                    <h3>BCA test</h3>
+                    <p>
+                        Concentration of pilA protein monomer was measured by 96-well ELISA
+                        plate method using BCA Protein Quantification Kit.
+                    </p>
+                    <p>
+                        1. BCA working solution preparation: according to the number of samples,
+                        add 50 volumes of BCA Reagent A plus 1 volume of BCA Reagent B (50:1)
+                        to prepare the appropriate amount of BCA working solution. Mix them
+                        thoroughly.
+                    </p>
+                    <p>
+                        2. Standard curve: Take a piece of ELISA plate and add reagents according
+                        to the data in the table below:
+                    </p>
+
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>0</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Protein standard solution (μL)</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>4</td>
+                                    <td>8</td>
+                                    <td>12</td>
+                                    <td>16</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O (μL)</td>
+                                    <td>20</td>
+                                    <td>19</td>
+                                    <td>18</td>
+                                    <td>16</td>
+                                    <td>12</td>
+                                    <td>8</td>
+                                    <td>4</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>BCA working solution(μL)</td>
+                                    <td>200</td>
+                                    <td>200</td>
+                                    <td>200</td>
+                                    <td>200</td>
+                                    <td>200</td>
+                                    <td>200</td>
+                                    <td>200</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <td>Corresponding protein content (μg)</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>4</td>
+                                    <td>8</td>
+                                    <td>12</td>
+                                    <td>16</td>
+                                    <td>20</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <p>
+                        3. Sample preparation: Dilute the protein sample to be measured with
+                        ddH2O to the appropriate concentration, take 20 μl of the sample and
+                        add 200 μl of BCA working solution.
+                    </p>
+                    <p>
+                        4. After shaking and mixing, place the sample at 37℃ for 20 - 30 min.
+                    </p>
+                    <p>
+                        5. Determine the absorbance value at A562 nm with an ELISA plate, and use
+                        the absorbance value without BSA as a blank control.
+                    </p>
+                    <p>
+                        6. Plot the standard curve with protein content(μg) as the horizontal
+                        coordinate and absorbance value as the vertical coordinate.
+                    </p>
+                    <p>
+                        7. According to the measured absorbance value, the protein content of the
+                        sample can be calculated based on the standard curve.
+                    </p>
+                    <p>
+                        8. Calculate the protein concentration: Divide the protein content by the
+                        sample volume of 20 μl and multiply by the corresponding dilution
+                        factor to obtain the actual concentration of the sample to be tested.
+                    </p>
+                    <h3>Glycerol stock</h3>
+                    <p>
+                        1. Prepare an overnight culture of the strain to be stored with
+                        appropriate liquid medium(OD600=1~1.5).
+                    </p>
+                    <p>2. Add 500 μL of prepared culture to 500 μL of 50% glycerol.</p>
+                    <p>3. Mix gently and store the tube at -80℃ until use.</p>
+                </div>
+            </div>
+
+            <div class="module" id="14" style="padding-top: 2rem"></div>
+
+            <div class="accordion-container">
+                <button class="accordion">Gel DNA extraction</button>
+                <div class="panel">
+                    <h3 id="gel-recovery-program">Gel Recovery Program</h3>
+
+                    <p>
+                        1. Cut off the gel containing the target DNA fragments. 100 mg of gel
+                        equals 100 μL of volume as a gel volume.
+                    </p>
+                    <p>
+                        2. Add an equal volume of Buffer GDP. 55°C water bath for 10 min. Invert
+                        and mix during the water bath.
+                    </p>
+                    <p>
+                        3. Centrifuge quickly and place the FastPure DNA Mini Columns-G in a
+                        Collection Tubes 2 mL collection tube, transfer ≤700 μL of lysate to
+                        the column, centrifuge at 12,000 rpm (13,800 × g) for 60 sec.
+                    </p>
+                    <p>
+                        4. （If the volume of lysate is &gt;700 μL, return the column to the
+                        Collection Tubes, and repeat step 3）
+                    </p>
+                    <p>
+                        5. Discard the filtrate. Add 300 μL Buffer GDP to the column. Centrifuge
+                        at 12,000 rpm (13,800 × g) for 60 sec.
+                    </p>
+                    <p>
+                        6. Discard the filtrate. Add 700 μL of Buffer GW (with anhydrous ethanol
+                        added) to the column. Centrifuge at 12,000 rpm (13,800 × g) for 60
+                        sec.
+                    </p>
+                    <p>Repeat step 5.</p>
+                    <p>
+                        7. Discard the filtrate. Centrifuge at 12,000 rpm (13,800 × g) for 2 min.
+                    </p>
+                    <p>
+                        8. Place the column in a 1.5 mL sterilized centrifuge tube, add 30 μL
+                        ddH2O to the center of the column, and leave for 2 min. Centrifuge at
+                        12,000 rpm (13,800 × g) for 1 min. Store the DNA at -20 °C.
+                    </p>
+
+                    <h3 id="pcr-solution-recovery-program">PCR Solution Recovery Program</h3>
+
+                    <p>
+                        1. Briefly centrifuge PCR products. Measure the volume and transfer to a
+                        1.5 mL centrifuge tube. If the sample volume is less than 100 μL,
+                        replenish it to 100 μL with H2O.
+                    </p>
+                    <p>
+                        2. Add 5 times the volume of Buffer GDP and mix by inversion or
+                        vortexing.
+                    </p>
+                    <p>
+                        3. Place the column in a collection tube. Transfer ≤700 μL of the solvent
+                        to the column and centrifuge at 12,000 rpm (13,800 × g) for 60 sec.
+                    </p>
+
+                    <p>
+                        (If the volume of lysate is &gt;700 μL, return the column to the
+                        Collection Tubes, and repeat step 3)4.
+                    </p>
+
+                    <p>4. Follow steps 5 - 8 of Gel Recovery Program.</p>
+                </div>
+            </div>
+            <div class="module" id="15" style="padding-top: 2rem"></div>
+
+            <div class="accordion-container">
+                <button class="accordion">Supplement note</button>
+                <div class="panel">
+                    <h3 id="1culture-mediums1000-ml">1. culture mediums(1000 mL)</h3>
+                    <p>LB liquid medium:</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Amount</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Yeast extract</td>
+                                    <td>5g</td>
+                                </tr>
+                                <tr>
+                                    <td>tryptone</td>
+                                    <td>10g</td>
+                                </tr>
+                                <tr>
+                                    <td>NaCl</td>
+                                    <td>10g</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <p>2x YT liquid medium:</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Amount</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Yeast extract</td>
+                                    <td>10g</td>
+                                </tr>
+                                <tr>
+                                    <td>tryptone</td>
+                                    <td>16g</td>
+                                </tr>
+                                <tr>
+                                    <td>NaCl</td>
+                                    <td>5g</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <p>BHI liquid medium:</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Amount</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Brain Heart Infusion Broth (Dehydrated)</td>
+                                    <td>38.5g</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <p>LB solid medium</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Amount</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Yeast extract</td>
+                                    <td>5g</td>
+                                </tr>
+                                <tr>
+                                    <td>tryptone</td>
+                                    <td>10g</td>
+                                </tr>
+                                <tr>
+                                    <td>NaCl</td>
+                                    <td>10g</td>
+                                </tr>
+                                <tr>
+                                    <td>agar</td>
+                                    <td>15g</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <p>LB +v2 salts liquid medium:</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Amount</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Yeast extract</td>
+                                    <td>5g</td>
+                                </tr>
+                                <tr>
+                                    <td>tryptone</td>
+                                    <td>10g</td>
+                                </tr>
+                                <tr>
+                                    <td>NaCl</td>
+                                    <td>129.34g (10g + 204mM×1L)</td>
+                                </tr>
+                                <tr>
+                                    <td>KCl</td>
+                                    <td>3.12g (4.2mM × 1L)</td>
+                                </tr>
+                                <tr>
+                                    <td>MgCl2</td>
+                                    <td>24g（23.14mM × 1L）</td>
+                                </tr>
+                                <tr>
+                                    <td>K2HPO4</td>
+                                    <td>30.6g (17.6mM × 1L)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <p>BHI +v2 salts liquid medium:</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Amount</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Brain Heart Infusion Broth (Dehydrated)</td>
+                                    <td>38.5g</td>
+                                </tr>
+                                <tr>
+                                    <td>NaCl</td>
+                                    <td>119.34g (204mM×1L)</td>
+                                </tr>
+                                <tr>
+                                    <td>KCl</td>
+                                    <td>3.12g (4.2mM × 1L)</td>
+                                </tr>
+                                <tr>
+                                    <td>MgCl2</td>
+                                    <td>24g（23.14mM × 1L）</td>
+                                </tr>
+                                <tr>
+                                    <td>K2HPO4</td>
+                                    <td>30.6g (17.6mM × 1L)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <h3 id="2other-reagents-used">2.other reagents used</h3>
+                    <p>Coomasie brilliant blue destaining solution</p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Volume</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>methanol</td>
+                                    <td>250 mL</td>
+                                </tr>
+                                <tr>
+                                    <td>glacial acetic acid</td>
+                                    <td>80 mL</td>
+                                </tr>
+                                <tr>
+                                    <td>ddH2O</td>
+                                    <td>To 1000 mL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <p>
+                        transformation storage buffer(a modified version of the buffer of
+                        Inoue34 containing DMSO)
+                    </p>
+                    <p>
+                        55 mM MnCl2, 15 mM CaCl2, 250 mM KCl, 10 mM PIPES (from 0.5 M, pH 6.7,
+                        stock), 7% (v/v) spec grade DMSO (where the DMSO is added after cells
+                        are suspended in the other buffer components)
+                    </p>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h3>Component</h3>
+                                    </th>
+                                    <th>
+                                        <h3>Concentration</h3>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MnCl2</td>
+                                    <td>55 mM</td>
+                                </tr>
+                                <tr>
+                                    <td>CaCl2</td>
+                                    <td>15 mM</td>
+                                </tr>
+                                <tr>
+                                    <td>KCl</td>
+                                    <td>250 mM</td>
+                                </tr>
+                                <tr>
+                                    <td>PIPES</td>
+                                    <td>10 mM (from 0.5 M, pH 6.7, stock)</td>
+                                </tr>
+                                <tr>
+                                    <td>DMSO (added after cells are suspended in the other buffer components)</td>
+                                    <td>7% (v/v)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <h3 id="3antibiotic-concentration">3.antibiotic concentration</h3>
+                    <p>Ampicillin storage solution:100 mg/mL</p>
+                    <p>Kanamycin storage solution: 100 mg/mL</p>
+                    <p>
+                        Ampicillin for single resistance Vibrio natriegens liquid culture: 100
+                        μg/μL
+                    </p>
+                    <p>
+                        Kanamycin for single resistance Vibrio natriegens liquid culture: 100
+                        μg/μL
+                    </p>
+                    <p>
+                        Double resistance Vibrio natriegens liquid culture: Ampicillin 75
+                        μg/μL;Knamycin 75 μg/μL
+                    </p>
+                    <p>Ampicillin for single resistance E.coli liquid culture: 100 μg/μL</p>
+                    <p>Kanamycin for single resistance E.coli liquid culture: 50 μg/μL</p>
+                    <p>Ampicillin for LB solid medium(E.coli):50 μg/μL</p>
+                    <p>Ampicillin for LB solid medium(V.natriegens):30 μg/μL</p>
+                    <h3 id="4primers">4.primers</h3>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>name</th>
+                                    <th>function</th>
+                                    <th>sequence</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PLF</td>
+                                    <td>Screening of transformants of pPilin by colony PCR</td>
+                                    <td>GTCTGAGCGGTTATCAGAGACAACAG</td>
+                                </tr>
+                                <tr>
+                                    <td>PLR</td>
+                                    <td>Screening of transformants of pPilin by colony PCR</td>
+                                    <td>ATTGTCCATATTGCATCAGACATTGCC</td>
+                                </tr>
+                                <tr>
+                                    <td>CRF</td>
+                                    <td>Screening of transformants of pdCas9-sg1 by colony PCR</td>
+                                    <td>GGCACAAATAGCGTCGGATGG</td>
+                                </tr>
+                                <tr>
+                                    <td>CRR</td>
+                                    <td>Screening of transformants of pdCas9-sg1 by colony PCR</td>
+                                    <td>GCATCTACTCCACTTGCGTTAATAGGG</td>
+                                </tr>
+                                <tr>
+                                    <td>GFF</td>
+                                    <td>Screening of transformants of pGFP by colony PCR</td>
+                                    <td>GCACAAGCTGGAGTACAACTTCAAC</td>
+                                </tr>
+                                <tr>
+                                    <td>GFR</td>
+                                    <td>Screening of transformants of pGFP by colony PCR</td>
+                                    <td>ATTTGTCCTACTCAGGAGAGCGTTC</td>
+                                </tr>
+                                <tr>
+                                    <td>CutF</td>
+                                    <td>
+                                        pGFP modification(reverse PCR,deleting the pilin fragment from
+                                        the N terminus of sfGFP)
+                                    </td>
+                                    <td>CATGAGAAGGaagagagaGAAATCAatggtgagcaagggc</td>
+                                </tr>
+                                <tr>
+                                    <td>CutR</td>
+                                    <td>
+                                        pGFP modification(reverse PCR,deleting the pilin fragment from
+                                        the N terminus of sfGFP)
+                                    </td>
+                                    <td>ctctcttCCTTCTCATGAGATAGATAATGC</td>
+                                </tr>
+                                <tr>
+                                    <td>ModF1</td>
+                                    <td>
+                                        pGFP modification(reverse PCR,changing the position of
+                                        initiation codon)
+                                    </td>
+                                    <td>GAGAAGGaagagagaACGAAGTCAAATAAAC</td>
+                                </tr>
+                                <tr>
+                                    <td>ModR1</td>
+                                    <td>
+                                        pGFP modification(reverse PCR,changing the position of
+                                        initiation codon)
+                                    </td>
+                                    <td>CTTCGTtctctcttCCTTCTCATGAGATAG</td>
+                                </tr>
+                                <tr>
+                                    <td>ModF2</td>
+                                    <td>
+                                        pGFP modification(reverse PCR,changing the position of
+                                        initiation codon)
+                                    </td>
+                                    <td>GAATTAACGATCGTGGTGGCGGTAAT</td>
+                                </tr>
+                                <tr>
+                                    <td>ModR2</td>
+                                    <td>
+                                        pGFP modification(reverse PCR,changing the position of
+                                        initiation codon)
+                                    </td>
+                                    <td>CCACCACGATCGTTAATTCAATCAGC</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <h3 id="5plasmids">5.plasmids</h3>
+                    <section class="shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>plasmid</th>
+                                    <th>backbone</th>
+                                    <th>resistance</th>
+                                    <th>Function gene</th>
+                                    <th>promoter</th>
+                                    <th>RBS</th>
+                                    <th>terminator</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pPilin</td>
+                                    <td>pUC19</td>
+                                    <td>Ampicillin</td>
+                                    <td>Recombined Pil_A</td>
+                                    <td>BBa_I0500</td>
+                                    <td>BBa_B0034</td>
+                                    <td>BBa_B1006</td>
+                                </tr>
+                                <tr>
+                                    <td>pGFP</td>
+                                    <td>pUC19</td>
+                                    <td>Ampicillin</td>
+                                    <td>Recombined sfGFP</td>
+                                    <td>V.natriegens promoter for pilA</td>
+                                    <td>V.natriegensRBS for pilA</td>
+                                    <td>BBa_B0010</td>
+                                </tr>
+                                <tr>
+                                    <td>pdCas9-sg1</td>
+                                    <td>pRSFDuet-1</td>
+                                    <td>Kanamycin</td>
+                                    <td>sgRNA;spdCas9</td>
+                                    <td>BBa_J23100(sgRNA);
+                                        BBa_R0010(spdCas9)</td>
+                                    <td>BBa_B0034(spdCas9)</td>
+                                    <td>BBa_B1006</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div class="footers">
+            <div class="footer-content main">
+                <h2>Links</h2>
+                <h2>Contact Us</h2>
+            </div>
+        </div>
+    </footer>
+    <!-- JS -->
+    <script src="../asserts/js/jquery-3.7.0.js"></script>
+    <script src="../asserts/js/bootstrap.bundle.min.js"></script>
+    <script src="../asserts/js/my.js"></script>
+
+</body>
