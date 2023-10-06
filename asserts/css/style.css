@@ -1387,6 +1387,9 @@ strong {
     }
 }
 
+#reports object {
+    height: 88vh;
+}
 /* scroll bar 滚动条 */
 /* 设置滚动条的背景色 */
 /* body::-webkit-scrollbar-track {
