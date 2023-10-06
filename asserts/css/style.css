@@ -781,7 +781,7 @@ div {
     position: relative;
     padding-top: 4rem;
 }
-.leader {
+ .leader {
     position: absolute;
     color:azure !important;
     font-size: 10rem;
@@ -791,6 +791,15 @@ div {
     transform: translate(-50%, -50%); /* 将文本移动到中心 */
 }
 
+#protocols .leader {
+    position: relative;
+    color:azure !important;
+    font-size: 10rem;
+    max-width: 80vw;
+    top: 0%;
+    left: 0%;    
+    transform: translate(35%, 0); /* 将文本移动到中心 */
+}
 .hidden {
     display: none;
 }
