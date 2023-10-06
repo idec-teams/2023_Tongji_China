@@ -1389,6 +1389,7 @@ strong {
 
 #reports object {
     height: 88vh;
+    width: 100%;
 }
 /* scroll bar 滚动条 */
 /* 设置滚动条的背景色 */
