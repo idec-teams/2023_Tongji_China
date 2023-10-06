@@ -149,7 +149,7 @@ window.addEventListener('scroll', function() {
 
 
 
-
+// read more
 $(document).ready(function () {
     $("#readMoreBtn").click(function () {
         $("#moreContent").toggleClass("hidden");
@@ -200,19 +200,14 @@ $('.book').on('click', function () {
 });
 
 // 折叠菜单
-document.addEventListener('DOMContentLoaded', function() {
-    var acc = document.getElementsByClassName("accordion");
-    for (let i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        });
-    }
+
+$(document).ready(function() {
+    $(".accordion").on("click touchstart", function(e) {
+        e.preventDefault();
+        $(this).toggleClass("active");
+        var panel = $(this).next(".panel");
+        panel.slideToggle();
+    });
 });
 
 // team page img hover3D from jquery
