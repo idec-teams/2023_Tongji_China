@@ -560,10 +560,10 @@ h6 {
 }
 
 h2 {
-    font-size: 5rem;
+    font-size: 3.5rem;
     letter-spacing: 2px;
     padding-top: 10rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 }
 
 .long-title {
@@ -577,17 +577,19 @@ body.dark-theme h2 {
 /* #26B5A4 */
 p {
     font-family: "UniversLTStd", "汉仪旗黑", 'Times New Roman', Times, serif;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     word-spacing: 1px;
     padding: 3rem;
     color: #08766c;
     font-weight: 300;
+    line-height:150%;
 }
 
 strong {
-    font-weight: 600;
-    font-size: 2.6rem;
+    font-weight: 450;
+    font-size: 1.8rem;
     color: #001C28;
+    font-family:UniversLTStd ;
 }
 
 body.dark-theme strong {
@@ -595,7 +597,7 @@ body.dark-theme strong {
 }
 
 em {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-style: italic;
     color: #114261;
 }
@@ -655,12 +657,13 @@ body.dark-theme p {
 }
 .image-container{
     position: relative;
-    width: 100%; 
+    width: 100vw; 
     height: auto;
     /* background-image: url("../img/myoverview.png"); */
     background-size: cover; 
     background-position: center; 
     padding-top: 50%; 
+    transform: translateX(250px);
 }
 .text-on-image {
     position: absolute;
@@ -671,11 +674,11 @@ body.dark-theme p {
     width: 80%; /* 调整文本容器的宽度 */
     text-align: center;
     padding: 20px; /* 添加一些内边距 */
+    padding-left: 40px;
 }
 .image-container {
     position: relative;
     width: 100%;
-    height: ; /* 调整为适合您的图片和文本的高度 */
     background-image: url("../img/myoverview.png");
     background-size: cover;
     background-position: center;
@@ -690,11 +693,19 @@ body.dark-theme p {
     margin-top: 0;
     padding-top: 0;
     color: wheat !important;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    transform: translateX(-140px);
 }
+.image-container strong {
+    color:white;
+} 
+.image-container em {
+    color:#A5F9F7;
+} 
 .image-container h2 {
     padding-top: 10rem;
     margin-top: 0;
+    transform: translateX(-100px);
 }
 
 .top-back {
@@ -707,20 +718,44 @@ body.dark-theme p {
     z-index: 10 !important;
     color:#f1f1f1
 }
-
+#Introduction-m {
+    display: none;
+}
 @media screen and (max-width: 750px) {
 
     .main-img {
         padding-left: 20px;
         padding-right: 0px;
     }
-
+    #Introduction-m {
+        display: block;
+    }
     .img-back {
         display: none;
     }
-
+    .image-container h2 {
+        transform: translateX(-100px);
+    }
+    .image-container p {
+        transform: translateX(-100px);
+    }
+    .image-container {
+        transform: translateX(-20px);
+        display: none;
+    }
+    .text-on-image {
+        transform: translateX(-100px);
+    }
 }
-
+.container {
+    max-width: 100vw !important;
+}
+.row {
+    max-width: 100vw !important;
+}
+main {
+    max-width: 100vw !important;  
+}
 .sidenav-bg {
 
     background-position: center;
@@ -752,17 +787,11 @@ body.dark-theme p {
 
 .toptransparent {
     transition: all 0.7s;
-    background-color: transparent;
+    background-color: #307675;
+    box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.7);
     display: block;
 }
 
-.toptransparent .circle-SVG,
-.toptransparent .sidenav-logo,
-.toptransparent .sidenav-a,
-.toptransparent h2,
-.toptransparent a {
-    display: none !important;
-}
 
 .toptransparent-scrolled {
     background-color: #307675;
@@ -805,7 +834,7 @@ div {
     padding-left: 65px;
     padding-right: 20px;
     margin-left: 20px;
-    font-family: 'Times New Roman', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    font-family:"UniverLTStd", 'Times New Roman', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
 }
 
 .sidenav a:first-child {
@@ -1558,15 +1587,8 @@ item .d-none {
     justify-items: center;
 }
 
-strong {
-    font-size: 2.3rem;
-    padding-top: 2rem;
-    margin-top: 1rem;
-}
 
-span .strong {
-    font-style: italic;
-}
+
 
 /* Media Queries */
 @media screen and (max-width: 750px) {
