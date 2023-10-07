@@ -1,0 +1,111 @@
+<!-- navbar 导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-scrolled justify-content-between">
+    <a class="navbar-brand" href="#">
+        <img src="../asserts/img/logo-light.svg" alt="Logo" class="logo dark-logo">
+        <img src="../asserts/img/logo-dark.svg" alt="Logo" class="logo light-logo ">
+    </a>
+
+    <!-- 汉堡按钮 -->
+    <button class="navbar-toggler p-0 border-0" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <?xml version="1.0" standalone="no"?>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg
+            t="1695294825594" class="icon menu-icon" viewBox="0 0 1024 1024" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" p-id="4266" xmlns:xlink="http://www.w3.org/1999/xlink" width="200"
+            height="200">
+            <path
+                d="M815 192.7H207.3c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16H815c8.8 0 16-7.2 16-16v-32c0-8.9-7.1-16-16-16zM815 480.8H463.8c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16H815c8.8 0 16-7.2 16-16v-32c0-8.9-7.1-16-16-16zM815 767.9H207.3c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16H815c8.8 0 16-7.2 16-16v-32c0-8.8-7.1-16-16-16zM303.8 618.1c14.4 12.2 36.5 2 36.5-16.9V421.1c0-18.9-22.2-29.1-36.5-16.8l-101.1 86.4c-11.5 11.5-11.5 30.2 0.1 41.7l101 85.7z"
+                p-id="4267"></path>
+        </svg>
+    </button>
+
+
+
+    <div class="collapse navbar-collapse justify-content-center nav-right" id="navbarNav">
+        <ul class="navbar-nav d-flex align-items-center">
+            <li class="nav-item dropdown ">
+                <a class="nav-link en" href="../index.html" i18n="home">Home</a>
+                <a class="nav-link d-none cn" href="../index.html" i18n="home">主页</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link en" href="#">Project</a>
+                <a class="nav-link d-none cn" href="#">项目</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item en" href="./description.html">Desciption</a>
+                    <a class="dropdown-item d-none cn" href="./description.html">描述</a>
+                    <a class="dropdown-item en" href="./design.html">Design</a>
+                    <a class="dropdown-item d-none cn" href="./design.html">设计</a>
+                    <a class="dropdown-item en" href="./model.html">Model</a>
+                    <a class="dropdown-item d-none cn" href="./model.html">模型</a>
+                    <!-- <a class="dropdown-item en" href="./hardware.html">Hardware</a> -->
+                    <!-- <a class="dropdown-item d-none cn" href="./hardware.html">硬件</a> -->
+                    <!-- <a class="dropdown-item en" href="./results.html" >Results</a> -->
+                    <!-- <a class="dropdown-item d-none cn" href="./results.html" >结果</a> -->
+                    <a class="dropdown-item en" href="./reports.html">Reports</a>
+                    <a class="dropdown-item d-none cn" href="./reports.html" ">报告</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link en" href="#">Wet lab</a>
+                <a class="nav-link cn d-none" href="#">湿实验室</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item en" href="./protocols.html" i18n="protocos">Protocols</a>
+                    <a class="dropdown-item cn d-none" href="./protocols.html" i18n="protocos">实验方案</a>
+                    <a class="dropdown-item en" href="./notebook.html" i18n="notebooks">Notebooks</a>
+                    <a class="dropdown-item cn d-none" href="./notebook.html" i18n="notebooks">实验记录</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link en" href="./team.html" i18n="team">Team</a>
+                <a class="nav-link cn d-none" href="./team.html" i18n="team">团队</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <!-- 月亮图标 -->
+                <i class="theme-toggle">
+                    <?xml version="1.0" standalone="no"?>
+                    <!DOCTYPE svg
+                        PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg
+                        t="1695295953556" class="moon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="11622" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="200" height="200">
+                        <path
+                            d="M529.611373 1023.38565c-146.112965 0-270.826063-51.707812-374.344078-155.225827C51.74928 764.641808 0.041469 639.826318 0.041469 493.815745c0-105.053891 29.693595-202.326012 88.978393-292.22593 59.38719-89.797526 137.000103-155.942569 232.83874-198.63991 6.041111-4.607627 12.184613-3.788493 18.225724 2.252618 7.576986 4.607627 9.931996 11.365479 6.860244 20.580733C322.677735 83.736961 310.493122 142.202626 310.493122 201.589815c0 135.464227 48.328885 251.474031 144.986656 348.131801 96.657771 96.657771 212.667574 144.986656 348.131801 144.986656 74.541162 0 139.252721-11.365479 194.032283-34.19883C1003.684974 655.799424 1009.726084 656.618558 1015.767195 662.659669c7.576986 4.607627 9.931996 11.365479 6.860244 20.580733C983.104241 786.758417 918.802249 869.286132 829.721465 930.925939 740.743072 992.565746 640.706375 1023.38565 529.611373 1023.38565zM296.772633 55.47685c-79.148789 44.130825-142.324472 105.770633-189.424657 184.919422C60.1454 319.545061 36.595308 404.018219 36.595308 493.815745c0 135.464227 48.328885 251.474031 144.986656 348.131801 96.657771 96.657771 212.667574 144.986656 348.131801 144.986656 97.374513 0 185.636163-25.085968 264.784952-75.360296C873.545115 861.299579 932.829913 793.618661 972.455503 708.32637 925.252927 723.582734 868.937488 731.15972 803.509188 731.15972c-146.112965 0-270.826063-51.707812-374.344078-155.225827C325.647095 472.415878 273.939283 347.70278 273.939283 201.589815 273.939283 158.994865 281.516269 110.256413 296.772633 55.47685z"
+                            p-id="11623"></path>
+                    </svg>
+                </i>
+                <!-- 太阳图标 -->
+                <i class="theme-toggle dropdown">
+                    <svg t="1695295862627" class="sun" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="9560" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="200" height="200">
+                        <path
+                            d="M512 950.857143c241.371429 0 438.857143-197.485714 438.857143-438.857143s-197.485714-438.857143-438.857143-438.857143-438.857143 197.485714-438.857143 438.857143 197.485714 438.857143 438.857143 438.857143z m0 73.142857c-285.257143 0-512-226.742857-512-512s226.742857-512 512-512 512 226.742857 512 512-226.742857 512-512 512z"
+                            fill="#333333" p-id="9561"></path>
+                    </svg>
+                </i>
+            </li>
+            <!-- 语言图标 -->
+            <li class="nav-item dropdown">
+                <i class="lang-toggle">
+                    <svg t="1691029428947" class="translate-icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="10939"
+                        data-spm-anchor-id="a313x.search_index.0.i13.76c63a81JzoK4S"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <path
+                            d="M358.912 223.914667h84.309333c17.442133 0 31.3344 14.336 31.3344 31.812266v76.1856a31.4368 31.4368 0 0 1-31.368533 31.3344h-84.2752v95.914667a18.944 18.944 0 0 1-18.807467 18.773333 18.944 18.944 0 0 1-18.8416-18.773333v-95.914667H236.987733a31.8464 31.8464 0 0 1-31.368533-31.778133V255.2832c0-16.9984 13.892267-31.3344 31.402667-31.3344h84.241066v-33.1776c0-10.308267 8.533333-18.773333 18.8416-18.773333 10.308267 0 18.807467 8.465067 18.807467 18.773333v33.1776zM243.268267 325.632h77.994666V262.007467H243.268267V325.632z m115.643733 0h78.0288V262.007467h-78.0288V325.632z m304.810667 396.936533l34.952533-88.2688 34.065067 88.2688h-69.0176z"
+                            fill="#10656B" p-id="10940" data-spm-anchor-id="a313x.search_index.0.i10.76c63a81JzoK4S"
+                            class=""></path>
+                        <path
+                            d="M408.234667 615.936H133.461333a69.188267 69.188267 0 0 1-69.461333-69.4272V133.4272c0-38.5024 30.9248-69.4272 69.461333-69.4272h413.2864c38.536533 0 69.4272 30.9248 69.4272 69.4272v275.114667h265.386667a78.506667 78.506667 0 0 1 78.4384 78.370133v394.683733a78.506667 78.506667 0 0 1-78.4384 78.404267H486.673067a78.506667 78.506667 0 0 1-78.4384-78.404267v-265.659733z m39.253333-39.185067l129.501867-129.501866V133.461333a30.071467 30.071467 0 0 0-30.242134-30.242133H133.461333a30.037333 30.037333 0 0 0-30.242133 30.242133v413.0816c0 16.861867 13.346133 30.242133 30.242133 30.242134h314.026667z m354.304 221.525334L716.117333 575.146667a18.978133 18.978133 0 0 0-17.476266-12.117334 18.909867 18.909867 0 0 0-17.476267 12.117334l-88.302933 223.095466a18.807467 18.807467 0 0 0 10.752 24.644267 18.807467 18.807467 0 0 0 24.644266-10.752l20.1728-51.541333h98.2016l19.694934 51.541333a18.7392 18.7392 0 0 0 24.644266 10.752 18.773333 18.773333 0 0 0 10.752-24.644267zM716.117333 176.913067a19.114667 19.114667 0 0 1-17.476266-20.616534 19.285333 19.285333 0 0 1 20.1728-17.476266c57.344 4.471467 167.185067 46.148267 170.325333 171.588266a18.602667 18.602667 0 1 1-37.205333 0.887467c-3.584-121.856-130.423467-133.9392-135.816534-134.382933z"
+                            fill="#10656B" p-id="10941"></path>
+                        <path
+                            d="M318.122667 830.976a19.0464 19.0464 0 0 1 6.485333 34.338133 18.602667 18.602667 0 0 1-13.653333 2.833067c-140.458667-27.136-162.474667-160.699733-164.317867-172.1344l-0.170667-0.785067a19.0464 19.0464 0 0 1 16.622934-21.060266 19.012267 19.012267 0 0 1 21.026133 16.5888l0.1024 0.682666c1.706667 10.5472 18.944 116.906667 133.9392 139.537067z"
+                            fill="#10656B" p-id="10942"></path>
+                    </svg>
+                </i> <!-- 语言图标 -->
+            </li>
+
+        </ul>
+    </div>
+</nav>
