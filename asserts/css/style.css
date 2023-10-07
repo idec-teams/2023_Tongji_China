@@ -13,6 +13,10 @@
     font-family: "汉仪旗黑";
     src: url("../font/正文/汉仪旗黑/汉仪旗黑-50S.otf")
 }
+@font-face {
+    font-family: "tempsitc";
+    src: url("../font/special/TEMPSITC.TTF")
+}
 
 html {
     font-size: calc(5px + 0.25vw);
