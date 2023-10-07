@@ -216,3 +216,11 @@ $(".hover3d").hover3d({
     selector: ".hover3d-child",
     invert: true
 });
+
+window.addEventListener("load", function() {
+    // 获取文本框的高度
+    var textHeight = document.querySelector(".text-on-image").offsetHeight;
+
+    // 将文本框的高度设置为图片容器的高度
+    document.querySelector(".image-container").style.height = textHeight+300+ "px";
+});
