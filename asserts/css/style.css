@@ -476,34 +476,15 @@ body.dark-theme .home-back path {
     /* 响应式背景图片 */
 }
 
-.home-demo {
-    width: 90%;
-    height: auto;
 
-}
 
-/* 首页 云框 */
-.home-cloud {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    /* height: 105vh; */
-    z-index: 10;
-}
-
-.home-p-scroll {
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    width: 100vw;
-    top: 95vh;
-    color: #a5f6e7;
-    justify-content: center;
+.lighting {
+    position: relative;
     z-index: 100;
-
+    transform: translateY(-30px);
+    left:50%;
+    width: 4rem;
+    height: auto;
 }
 
 /* home page */

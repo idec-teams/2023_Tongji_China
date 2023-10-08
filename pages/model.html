@@ -90,12 +90,13 @@
                         <a class="dropdown-item d-none cn" href="./model.html">模型</a>
                         <!-- <a class="dropdown-item en" href="./hardware.html" i18n="hardware">Hardware</a> -->
                         <!-- <a class="dropdown-item d-none cn" href="./hardware.html" i18n="hardware">硬件</a> -->
-                        <a class="dropdown-item en" href="./results.html" >Results</a> 
-                        <a class="dropdown-item d-none cn" href="./results.html" >结果</a> 
+                        <a class="dropdown-item en" href="./results.html">Results</a>
+                        <a class="dropdown-item d-none cn" href="./results.html">结果</a>
                         <a class="dropdown-item en" href="./reports.html">Reports</a>
                         <a class="dropdown-item d-none cn" href="./reports.html" ">报告</a>
-                        <a class="dropdown-item en" href="./Supplenmentary_information.html" >Supplenmentary information</a> 
-                        <a class="dropdown-item d-none cn" href="./Supplenmentary_information.html" >支持信息</a> 
+                        <a class=" dropdown-item en" href="./Supplenmentary_information.html">Supplenmentary
+                            information</a>
+                        <a class="dropdown-item d-none cn" href="./Supplenmentary_information.html">支持信息</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -285,47 +286,120 @@
             <p class="cn d-none"></p>
             <p class="en"></p>
             <p class="cn d-none"></p>
-            <p class="en">We can observe that adding new aromatic amino acids can significantly optimize both our objective functions one and two.</p>
+            <p class="en">We can observe that adding new aromatic amino acids can significantly optimize both our
+                objective functions one and two.</p>
             <p class="cn d-none"></p>
-            <p class="en"><strong>In objective function one</strong> ,we found that replacing serine with aromatic amino acids at position 2 of the original amino acid sequence of the e-pili can reduce the average distance in objective one from 5.28 Å to 4.72 Å. Furthermore, we found that adding more aromatic amino acids on top of this does not further reduce this distance. In objective one, we can consider that the electric</p>
+            <p class="en"><strong>In objective function one</strong> ,we found that replacing serine with aromatic amino
+                acids at position 2 of the original amino acid sequence of the e-pili can reduce the average distance in
+                objective one from 5.28 Å to 4.72 Å. Furthermore, we found that adding more aromatic amino acids on top
+                of this does not further reduce this distance. In objective one, we can consider that the electric</p>
             <p class="cn d-none"></p>
-            <p class="en">To verify the accuracy of the results, we attempted to iterate through all possible spacing scenarios for adding 1, 2, and 3 pi-residues (Fig. 2) and found that only the modification at position 2 changes the original shortest electron transfer pathway, and adding more aromatic amino acids does not alter this result.</p>
+            <p class="en">To verify the accuracy of the results, we attempted to iterate through all possible spacing
+                scenarios for adding 1, 2, and 3 pi-residues (Fig. 2) and found that only the modification at position 2
+                changes the original shortest electron transfer pathway, and adding more aromatic amino acids does not
+                alter this result.</p>
             <p class="cn d-none"></p>
-            <p class="en"><strong>In objective function two</strong> , because the objective function we chose is used to describe the distribution density of aromatic rings within the e-pili, this means that adding 1 or 2 pi-residues cannot yield an optimal result. Therefore, we started considering the addition of three Π-residues, as shown in Fig. 1. Adding 5 aromatic amino acids can reduce the original spacing from 7.6 Å to less than 5.5 Å.</p>
-            <p class="cn d-none"><strong>在优化目标二中</strong> ，我们分别在原有的结构基础上，在由我们的优化算法得到的位点上分别加入3，4，5个苯丙氨酸。我们可以非常直观的发现加入的芳香族氨基酸明显提高了原有菌毛结构中的芳香族氨基酸的分布的均匀度，使得电子传递的核心从菌毛的中轴开始向外扩散。这就意味着</p>
+            <p class="en"><strong>In objective function two</strong> , because the objective function we chose is used
+                to describe the distribution density of aromatic rings within the e-pili, this means that adding 1 or 2
+                pi-residues cannot yield an optimal result. Therefore, we started considering the addition of three
+                Π-residues, as shown in Fig. 1. Adding 5 aromatic amino acids can reduce the original spacing from 7.6 Å
+                to less than 5.5 Å.</p>
+            <p class="cn d-none"><strong>在优化目标二中</strong>
+                ，我们分别在原有的结构基础上，在由我们的优化算法得到的位点上分别加入3，4，5个苯丙氨酸。我们可以非常直观的发现加入的芳香族氨基酸明显提高了原有菌毛结构中的芳香族氨基酸的分布的均匀度，使得电子传递的核心从菌毛的中轴开始向外扩散。这就意味着
+            </p>
             <h2 id="06" class="module">Semi-rational Directed Evolution</h2>
-            <p class="en">To reduce the computational workload in modeling, a common practice is to simplify the model by introducing assumptions. For example, when determining constraints for optimizing, we approximate the centroid coordinates of the newly added aromatic ring by using the average coordinates of all atoms in the side chain at the modified position.However, introducing assumptions means that our model can not achieve the level of precision required in rational protein design. We can only identify several potential mutation sites, and we cannot guarantee that the final structure of the pili and the internal electron transfer will conform to our design.</p>
-            <p class="cn d-none">为了减少建模的任务量，一个非常常见的做法就是通过引入假设来简化模型，例如我们在确定优化模型的约束条件时用侧链上所有原子的平均坐标来近似预测新增的芳香环的质心坐标。但引入假设就意味着我们的模型没有办法做到和蛋白质的理性设计中要求的精确程度。我们只能确定若干个可能的突变位点，并无法保证最终菌毛的结构以及内部的电子传递情况会符合我们的设计。</p>
-            <p class="en">This situation is quite common in protein structure optimization, and the most common solution to address this is to use a non-rational (high-throughput screening) approach to compensate for the shortcomings of rational design.</p>
+            <p class="en">To reduce the computational workload in modeling, a common practice is to simplify the model
+                by introducing assumptions. For example, when determining constraints for optimizing, we approximate the
+                centroid coordinates of the newly added aromatic ring by using the average coordinates of all atoms in
+                the side chain at the modified position.However, introducing assumptions means that our model can not
+                achieve the level of precision required in rational protein design. We can only identify several
+                potential mutation sites, and we cannot guarantee that the final structure of the pili and the internal
+                electron transfer will conform to our design.</p>
+            <p class="cn d-none">
+                为了减少建模的任务量，一个非常常见的做法就是通过引入假设来简化模型，例如我们在确定优化模型的约束条件时用侧链上所有原子的平均坐标来近似预测新增的芳香环的质心坐标。但引入假设就意味着我们的模型没有办法做到和蛋白质的理性设计中要求的精确程度。我们只能确定若干个可能的突变位点，并无法保证最终菌毛的结构以及内部的电子传递情况会符合我们的设计。
+            </p>
+            <p class="en">This situation is quite common in protein structure optimization, and the most common solution
+                to address this is to use a non-rational (high-throughput screening) approach to compensate for the
+                shortcomings of rational design.</p>
             <p class="cn d-none">这种情况在蛋白质的结构优化中是非常常见的，而应对这种情况的最常见的方案就是使用一种非理性（高通量的筛选）的方法来弥补掉理性设计上的不足。</p>
-            <p class="en">Directed evolution simulates the process of Darwinian evolution in the laboratory by creating a large number of mutants through random mutation and recombination. Specific selection pressures are applied for desired features, allowing the selection of proteins with desired characteristics, achieving molecular-level simulated evolution.</p>
-            <p class="cn d-none">定向进化是在实验室中模拟达尔文进化过程,通过随机突变和重组,人为制造大量的突变体,按照特定的需要和目的给予选择压力,筛选出具有期望特征的蛋白质,实现分子水平的模拟进化。”</p>
-            <p class="en">Among the various methods of directed evolution, semi-rational directed evolution is the most widely applied with the most successful cases. This method aims to mutate proteins based on some understanding of their physicochemical properties, three-dimensional structure, structure-activity relationships, catalytic mechanisms, etc. With the assistance of computers, it then uses a reasonable high-throughput screening method to quickly obtain the target mutants.</p>
-            <p class="cn d-none">而在定向进化的诸多方法中，半理性定向进化应用最广泛，成功案例最多。该方法旨在对蛋白的理化性质、三维结构、构效关系、催化机理等信息有一定理解的基础上，在计算机辅助下，对蛋白进行突变，并利用合理的高通量筛选方法，以快速获得目标突变体。</p>
-            <p class="en">In our project, after identifying potential sites that may enhance the electrical conductivity of the pili, the next step is to construct a mutant library with these sites as hotspots and perform screening using the aforementioned methods. In our original plan, we intended to express and purify the mutants from the library one by one in engineered bacteria to measure their electrical conductivity. However, we quickly realized that this approach was too inefficient. Additionally, due to the relative conservation in the assembly of Type IV pili, a significant portion of mutant pili may fail to assemble correctly and lose their conductive function. Screening these pili would consume a considerable amount of effort.</p>
-            <p class="cn d-none">在我们的项目中，在确定了可能提高菌毛的电导率的位点后，接下来我们需要以上述位点为突变热点构建突变体库，并使用一定的方法进行筛选。在我们原先的方案，我们准备将构建出的突变体库一个一个的在工程菌中表达并分离和纯化以测量其电导率。我们很快就发现这种方法的效率太低了，且由于四型菌毛组装的相对保守性，可能会有相当一部分的突变体菌毛是无法正确组装而失去导电功能的，对于这部分菌毛的筛选会浪费我们大量精力。</p>
-            <p class="en">We plan to leverage the original function of e-pili, using Geobacter sulfurreducens as a chassis organism and combining it with the improved H-type microbial fuel cell model previously developed by previous researchers[8,9]. This bioelectrochemical system will be used for the initial screening of pili with higher electrical conductivity by observing the maximum current generated by the strains in microbial fuel cells.</p>
-            <p class="cn d-none">我们准备从导电菌毛的本来的功能入手，以硫还原地杆菌作为底盘，结合研究者此前改进的H 型燃料电池模型[8,9]，搭建生物电化学系统通过观察菌株在微生物燃料电池中的最大电流来初步筛选具有更高电导率的菌毛。
-                电池中使用石墨电极，使用稳压器保证阳极电势，电池阳极和阴极之间连接电阻。细胞被接种到阳极之后，在含有10mM 的乙酸钠（电子供体）和 40mM 延胡索酸钠（电子受体）的 freshwater培养基中生长。</p>
+            <p class="en">Directed evolution simulates the process of Darwinian evolution in the laboratory by creating
+                a large number of mutants through random mutation and recombination. Specific selection pressures are
+                applied for desired features, allowing the selection of proteins with desired characteristics, achieving
+                molecular-level simulated evolution.</p>
+            <p class="cn d-none">定向进化是在实验室中模拟达尔文进化过程,通过随机突变和重组,人为制造大量的突变体,按照特定的需要和目的给予选择压力,筛选出具有期望特征的蛋白质,实现分子水平的模拟进化。”
+            </p>
+            <p class="en">Among the various methods of directed evolution, semi-rational directed evolution is the most
+                widely applied with the most successful cases. This method aims to mutate proteins based on some
+                understanding of their physicochemical properties, three-dimensional structure, structure-activity
+                relationships, catalytic mechanisms, etc. With the assistance of computers, it then uses a reasonable
+                high-throughput screening method to quickly obtain the target mutants.</p>
+            <p class="cn d-none">
+                而在定向进化的诸多方法中，半理性定向进化应用最广泛，成功案例最多。该方法旨在对蛋白的理化性质、三维结构、构效关系、催化机理等信息有一定理解的基础上，在计算机辅助下，对蛋白进行突变，并利用合理的高通量筛选方法，以快速获得目标突变体。
+            </p>
+            <p class="en">In our project, after identifying potential sites that may enhance the electrical conductivity
+                of the pili, the next step is to construct a mutant library with these sites as hotspots and perform
+                screening using the aforementioned methods. In our original plan, we intended to express and purify the
+                mutants from the library one by one in engineered bacteria to measure their electrical conductivity.
+                However, we quickly realized that this approach was too inefficient. Additionally, due to the relative
+                conservation in the assembly of Type IV pili, a significant portion of mutant pili may fail to assemble
+                correctly and lose their conductive function. Screening these pili would consume a considerable amount
+                of effort.</p>
+            <p class="cn d-none">
+                在我们的项目中，在确定了可能提高菌毛的电导率的位点后，接下来我们需要以上述位点为突变热点构建突变体库，并使用一定的方法进行筛选。在我们原先的方案，我们准备将构建出的突变体库一个一个的在工程菌中表达并分离和纯化以测量其电导率。我们很快就发现这种方法的效率太低了，且由于四型菌毛组装的相对保守性，可能会有相当一部分的突变体菌毛是无法正确组装而失去导电功能的，对于这部分菌毛的筛选会浪费我们大量精力。
+            </p>
+            <p class="en">We plan to leverage the original function of e-pili, using Geobacter sulfurreducens as a
+                chassis organism and combining it with the improved H-type microbial fuel cell model previously
+                developed by previous researchers[8,9]. This bioelectrochemical system will be used for the initial
+                screening of pili with higher electrical conductivity by observing the maximum current generated by the
+                strains in microbial fuel cells.</p>
+            <p class="cn d-none">我们准备从导电菌毛的本来的功能入手，以硫还原地杆菌作为底盘，结合研究者此前改进的H
+                型燃料电池模型[8,9]，搭建生物电化学系统通过观察菌株在微生物燃料电池中的最大电流来初步筛选具有更高电导率的菌毛。
+                电池中使用石墨电极，使用稳压器保证阳极电势，电池阳极和阴极之间连接电阻。细胞被接种到阳极之后，在含有10mM 的乙酸钠（电子供体）和 40mM 延胡索酸钠（电子受体）的 freshwater培养基中生长。
+            </p>
             <h2 id="07" class="module">Future work</h2>
-            <p class="en">To validate our design, we still need to measure the electrical conductivity of individual pili. However, due to project timelines and the unavailability of the necessary equipment (low-noise nanoelectrode measurement platform and atomic force microscope [10]), it is regrettable that we won't be able to experimentally verify our modeling results this year.</p>
-            <p class="cn d-none">要验证我们的设计，我们最终仍然需要测量单根菌毛的电导率，然而受限于项目的周期以及我们无法获得相关的仪器设备（低噪声纳米电极测量平台和原子力显微镜[10]），非常遗憾的是今年我们无法在湿实验中验证我们的建模结果。</p>
-            <p class="en">We plan to continue our research after the competition ends, and we sincerely hope that future iGEM teams can refer to the construction approach of our model to design proteins that meet their project requirements.</p>
+            <p class="en">To validate our design, we still need to measure the electrical conductivity of individual
+                pili. However, due to project timelines and the unavailability of the necessary equipment (low-noise
+                nanoelectrode measurement platform and atomic force microscope [10]), it is regrettable that we won't be
+                able to experimentally verify our modeling results this year.</p>
+            <p class="cn d-none">
+                要验证我们的设计，我们最终仍然需要测量单根菌毛的电导率，然而受限于项目的周期以及我们无法获得相关的仪器设备（低噪声纳米电极测量平台和原子力显微镜[10]），非常遗憾的是今年我们无法在湿实验中验证我们的建模结果。
+            </p>
+            <p class="en">We plan to continue our research after the competition ends, and we sincerely hope that future
+                iGEM teams can refer to the construction approach of our model to design proteins that meet their
+                project requirements.</p>
             <p class="cn d-none">我们将在比赛结束后继续我们的研究，我们也衷心的希望未来的iGEM团队能够参考我们的模型的构建思路来设计符合他们的项目需求的蛋白质。</p>
             <div class="module" id="08" style="padding-top: 2rem;"></div>
             <div class="accordion-container">
                 <button class="accordion">References</button>
                 <div class="panel">
-                <p>[1] Tan, Y., Adhikari, R.Y., Malvankar, N.S., Pi, S., Ward, J.E., Woodard, T.L., Nevin, K.P., Xia, Q., Tuominen, M.T. and Lovley, D.R. (2016), Synthetic Biological Protein Nanowires with High Conductivity. Small, 12: 4481-4485. </p>
-                <p>[2]Nikhil S. Malvankar , Madeline Vargas , Kelly Nevin , Pier-Luc Tremblay , Kenneth Evans-Lutterodt , Dmytro Nykypanchuk , Eric Martz , Mark T. Tuominen , and Derek R. Lovley Structural Basis for Metallic-Like Conductivity in Microbial Nanowires,10.1128/mbio.00084-15</p>
-                <p>[3] Toshiyuki Ueki, David J.F. Walker, Pier-Luc Tremblay, Kelly P. Nevin, Joy E. Ward, Trevor L. Woodard, Stephen S. Nonnenmann, and Derek R. Lovley ACS Decorating the Outer Surface of Microbially Produced Protein Nanowires with PeptidesSynthetic Biology 2019 8 (8), 1809-1817 DOI:10.1021/acssynbio.9b00131</p>
-                <p>[4] Tan Y, Adhikari RY, Malvankar NS, Ward JE, Woodard TL, Nevin KP, Lovley DR. 2017. Expressing the Geobacter metallireducens PilA in Geobacter sulfurreducens yields pili with exceptional conductivity. mBio 8:e02203-16.</p>
-                <p>[5]Walker DJF, Adhikari RY, Holmes DE, Ward JE, Woodard TL, Nevin KP,  Lovley DR. 2018. Electrically conductive pili from genes of phylogenetically diverse microorganisms. ISME J 12:48-58.</p>
-                <p>[6]Yang Tan , Ramesh Y. Adhikari , Nikhil S. Malvankar , Joy E. Ward , Trevor L. Woodard , Kelly P. Nevin , and Derek R. Lovley Expressing the Geobacter metallireducens PilA in Geobacter sulfurreducens Yields Pili with Exceptional Conductivity.</p>
-                <p>[7]Campos M, Cisneros D A, Nivaskumar M, et al. The type II secretion system - a dynamic fiber assembly nanomachine[J]. Res Microbiol. 2013, 164(6): 545-555</p>
-                <p>[8]Nevin, K. P. et al. Anode biofilm transcriptomics reveals outer surface components essential for high density current production in Geobacter sulfurreducens fuel cells.  PLoS One 4, e5628 (2009).</p>
-                <p>[9]Bond, D. R. & Lovley, D. R. Electricity Production by Geobacter sulfurreducens Attached to Electrodes. Appl. Environ. Microbiol. 69, 1548–1555 (2003).</p>
-                <p>[10] Ramesh Y. Adhikari ,a Nikhil S. Malvankar,‡ab Mark T. Tuominena and Derek R. Lovley*b Conductivity of individual Geobacter pili 10.1039/C5RA28092C</p>
+                    <p>[1] Tan, Y., Adhikari, R.Y., Malvankar, N.S., Pi, S., Ward, J.E., Woodard, T.L., Nevin, K.P.,
+                        Xia, Q., Tuominen, M.T. and Lovley, D.R. (2016), Synthetic Biological Protein Nanowires with
+                        High Conductivity. Small, 12: 4481-4485. </p>
+                    <p>[2]Nikhil S. Malvankar , Madeline Vargas , Kelly Nevin , Pier-Luc Tremblay , Kenneth
+                        Evans-Lutterodt , Dmytro Nykypanchuk , Eric Martz , Mark T. Tuominen , and Derek R. Lovley
+                        Structural Basis for Metallic-Like Conductivity in Microbial Nanowires,10.1128/mbio.00084-15</p>
+                    <p>[3] Toshiyuki Ueki, David J.F. Walker, Pier-Luc Tremblay, Kelly P. Nevin, Joy E. Ward, Trevor L.
+                        Woodard, Stephen S. Nonnenmann, and Derek R. Lovley ACS Decorating the Outer Surface of
+                        Microbially Produced Protein Nanowires with PeptidesSynthetic Biology 2019 8 (8), 1809-1817
+                        DOI:10.1021/acssynbio.9b00131</p>
+                    <p>[4] Tan Y, Adhikari RY, Malvankar NS, Ward JE, Woodard TL, Nevin KP, Lovley DR. 2017. Expressing
+                        the Geobacter metallireducens PilA in Geobacter sulfurreducens yields pili with exceptional
+                        conductivity. mBio 8:e02203-16.</p>
+                    <p>[5]Walker DJF, Adhikari RY, Holmes DE, Ward JE, Woodard TL, Nevin KP, Lovley DR. 2018.
+                        Electrically conductive pili from genes of phylogenetically diverse microorganisms. ISME J
+                        12:48-58.</p>
+                    <p>[6]Yang Tan , Ramesh Y. Adhikari , Nikhil S. Malvankar , Joy E. Ward , Trevor L. Woodard , Kelly
+                        P. Nevin , and Derek R. Lovley Expressing the Geobacter metallireducens PilA in Geobacter
+                        sulfurreducens Yields Pili with Exceptional Conductivity.</p>
+                    <p>[7]Campos M, Cisneros D A, Nivaskumar M, et al. The type II secretion system - a dynamic fiber
+                        assembly nanomachine[J]. Res Microbiol. 2013, 164(6): 545-555</p>
+                    <p>[8]Nevin, K. P. et al. Anode biofilm transcriptomics reveals outer surface components essential
+                        for high density current production in Geobacter sulfurreducens fuel cells. PLoS One 4, e5628
+                        (2009).</p>
+                    <p>[9]Bond, D. R. & Lovley, D. R. Electricity Production by Geobacter sulfurreducens Attached to
+                        Electrodes. Appl. Environ. Microbiol. 69, 1548–1555 (2003).</p>
+                    <p>[10] Ramesh Y. Adhikari ,a Nikhil S. Malvankar,‡ab Mark T. Tuominena and Derek R. Lovley*b
+                        Conductivity of individual Geobacter pili 10.1039/C5RA28092C</p>
                 </div>
             </div>
     </article>
