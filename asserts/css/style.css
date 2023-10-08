@@ -451,6 +451,27 @@ a:hover {
     position: relative;
     background:  center center / cover no-repeat;
 }
+.background {
+    position: absolute;
+    z-index: 1;
+    width: 125vw;
+    height: auto;
+    transform: translateY(-80%);
+    left: -8vw;
+    object-fit: cover;
+}
+@media screen and (max-width: 1000px) {
+    .background {
+        display: none;
+    }
+}
+
+#ciyun {
+    position: relative;
+    z-index: 2;
+    width: 40vw;
+    height: auto;
+}
 
 .home-back path {
 
@@ -458,9 +479,38 @@ a:hover {
     position: relative;
 
 }
+#heighttransparent {
+    height:5rem;
+}
+#downarrow {
+    width: 2rem;
+}
+#Innovative{
+    font-size: 3.5rem;
+}
+#innovativeimg {
+    position: absolute;
+    width: 150vw;
+    left: -20vw;
+    top: -42vw;
+    z-index: 1 !important;
+}
+#pvcloud {
+    position: absolute;
+    width: 200vw ;
+    top: -50vw;
+    left: -45vw;
+    z-index: 1;
+}
+#largep p {
+    font-size: 5rem;
+}
+#stephomeimg {
+    width: 80vw;
+}
 .home-top-img {
     position: absolute;
-    z-index: 1 ;
+    z-index: 1;
     width: 99vw;
     height: auto;
     left: 0rem;
@@ -481,7 +531,7 @@ body.dark-theme .home-back path {
 .lighting {
     position: relative;
     z-index: 100;
-    transform: translateY(-30px);
+    transform: translateY(-3.5rem);
     left:50%;
     width: 4rem;
     height: auto;
@@ -511,8 +561,8 @@ body.dark-theme .home-back path {
     /* 保持纵横比 */
     display: flex;
     justify-content: flex-end;
-
 }
+
 
 .home-page5 {
     transform: translateX(0%);
@@ -551,9 +601,9 @@ h2 {
     letter-spacing: 1px;
 }
 
-body.dark-theme h2 {
-    color: #e2fff5;
-}
+/* body.dark-theme h2 {
+    /* color: #e2fff5; */
+/* } */ 
 
 /* #26B5A4 */
 p {
@@ -1597,7 +1647,7 @@ item .d-none {
 
 /* scroll bar 滚动条 */
 /* 设置滚动条的背景色 */
-/* body::-webkit-scrollbar-track {
+ /* body::-webkit-scrollbar-track {
     background-color: transparent !important;
 }
 body::-webkit-scrollbar-thumb {
