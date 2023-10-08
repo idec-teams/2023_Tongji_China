@@ -420,7 +420,7 @@ body.dark-theme .translate-icon:hover path {
 /* 链接 hover下划线 */
 a {
     position: relative;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-decoration: none;
     font-weight: 600;
     color: var(--link-color);
@@ -618,7 +618,14 @@ p {
     font-weight: 350;
     line-height:150%;
 }
-
+.math-equation {
+    display: block;
+    margin: 1.5rem 0;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #f7f7f7;
+    font-size: 1.2em;
+}
 strong {
     font-weight: 500;
     font-size: 1.8rem;
