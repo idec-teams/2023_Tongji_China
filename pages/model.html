@@ -90,8 +90,7 @@
                         <a class="dropdown-item d-none cn" href="./model.html">模型</a>
                         <!-- <a class="dropdown-item en" href="./hardware.html" i18n="hardware">Hardware</a> -->
                         <!-- <a class="dropdown-item d-none cn" href="./hardware.html" i18n="hardware">硬件</a> -->
-                        <a class="dropdown-item en" href="./results.html">Results</a>
-                        <a class="dropdown-item d-none cn" href="./results.html">结果</a>
+
                         <a class="dropdown-item en" href="./reports.html">Reports</a>
                         <a class="dropdown-item d-none cn" href="./reports.html" ">报告</a>
                         <a class=" dropdown-item en" href="./Supplenmentary_information.html">Supplenmentary
@@ -107,6 +106,8 @@
                         <a class="dropdown-item cn d-none" href="./protocols.html" i18n="protocos">实验方案</a>
                         <a class="dropdown-item en" href="./notebook.html" i18n="notebooks">Notebooks</a>
                         <a class="dropdown-item cn d-none" href="./notebook.html" i18n="notebooks">实验记录</a>
+                        <a class="dropdown-item en" href="./results.html">Results</a>
+                        <a class="dropdown-item d-none cn" href="./results.html">结果</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -182,6 +183,7 @@
             </h2>
 
             <a href="#overview" style="margin-top: -20px;" class="" i18n="overview">Overview</a>
+            <a href="#00" class="">Introduction</a>
             <a href="#01" class="">Theoretical basis</a>
             <a href="#02" class="">Conductivity optimization model</a>
             <a href="#03" class="">Model Overview</a>
@@ -201,53 +203,164 @@
         </div>
 
         <div id="overview" class="section header" style="padding-top: 4rem;">
-            <div id="" class="" style="min-height: 40vh; margin-bottom: 0px;">
+            <div id="" class="" style="min-height: 20vh; margin-bottom: 0px;">
                 <div class="overview-bg">
                     <div class="overview-logo">
                         <img id="overview" src="../asserts/img/overview.png" class="overview-img">
                     </div>
-
+                    <p class="en">This year, we used a special bio-nanomaterial derived from Geobacter metallireducens,
+                        as the "variable resistor" in our disease biomarker detection system. By detecting the changes
+                        in conductivity of the e-pili at different concentrations of the target substance and combining
+                        it with a standard curve, we can achieve quantitative detection of the target substance (To
+                        learn more: <a href="./design.html">design</a>).</p>
+                    <p class="cn d-none">
+                        在我们今年的项目中，我们将一种特殊的生物纳米材料---来源于金属还原地杆菌的Ⅳ型菌毛---作为我们的疾病标志物检测系统中的“可变电阻”，通过检测其在不同待测物浓度下的电导率变化并结合标准曲线，我们就能实现对于待测物的定量检测（To
+                        learn more：<a href="./design.html">design</a>）。</p>
                 </div>
             </div>
             <!-- Header Section Content -->
         </div>
         <div class="container">
-
+            <h2 id="00" class="module" style="padding-top: 4rem;">Introduction</h2>
+            <p class="en">In our system, the conductivity of the e-pili is the most important parameter. Higher
+                conductivity allows our detection system to become more stable and accurate. Additionally, higher
+                conductivity may also imply more possibilities for future applications of this bio-nanomaterial.</p>
+            <p class="cn d-none">在我们的系统中，导电菌毛的电导率是最重要的一个指标。更高的电导率可以让我们的检查系统变得更加的稳定和精确。除此之外，更高的电导率还意味着更多应用的可能性。</p>
+            <p class="en">In this section，we use optimization methods of mathematical modeling to optimize the structure
+                of this pili to improve its conductivity.Conbing with an innovative screening method based on the
+                microbial fuel cell system,we may eventually obtain a pili with higher conductivity.</p>
+            <h3 class="en">1. Lower current thermal effect</h3>
+            <h3 class="cn d-none">1.更低的电流热效应：</h3>
+            <p class="en">Compared to inorganic conductive nanomaterials, an important point to note about e-pili is
+                their chemical nature as proteins.This means that we need to consider whether they can function stably
+                in the working environment of traditional inorganic materials.</p>
+            <p class="en">In our system, the e-pili act as variable resistors. When current passes through the e-pili,
+                work is done, resulting in heat proportional to the resistance of the e-pili. Since our system requires
+                measuring the conductivity changes of the nanowires over a period of time, it implies that the e-pili
+                will be constantly exposed to the Joule heating effect. Being protein-based materials, long-term
+                exposure to high temperatures may cause denaturation (by using DeepSTABp tool,we estimated the melting
+                temperature of these nanowires to be 43 degrees). This could potentially affect the stability and
+                accuracy of the system.</p>
+            <p class="cn d-none">
+                相较于无机的导电纳米材料，一个值得我们注意的点是导电菌毛的化学本质是一种蛋白质，这就意味着我们需要考虑其是否能在传统的无机材料的工作环境下稳定的工作。导电菌毛在我们的系统中作为一个可变电阻，而当电流通过菌毛时，电流会做功并产生和菌毛的阻值成正比的热量。由于我们的系统需要测量菌毛在一段时间内的电导率变化曲线，这就意味着此时导电菌毛会一直处在电流热效应中。而导电菌毛作为一种蛋白质材料，长期处于较高的温度中可能会使其发生变性（我们使用DeepSTABp，简单估计了一下这种菌毛的热变性中点温度为43度），从而影响到系统的稳定性和精确程度。
+            </p>
+            <h3 class="en">2.Smoother resistance variation curve</h3>
+            <h3 class="cn d-none">2.更平滑的电阻变化曲线：</h3>
+            <p class="en">We have found that the resistance of e-pili with higher conductivity has a smoother curve when
+                pH changes. The range of conductivity changes within the measured range is also greater, which may help
+                improve the detection threshold. For example, compared to the wild-type , W51W53 (a mutant of Geobacter
+                sulfurreducens with higher conductivity) shows a stronger linear relationship in the change of its
+                conductivity as the external pH varies from 2.0 to 10.5 [1]. A stronger linear relationship means that
+                we can better establish models and quantify and analyze experimental results.</p>
+            <p class="cn d-none">
+                我们发现，具有更高电导率的菌毛的电阻随pH的变化曲线更加的平滑，在测量范围内的电导率变化的范围也更大（可能有助于提高检测的阈值）。例如相较于野生型的硫还原地杆菌的菌毛，W51W53（一种硫还原地杆菌菌毛的突变体，具有更高的电导率）在外界的pH值从2.0到10.5的过程中其电导率的变化的线性性明显更强[1]。更强的线性性就意味着我们可以更好的建立模型以及量化和分析实验结果。
+            </p>
+            <h3 class="en">3.Further unlocking its application potential</h3>
+            <h3 class="cn d-none">3.进一步解放其应用潜力：</h3>
+            <p class="en">In addition to the lack of mature large-scale production techniques, one of the reasons that
+                currently limits the application of these conductive biological nanomaterials is their conductivity
+                compared to traditional inorganic nanomaterials such as carbon nanotubes and silicon nanotubes still at
+                a disadvantage[1]. However, by improving the conductivity of e-pili, we can further unlock the
+                application potential of this green biogenic nanomaterial.</p>
+            <p class="cn d-none">
+                除此之外，作为一种导电生物纳米材料，目前限制其投入应用的原因除了缺少成熟的大规模生产技术外，这种材料的电导率相较于传统的无机纳米材料例如碳纳米管和硅纳米管还有着一定的差距[1]。而提高菌毛的电导率毫无意味可以进一步的解放这种绿色生物纳米材料的应用潜力。
+            </p>
+            <p class="en">After clarifying our objectives, we extensively reviewed existing literature but found no
+                studies related to optimizing the conductivity of e-pili. </p>
+            <p class="cn d-none">在明确了我们要做的事情后，我们查阅了大量的资料但都没有发现和优化导电菌毛电导率相关的研究。</p>
+            <p class="en">An idea came to our minds: since no one has done it before, let's give it a try.</p>
+            <p class="cn d-none">一个想法出现在了我们的脑海里：既然没有别人做过，那就让我们来试试吧。</p>
             <h2 id="01" class="module">Theoretical basis</h2>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-
+            <p class="en">Within e-pili, there is a high density of aromatic amino acids (Figure 1). Current research
+                suggests that the conductivity of e-pili mainly originates from the overlapping Π-Π orbitals of aromatic
+                rings formed by the aromatic moieties of aromatic amino acid residues in their unique structure[2].
+                Numerous studies based on this theoretical foundation have made significant progress [1,3,4].</p>
+            <p class="cn d-none">
+                在导电菌毛中分布着高密度的芳香族氨基酸（图一）。目前绝大部分研究都认为，导电菌毛的电导率主要来源于其特殊结构中芳香族氨基酸残基上的芳香环形成的电子云轨道的交叠[2]。有大量基于该理论基础的研究都取得了的进展[1,3,4]。
+            </p>
+            <p class="en">Further consideration suggested that not only aromatic amino acid abundance, but also the
+                position and spacing of aromatic amino acids in the pilin could be important[5]. For example, there is a
+                stretch of 53 amino acids without an aromatic amino acid within The G. uraniireducens pilin. This
+                aromatic-free gap might prevent close-packing of aromatic amino acids within the assembled pili.
+                Heterologous expression in G. sulfurreducens of other type IV pilins with high aromatic amino acid
+                abundance and smaller aromatic-free gaps yielded e-pili that appeared to be as conductive as wild-type
+                G. sulfurreducens e-pili and functioned well in extracellular electron transfer[5]. </p>
+            <p class="cn d-none">
+                菌毛的高分子结构拥有延长共轭双键，离域π键电子不受原子束缚，能在聚合链上自由移动，经过掺杂后，可移走电子生成空穴，或添加电子，使电子或空穴在分子链上自由移动，从而形成导电分子。</p>
+            <p class="en">This means that if each aromatic amino acid in a sequence within the e-pili can form π-π
+                interactions with adjacent aromatic amino acids, an effective conductive pathway is likely to form. At
+                this point, the distance between aromatic amino acids and the rate of electron transfer exhibit a
+                negative correlation.</p>
+            <p class="cn d-none">这就意味着如果导电菌毛的某一串芳香族氨基酸中的每个芳香族氨基酸的芳香环均可以与其邻近的芳香族氨基酸的芳香环形成 π-π
+                的相互作用，则这串芳香族氨基酸就可能形成有效的导电通路。而此时芳香族氨基酸之间的距离与电子转移速率大小呈现负相关关系。</p>
+            <p class="en">However, when the external pH changes or other molecules are adsorbed onto the surface of
+                e-pili, the orientation and spacing of the aromatic rings of the aromatic amino acids on the surface may
+                change due to alterations in surface charge distribution. Consequently, this leads to changes in the
+                conductivity of e-pili.</p>
+            <p class="cn d-none">
+                简单的说，导电菌毛中能够形成ΠΠ堆积的芳香环越密集，菌毛的电导率越高。而当外界的pH值发生变化或导电菌毛表面吸附上其他分子的时候，导电菌毛表面的芳香族氨基酸的苯环的朝向和间距会因为表面电荷分布情况的改变而发生变化，进而改变导电菌毛的电导率。
+            </p>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <img src="../asserts/img/model/model_1.png " alt="" class="col-md-6">
+                    <p>Fig1. Schematic illustration of the principle of conductivity/electrical conductivity changes in e-pili.
+                    </p>
+                </img>
+            </div>
             <h2 id="02" class="module">Conductivity optimization model</h2>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <h3></h3>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <h3></h3>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <h3></h3>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <h3></h3>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
+            <p class="en">
+                To establish an optimization model for the conductivity of e-pili, we need to consider three basic
+                elements of optimization separately: <strong>Decision variables</strong>, <strong>Objective
+                    function</strong>, and <strong>Constraints</strong>.
+            </p>
+            <p class="cn d-none">
+                要建立导电菌毛的电导率最优化模型，我们需要分别考虑最优化类模型的三个基本要素：决策变量，目标函数和约束条件。
+            </p>
+            <h3>Decision variables</h3>
+            <p class="en">
+            <strong>The decision variables are factors that decision-makers can control.</strong><br>
+            In this model, the variables we can control are the amino acid sequences of the e-pili. By changing the types and positions of amino acids in the sequence, we can attempt to alter the overall conductivity of the pili. The most critical indicator affecting pili conductivity is the spacing of Π residues (aromatic amino acids capable of producing Π-Π interactions). There are two methods to modify this spacing:
+            </p>
+            <p class="cn d-none">
+            <strong>决策变量是决策者可以控制的因素。</strong><br>
+            在这个模型中，我们能控制的变量是金属还原地杆菌的导电菌毛的氨基酸序列。我们可以通过改变序列中的氨基酸的种类和位置来尝试改变整体菌毛的电导率。影响菌毛电导率的最核心的指标是其中Π残基（能够产生ΠΠ相互作用的芳香族氨基酸称作Π残基）的间距。而改变其间距的方法有以下两种：
+            <h3 class="en">1.Altering the quantity and position of aromatic amino acids within e-pili.</h3>
+            <h3 class="cn d-none">1.改变导电菌毛内芳香族氨基酸的数量和位置</h3>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <img src="../asserts/img/model/model_2.png " alt="" class="col-md-8">
+                    <p>Fig2. Alterations in the quantity and position of aromatic amino acids within the e-pili.
+                    </p>
+                </img>
+            </div>
+            <p class="en">The quantity and positioning of aromatic amino acids within the e-pili are important factors determining their conductivity. For example, in comparison to the wild type G. sulfurreducens's e-pili, a mutant variant Y27A exhibits less than one-fifth of the conductivity. This is because in Y27A, tyrosine, an aromatic amino acid, is replaced by alanine, a non-aromatic amino acid, leading to an increased spacing between the Π residues in that specific region. This alteration impacts the transfer of electrons, resulting in reduced conductivity.</p>
+            <p class="cn d-none">芳香族氨基酸的在导电菌毛内部的数量和位置是决定其电导率的一个重要原因。例如相较于野生型的硫还原地杆菌的菌毛，其突变体Y27A的电导率只有其不到5分之一。这是因为Y27A用一个丙氨酸代替了芳香族氨基酸酪氨酸，使得局部的Π残基之间的间距变大，影响到了电子的传递。</p>
+            <h3 class="en">2.
+                Modifying the type of amino acids to alter the overall hydrophilicity and hydrophobicity of the e-pili:</h3>
+            <h3 class="cn d-none">2.改变氨基酸的种类以改变整个菌毛亲疏水性：</h3>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <img src="../asserts/img/model/model_3.png " alt="" class="col-md-8">
+                    <p>
+                        Fig3. Impact of amino acid type alteration on the electrical conductivity of e-pili.
+                    </p>
+                </img>
+            </div>
+            <p class="en">In addition, the hydrophobicity of amino acids in the e-pili can also influence the overall structure and spacing of Π residues within the e-pili. For instance, in the mutant W51W57, replacing the phenylalanine and tyrosine at the c-terminal of the pili with tryptophan enhances the hydrophobicity of the pili and reduces the diameter of the pili. This results in a more compact structure, leading to a reduction in the spacing between internal Π residues. As a result, the conductivity of W51W57 has been shown to be approximately 2000 times higher than that of the wild type in some studies[6].</p>
+            <p class="cn d-none">除此之外，导电菌毛中氨基酸的亲疏水性可以影响到菌毛的整体结构从而导致内部的Π残基间距发生变化。例如在突变体W51W57中，通过用色氨酸替代导电菌毛羧基端的苯丙氨酸和酪氨酸，使得组装后菌毛的疏水性增强，菌毛的直径也变得更小。此时导电菌毛的结构变得更加紧凑，内部Π残基的间距也明显减小。这使得W51W57的电导率在一些研究中比野生型的电导率提高了大约2000倍[6]。</p>
+            <p class="en">Due to the complexity of the structural model for type IV pili assembly and the lack of suitable methods to predict the impact of hydrophobicity changes in individual pili subunits on the overall assembled pili structure, our focus in this model is primarily on <strong>method one:</strong> understanding the impact of introducing new aromatic amino acids or altering the positions of existing aromatic amino acids on the pili conductivity.</p>
+            <p class="cn d-none">由于Ⅳ型菌毛的结构模型构建相对复杂，且目前我们也没有找到合适的方法来预测菌毛单体的疏水性变化对于整个组装后菌毛结构的影响。在本模型中我们主要关注<strong>方法一:</strong>即增加新的芳香族氨基酸或者改变原有芳香族氨基酸的位置对于菌毛电导率的影响。</p>
+            <p class="en">Furthermore, it's worth noting that the assembly of e-pili requires a complex and conserved type IV pilus assembly system. This assembly system has certain requirements for the conservation of amino acid sequences within the pili[7]. Modifying too many amino acids may not only result in the collapse of the original pili structure but also prevent proper assembly within cells.</p>
+            <p class="cn d-none">除此之外，值得注意的是，金属还原地杆菌的导电菌毛需要一套复杂且保守的Ⅳ型菌毛组装系统来进行组装。而这套组装系统对于菌毛的氨基酸序列的保守性是有一定的要求的。如果修改的氨基酸过多不仅可能会导致原有菌毛结构的崩溃还可能导致其无法在工程菌体内正确组装。</p>
+            <p class="en">This implies that our algorithm needs to find the optimal modification strategy under the constraint of minimizing the number of modifications required.</p>
+            <p class="cn d-none">这就意味着我们的算法需要能够在使用最少修改次数的条件下找到此时的最优修改方案。</p>
+            <h3>Objective function</h3>
+            <p class="en"><strong>The objective function is a function used to describe the goals pursued by decision-makers.</strong></p>
+            <p class="cn d-none"><strong>目标函数是用于描述决策者所追求的目标的函数。</strong></p>
+            <p class="en">In our model, our ultimate goal is to obtain e-pili with higher conductivity characteristics. The conductivity characteristics of the e-pili are closely related to the distance between the centroid of the aromatic ring on the aromatic amino acid residues.</p>
+            <p class="cn d-none">在我们的模型中，我们最终的目标是得到具有更高的电导率特性的导电菌毛。而导电菌毛的电导率特性和其中芳香族氨基酸残基上的芳香环的质心之间的间距息息相关。</p>
+            <p class="en">Based on this theory, we have designed the following two objective functions:</p>
+            <p class="cn d-none">基于这个理论，我们设计了如下两个目标函数：</p>
             <h3></h3>
             <p class="en"></p>
             <p class="cn d-none"></p>

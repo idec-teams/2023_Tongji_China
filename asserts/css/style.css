@@ -498,15 +498,12 @@ a:hover {
 #pvcloud {
     position: absolute;
     width: 200vw ;
-    top: -50vw;
-    left: -45vw;
+    top: -45vw;
+    left: -60vw;
     z-index: 1;
 }
 #largep p {
     font-size: 5rem;
-}
-#stephomeimg {
-    width: 80vw;
 }
 .home-top-img {
     position: absolute;
@@ -525,8 +522,14 @@ body.dark-theme .home-back path {
     background: url('./img/bg1.png') center center / cover no-repeat;
     /* 响应式背景图片 */
 }
-
-
+img p {
+    text-align: left !important;
+    font-size: 1rem;
+}
+p {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important; 
+}
 
 .lighting {
     position: relative;
@@ -960,7 +963,7 @@ div {
 
 .leader {
     position: absolute;
-    color: #001C28 !important;
+    color: #00C2B3 !important;
     font-size: 8rem;
     max-width: 80vw !important;
     top: 50%;

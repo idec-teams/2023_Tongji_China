@@ -88,8 +88,7 @@
                         <a class="dropdown-item d-none cn" href="./model.html">模型</a>
                         <!-- <a class="dropdown-item en" href="./hardware.html">Hardware</a> -->
                         <!-- <a class="dropdown-item d-none cn" href="./hardware.html">硬件</a> -->
-                        <a class="dropdown-item en" href="./results.html">Results</a>
-                        <a class="dropdown-item d-none cn" href="./results.html">结果</a>
+
                         <a class="dropdown-item en" href="./reports.html">Reports</a>
                         <a class="dropdown-item d-none cn" href="./reports.html" ">报告</a>
                         <a class=" dropdown-item en" href="./Supplenmentary_information.html">Supplenmentary
@@ -105,6 +104,8 @@
                         <a class="dropdown-item cn d-none" href="./protocols.html" i18n="protocos">实验方案</a>
                         <a class="dropdown-item en" href="./notebook.html" i18n="notebooks">Notebooks</a>
                         <a class="dropdown-item cn d-none" href="./notebook.html" i18n="notebooks">实验记录</a>
+                        <a class="dropdown-item en" href="./results.html">Results</a>
+                        <a class="dropdown-item d-none cn" href="./results.html">结果</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -177,9 +178,11 @@
             <h2 class="justify-content-center" style="color:#F29700; display:flex;margin-top:150px;">
                 Results
             </h2>
-            <a href="#01" class=" ">Download</a>
-            <a href="#02" class=" ">Training</a>
-            <a href="#03" class=" ">APSO</a>
+            <a href="#01" class=" ">Introduction</a>
+            <a href="#02" class=" ">Strain construction</a>
+            <a href="#03" class=" ">Vibrio natriegens pili suppression</a>
+            <a href="#04" class=" ">e-Pili production</a>
+            <a href="#05" class=" ">Reference</a>
             <a href="#overview" class="">Back to top ⬆ </a>
         </div>
     </div>
@@ -195,23 +198,76 @@
                         <div class="overview-logo">
                             <img id="overview" src="../asserts/img/overview.png" class="overview-img">
                         </div>
-                        <p>This year, we have chosen  electrically conductive pili as a unique bio-nanomaterial for our detection system, serving as the "variable resistor". However, there are currently dozens of variations of e-pili reported, each with varying levels of conductivity. Selecting the most suitable e-pili for our project poses the first challenge.</p>
+                        <p>This year, we have chosen electrically conductive pili as a unique bio-nanomaterial for our
+                            detection system, serving as the "variable resistor". However, there are currently dozens of
+                            variations of e-pili reported, each with varying levels of conductivity. Selecting the most
+                            suitable e-pili for our project poses the first challenge.</p>
                     </div>
                 </div>
                 <!-- Header Section Content -->
             </div>
             <div class="container">
                 <h2 id="01" class="module">Introduction</h2>
-                    <p>The e-pili of G.metallireducdens. are the most conductive biological materials discovered by humans to date. The proportion of aromatic amino acids within the e-pili is approximately 55% higher（15.25% VS 9.83% ） than G.sulfurreducens's .Composed solely of proteins, these pili exhibit an impressive conductivity of 277 S/cm at pH 7 [1].</p>
-                    <p>The selection of chassis microbes is also a crucial issue in our project. G.metallireducdens. is a strictly anaerobic that is challenging to industrially cultivate with existing technologies. In addition, compared to commonly used engineering strains, G.metallireducdens has a slow growth rate, low protein expression, and difficulties in regulation. These limitations clearly restrict the application potential of this conductive pili.</p>
-                    <p>Vibrio natriegens is a gram-negative marine bacterium known for its extremely fast growth rate, with a generation time of less than 10 minutes, making it the fastest growing bacterium known to date [2]. As a newly emerging chassis microbe, V. natriegens has numerous advantages such as substrate versatility, high metabolic rates, lack of pathogenicity to humans, ease of genetic manipulation, and efficient expression of heterologous proteins, demonstrating promising applications in the field of synthetic biology [3].</p>
-                    <p>In nature, a large amount of Vibrio species with Type IV pili can be found [4]. By using NCBI Nucleotide BLAST, we searched the genome of V. natriegens ATCC 14048 (taxid:691) and found that it does indeed possess a Type IV pilus assembly system (T4aP). This indicates that compared to E. coli, V. natriegens may be a more suitable chassis microorganism for the production of conductive pili.</p>
+                <p>The e-pili of G.metallireducdens. are the most conductive biological materials discovered by humans
+                    to date. The proportion of aromatic amino acids within the e-pili is approximately 55% higher（15.25%
+                    VS 9.83% ） than G.sulfurreducens's .Composed solely of proteins, these pili exhibit an impressive
+                    conductivity of 277 S/cm at pH 7 [1].</p>
+                <p>The selection of chassis microbes is also a crucial issue in our project. G.metallireducdens. is a
+                    strictly anaerobic that is challenging to industrially cultivate with existing technologies. In
+                    addition, compared to commonly used engineering strains, G.metallireducdens has a slow growth rate,
+                    low protein expression, and difficulties in regulation. These limitations clearly restrict the
+                    application potential of this conductive pili.</p>
+                <p>Vibrio natriegens is a gram-negative marine bacterium known for its extremely fast growth rate, with
+                    a generation time of less than 10 minutes, making it the fastest growing bacterium known to date
+                    [2]. As a newly emerging chassis microbe, V. natriegens has numerous advantages such as substrate
+                    versatility, high metabolic rates, lack of pathogenicity to humans, ease of genetic manipulation,
+                    and efficient expression of heterologous proteins, demonstrating promising applications in the field
+                    of synthetic biology [3].</p>
+                <p>In nature, a large amount of Vibrio species with Type IV pili can be found [4]. By using NCBI
+                    Nucleotide BLAST, we searched the genome of V. natriegens ATCC 14048 (taxid:691) and found that it
+                    does indeed possess a Type IV pilus assembly system (T4aP). This indicates that compared to E. coli,
+                    V. natriegens may be a more suitable chassis microorganism for the production of conductive pili.
+                </p>
                 <h2 id="02" class="module">Strain construction</h2>
+                <p>There are two main strains that we constructed in our project. One of them is the pilin producing
+                    strain V.PC and the other one is the report strain V.CR-mod(fig.1 and fig.2). During the strain
+                    construction process, we tried three different transformation protocols and finally found out the
+                    method that works to our V.natriegens strain. </p>
+                <p>Strain V.PC has plasmid pPilin and pdCas9-sg.pPilin(fig.1a)encodes e-pili monomer gene from Geobactor
+                    metallireducens, designated as G.PilA. pdCas9-sg(fig.1b) encodes dCas9 from Streptococcus pyogenes
+                    and sgRNA that targets at the promoter of type Ⅳ pilus monomer in V.natriegens(V.PilA promoter).
+                    V.CR-mod is an accessory strain which also has two plasmids, pGFPmod and pdCas9-sg. pGFPmod(fig.2a)
+                    is a report plasmid to test the efficiency of CRISPRi system. sfGFP is under the control of V.PilA
+                    promoter, which is the target of sgRNA in pdCas9-sg.</p>
+
                 <h2 id="03" class="module">Vibrio natriegens pili suppression</h2>
+
                 <h3>CRISPRi system construction</h3>
+                <p>Because Vibrio natriegens itself can produce type Ⅳ pilus, we need to suppress the endogenous
+                    production of type Ⅳ pilus before producing the e-pili.Therefor, we designed a CRISPRi system to
+                    suppress the expression of V.PilA.The reason why we didn't choose CRISPR to knock out V.PilA was
+                    that it has been reported in the literature that DNA double-stranded breaks caused by the
+                    CRISPR/Cas9 system can be extremely toxic to Vibrio spp because non-homologous end-joining (NHEJ)
+                    activity is almost undetectable in the microorganism.</p>
+                <p>We initially designed four different sgRNAs targeting at the sequence near transcription start
+                    site(TSS) of V.PilA. We ordered the first version of pdCas9-sg which has sgRNA 1 and gene segments
+                    containing the other three sgRNAs . Then, using high fidelity reversed PCR and Gibson assembly, we
+                    acquired 4 different versions of pdCas9-sg plasmids(fig.3b).</p>
                 <h3>System efficiency measurement</h3>
+                <p>pGFPmod is the final version of our report plasmid for CRISPRi efficiency measurement.It has the gene
+                    of sfGFP under the control of V.PilA promoter and the N terminus sequence of V.PilA linked to the N
+                    terminus of sfGFP. The methionines in the V.PilA sequence was mutated so the folding of sfGFP would
+                    not be influenced by anattached fragment(fig.4).</p>
+                <p>pGFPmod was cotransferred with pdCas-sg,pdCas-sg2,pdCas-sg3 and pdCas-sg4 seperatly into V.natriegens(fig .5)Overnight cultures of these four strains were spread out on plates and the cells were collected with culture medium for Green flourescence measurement.</p>
+
                 <h2 id="04" class="module">e-Pili production</h2>
-                <div class="module" id="08" style="padding-top: 2rem;"></div>
+                    <p>Overnight culture of e-Pili producing strain V.PC was spread out on plates for pili harvest. Meanwhile, we also spread overnight wild type V.natriegens culture on plates.It could be seen that the apprearance of lawn of these two strains were different.The lawn of V.PC, which produced e-Pili of G.metallireducens, has winkled surface(fig.5a), while the lawn of wild type V.natriegens was smooth(fig.5b).</p>
+                    <p>The whole procedure of e-pili harvest includes cell collection and resuspension, shearing pili from cells, removal of cell debris and precipitation of  e-pili.The harvested e-pili solution was on average 2~3 μg/μL.</p>
+                    <p>The harvested pili solution was purified using Ni-NTA resin.To roughly test the conductivity of this pili, we used gold electrode and multimeter to measure the resistance of the unpurified e-pili solution and purified solution. Pili solution was dropped between two gold electrodes and waited about 10 min for the solution to air-dry. After air-drying for 20 min, the pili solution became a protein film.Resistance was measured when the protein film was still moisted. The vedios below illustrate different resistance of purified or unpurified e-pili solution. It could be seen that the resistance of unpurified pili solution had a resistance of about 24.3kΩ while purified pili solution had a lower resistance of about 17kΩ.</p>
+                    <p></p>
+                    <p>Then,  we used TEM (transmission electron microscope) to view the micro-structure of the pilis. In fig.6, several nanowires could be seen after negative staining with uranium acetate(fig.6)</p>
+                    
+                <div class="module" id="05" style="padding-top: 2rem;"></div>
                 <div class="accordion-container">
                     <button class="accordion">References</button>
                     <div class="panel">
