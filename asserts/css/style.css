@@ -1406,10 +1406,10 @@ table {
 }
 
 td img {
-    width: 36px;
-    height: 36px;
+    width: 300px;
+    height: 150px;
     margin-right: 10px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     vertical-align: middle;
 }
 

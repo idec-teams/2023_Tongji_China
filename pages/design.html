@@ -90,10 +90,12 @@
                         <a class="dropdown-item d-none cn" href="./model.html">模型</a>
                         <!-- <a class="dropdown-item en" href="./hardware.html" i18n="hardware">Hardware</a> -->
                         <!-- <a class="dropdown-item d-none cn" href="./hardware.html" i18n="hardware">硬件</a> -->
-                        <!-- <a class="dropdown-item en" href="./results.html" i18n="results">Results</a> -->
-                        <!-- <a class="dropdown-item d-none cn" href="./results.html" i18n="results">结果</a> -->
-                        <a class="dropdown-item en" href="./reports.html" i18n="reports">Reports</a>
-                        <a class="dropdown-item d-none cn" href="./reports.html" i18n="reports">报告</a>
+                        <a class="dropdown-item en" href="./results.html" >Results</a> 
+                        <a class="dropdown-item d-none cn" href="./results.html" >结果</a> 
+                        <a class="dropdown-item en" href="./reports.html">Reports</a>
+                        <a class="dropdown-item d-none cn" href="./reports.html" ">报告</a>
+                        <a class="dropdown-item en" href="./Supplenmentary_information.html" >Supplenmentary information</a> 
+                        <a class="dropdown-item d-none cn" href="./Supplenmentary_information.html" >支持信息</a> 
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -196,8 +198,7 @@
             <a href="#09" class="">Characterization</a>
             <!-- <a href="#08-1" class="sidenav-a"> - Influence of pH on the conductance of e-Pili</a>
             <a href="#08-2" class="sidenav-a"> - Influence of Binding on the conductance of e-Pili</a> -->
-            <a href="#010" class="">Proof of concept</a>
-            <a href="#011" class="">References</a>
+            <a href="#10" class="">References</a>
             <a href="#overview" class="">Back to top ⬆ </a>
         </div>
     </div>
@@ -266,95 +267,372 @@
                 e-pili.
             </p>
             <p class="cn d-none">
-                更高的基础电导率可能意味着更高的检测灵敏度和更低的电流热效应，这两者对于维持整个检测系统的精确性和稳定性都至关重要（To learn more：<a href="./model.html" alt="model">Model</a>）。通过查阅文献，我们整理得到了目前研究比较多的菌毛：
+                更高的基础电导率可能意味着更高的检测灵敏度和更低的电流热效应，这两者对于维持整个检测系统的精确性和稳定性都至关重要（To learn more：<a href="./model.html"
+                    alt="model">Model</a>）。通过查阅文献，我们整理得到了目前研究比较多的菌毛：
             </p>
-            <p class="cn d-none"></p>
             <div class="row">
                 <img src="../asserts/img/design/design_f2.PNG" alt="Figure 2" class="img-fluid myimg">
             </div>
-            <p>
-                Due to variations in the methods used by different laboratories to measure the conductivity of e-pili,
-                significant differences in the measured conductivity of the same type of e-pili have been observed
-                [7,8]. Therefore, we aim to compare the highest reported conductivity of the same type of e-pili at pH
-                7.
-            </p>
-            <p>
-                Among them, the Y27A and W51W57 are mutants of G. sulfurreducens's e-pili. In the Y27A mutant, a
-                phenylalanine residue is replaced with alanine, which disrupting the electron transfer. This results in
-                a approximately 5-fold decrease in conductivity compared to the wild type [5]. The W51W57 mutant
-                exhibits the highest conductivity reported for this kind of e-pili so far. By introducing two
-                hydrophobic tryptophan residues at positions 51 and 57, the diameter of the appendage is reduced,
-                decreasing the spacing between different aromatic amino acids on the electron transfer chain and thus
-                improving its conductivity [6].
-            </p>
-            <p>
-                The e-pili of G.metallireducdens. are the most conductive biological materials discovered by humans to
-                date. The proportion of aromatic amino acids within the e-pili is approximately 55% higher(15.25% VS
-                9.83% ) than G.sulfurreducens's .Composed solely of proteins, these pili exhibit an impressive
-                conductivity of 277 S/cm at pH 7 [6].
-            </p>
-            <p>After comparing (Figure 2), we found that these e-pili are highly similar in terms of sequence and
-                structure. They all utilize a conserved type IV pilus assembly system to assemble themselves within the
-                organism. Among them, we have chosen the e-pili from G.metallireducdens that exhibit higher
-                conductivity.</p>
-            <h2 id="02" class="module">Module Two</h2>
-            <p>
-                After selecting the e-pili, our next step is to modify them to possess the ability to specifically bind
-                to antibodies. Based on homology modeling predictions of the pili monomer structure, it is known that
-                the C-terminal tail of the monomeric protein is located on the outer surface of the assembled pili. This
-                suggests that the addition of short peptides at the C-terminus would likely have minimal interference
-                with the structure and conductivity of the e-pili.
-            </p>
-            <h2 id="03">3.表格 table,sheet,form</h2>
-            <p>
-                Previous research has demonstrated the addition of peptide tags at the C-terminus of the e-pili
-                monomeric protein. Tags such as "His-tag" and "HA-tag" were successfully incorporated into the e-pili
-                without disrupting their special ability in electric conduction but did affect its conductivity [9].
-                Inspired by this study, we plan to introduce an epitope tag at the C-terminus of the pili, thus
-                conferring the ability to selectively bind to the target antibody.
-            </p>
-            <img src="../asserts/img/bg1.png" alt="" class="img-fluid">
-            <p>As the project progressed, we soon discovered a problem with our original design. </p>
-            <p>The e-pili belongs to the type IV pili family. Type IV pili are fibrous polymers assembled from thousands
-                of identical pillus protein monomers. The assembly of these protein subunits follows the characteristics
-                of helical symmetry and relies on a highly conserved ATP-driven assembly system [10].</p>
-            <p>The pillus protein subunit consists of less than 60 amino acids, while the length of some types of
-                antigen epitope tags can exceed the length of it. This means that modifying the C-terminus with
-                excessively long peptide chains may interfere with the proper assembly of the e-pili. As a result, the
-                variety of epitope tags that can be fused to the e-pili protein is severely limited.</p>
-            <p>To improve the versatility of our system, we were inspired by the UCopenhagen2022 and utilized the
-                Snooptag-Catcher system. This system consists of a Snooptag and a Snoopcatcher, which spontaneously form
-                a strong covalent bond [11]. We incorporated a Snooptag sequence, a 12-amino acid tag known to have
-                minimal impact on the assembly process, at the C-terminus of the e-pili. Additionally, by introducing a
-                SnoopCatcher with an antigen epitope tag into the assembled bacterial appendages, we enabled them to
-                exhibit specific binding capabilities to the target antibody.</p>
-            <p>This design not only avoids the impact of lengthy modifications on the assembly of the e-pili subunits
-                but also provides the following two advantages:</p>
-            <p>1. Increased system extensibility: Adopting a "assemble-first, modify-later" approach enhances the
-                versatility of our system and allows it to accommodate various types of detection requirements. By
-                simply changing the types of the "Tag" and "Catcher," our system can be adapted for different detection
-                needs, such as nucleic acid testing.</p>
-            <br>
-            <p> Modular production of the project: The separation of pili and antigens facilitates intensified and
-                modular production in industrial settings. It also enables library construction and early approval
-                processes. By maintaining a stockpile of Snooptag-modified e-pili, we can easily introduce Catchers with
-                new detection receptors when faced with new, high-volume testing demands. This modular production
-                approach is deemed beneficial for addressing sudden public health emergencies.</p>
+            <p class="en">Due to variations in the methods used by different laboratories to measure the conductivity of e-pili, significant differences in the measured conductivity of the same type of e-pili have been observed [7,8]. Therefore, we aim to compare the highest reported conductivity of the same type of e-pili at pH 7.</p>
+            <p class="cn d-none">由于不同的实验室使用的测量菌毛电导率的方法不同，且同一实验室不同批次间的同一种导电菌毛之间的电导率在测量时也往往会出现较大的差异[7,8]。在此我们使用了同一种菌毛在pH=7时被报道过的最高的电导率来进行比较。</p>
+            <p class="en">Among them, the Y27A and W51W57 are mutants of G. sulfurreducens's e-pili. In the Y27A mutant, a phenylalanine residue is replaced with alanine, which disrupting the electron transfer. This results in a approximately 5-fold decrease in conductivity compared to the wild type [5]. The W51W57 mutant exhibits the highest conductivity reported for this kind of e-pili so far. By introducing two hydrophobic tryptophan residues at positions 51 and 57, the diameter of the appendage is reduced, decreasing the spacing between different aromatic amino acids on the electron transfer chain and thus improving its conductivity [6].</p>
+            <p class="cn d-none">其中前三种菌毛均为硫还原地杆菌菌毛的突变体，其中Y27A用一个丙氨酸代替了酪氨酸，破坏了原有的电子传递链，这导致其电导率相较于野生型降低了约5倍[5]。而W51W57是目前已知该菌毛的最高电导率的突变体，通过在51和57位加入两个疏水性较强的色氨酸减小了菌毛的直径，缩短了电子传递链上不同芳香族氨基酸之间的间距以提高了电导率[6]。而金属还原地杆菌的菌毛是人类迄今为止发现的最强的导电生物材料，其内部的芳香族氨基酸的占比比硫还原地杆菌的高出约55%。其作为一个仅仅由蛋白质组成的材料，在pH等于7时的电导率高达277S/cm[6]。</p>
+            <p class="en">The e-pili of G.metallireducdens. are the most conductive biological materials discovered by humans to date. The proportion of aromatic amino acids within the e-pili is approximately 55% higher（15.25% VS 9.83% ） than G.sulfurreducens's .Composed solely of proteins, these pili exhibit an impressive conductivity of 277 S/cm at pH 7 [6].</p>
+            <p class="cn d-none">在经过比较后(图2)，我们发现这几种菌毛在序列和结构上都是非常相似的，且都使用一套保守的四型菌毛组装系统在体内完成组装。我们选择了其中具有更高电导率的菌毛---来源于金属还原地杆菌的导电菌毛来作为我们所使用的菌毛。</p>
+            <p class="en">After comparing  (Figure 2), we found that these e-pili are highly similar in terms of sequence and structure. They all utilize a conserved type IV pilus assembly system to assemble themselves within the organism. Among them, we have chosen the e-pili from G.metallireducdens that exhibit higher conductivity.</p>
 
-            <h2 id="04" class="module">Module Three</h2>
-            <p>
-                Excepturi qui quidem iusto ducimus id cum provident. Et consectetur, repudiandae minus sapiente,
-                perferendis dolorum minima laudantium nulla, saepe autem eligendi harum aperiam eum tenetur officiis
-                voluptatem esse dignissimos nisi.
-                Molestias corrupti veritatis, incidunt fuga voluptate quia quis quasi suscipit quidem sit, beatae quas
-                quisquam, maiores optio dolore? Laudantium esse, provident dolore ab natus ex sint repellendus beatae
-                minus quo.
-                Atque a non eveniet eligendi quaerat optio possimus quas molestiae sed, asperiores adipisci tempora
-                laudantium laboriosam assumenda eaque dolor eum aliquid sequi. Nisi excepturi labore quaerat amet
-                repellendus quia ducimus!
-                Ab optio eligendi quos repellendus libero fugit itaque magnam cum suscipit nihil eveniet esse ut
-                reprehenderit, iure omnis rem nostrum error magni? Aut ipsa, sint cum in reiciendis ipsum velit?
+
+            <h2 id="02" class="module">Module Two</h2>
+            <p class="en">After selecting the e-pili, our next step is to modify them to possess the ability to specifically bind to antibodies. Based on homology modeling predictions of the pili monomer structure, it is known that the C-terminal tail of the monomeric protein is located on the outer surface of the assembled pili. This suggests that the addition of short peptides at the C-terminus would likely have minimal interference with the structure and conductivity of the e-pili.</p>
+            <p class="cn d-none">在确定了我们所选用的菌毛后，我们接下来需要通过对菌毛进行修饰使其拥有能够特异性结合抗体的能力。结合蛋白同源模建结构预测可知，该菌毛单体蛋白C端尾巴位于组装后菌毛的外部，这表明添加在C端的短肽可能对该导电菌毛的结构和导电性能干扰很小。有研究团队在菌毛单体蛋白的C端添加肽标签，合成了含有“His-tag”和“HA-tag”的导电菌毛，结果发现添加这些肽标签并没有破坏材料的导电能力但会改变菌毛的电导率[9]。受到这篇文章的启发，我们准备在菌毛的C端加入一段抗原的表位标签来赋予其特异性结合待测抗体的能力。</p>
+            <p class="en">Previous research has demonstrated the addition of peptide tags at the C-terminus of the e-pili monomeric protein. Tags such as "His-tag" and "HA-tag" were successfully incorporated into the e-pili without disrupting their special ability in electric conduction but did affect its conductivity [9]. Inspired by this study, we plan to introduce an epitope tag at the C-terminus of the pili,  thus conferring the ability to selectively bind to the target antibody.</p>
+            
+            <p class="en">As the project progressed, we soon discovered a problem with our original design. </p>
+            <p class="cn d-none">随着项目的推进，我们很快发现原先的设计存在着一个问题。我们所选用的金属还原地杆菌的导电菌毛属于四型菌毛。而四型菌毛是由数千个相同的菌毛蛋白单体组装形成的纤维状聚合物。这种菌毛蛋白亚基的组装与其他四型菌毛和二型分泌系统相似，均遵循螺旋对称组装的特性，依赖于一套非常保守的ATP 驱动的组装系统[10]。菌毛蛋白亚基只有不到60个氨基酸，而一些种类的抗原表位标签的长度甚至可以超过菌毛蛋白亚基的长度。这就意味着在C端修饰过长的肽链可能使菌毛无法正常组装。这使得可被融合到菌毛蛋白的表位标签种类极为受限。</p>
+            <p class="en">The e-pili belongs to the type IV pili family. Type IV pili are fibrous polymers assembled from thousands of identical pillus protein monomers. The assembly of these protein subunits follows the characteristics of helical symmetry and relies on a highly conserved ATP-driven assembly system [10].</p>
+            
+            <p class="en">The pillus protein subunit consists of less than 60 amino acids, while the length of some types of antigen epitope tags can exceed the length of it. This means that modifying the C-terminus with excessively long peptide chains <strong>may interfere with the proper assembly of the e-pili</strong> . As a result, the variety of epitope tags that can be fused to the e-pili protein is severely limited.</p>
+            
+            <p class="en">To improve the versatility of our system, we were inspired by the UCopenhagen2022 and utilized  <strong>the Snooptag-Catcher system</strong> . This system consists of a Snooptag and a Snoopcatcher, which spontaneously form a strong covalent bond [11]. We incorporated a Snooptag sequence, a 12-amino acid tag known to have minimal impact on the assembly process, at the C-terminus of the e-pili. Additionally, by introducing a SnoopCatcher with an antigen epitope tag into the assembled bacterial appendages, we enabled them to exhibit specific binding capabilities to the target antibody.</p>
+            <p class="cn d-none">为了提高系统的泛用性，我们受到2022年UCopenhagen项目的启发，我们使用了Snooptag-Catcher蛋白连接系统，该系统由一段12个氨基酸长度的Snooptag和一个Snoopcatcher组成，两者会自发的形成较为牢固的异肽键[11]。我们在菌毛的C端加入了一段Snooptag序列——12个长度的标签修饰被认为对菌毛的组装过程影响不大——并通过在组装后的菌毛中加入连接有抗原表位标签的SnoopCatcher便抗原使得菌毛获得特异性结合待测抗体的能力。</p>
+            <p class="en">This design not only avoids the impact of lengthy modifications on the assembly of the e-pili subunits but also provides the following two advantages:</p>
+            <p class="cn d-none">这样的设计除了回避了长片段的修饰对菌毛亚基组装的影响之外还有以下两个优点：</p>
+            <p class="en"><strong>1. Increased system extensibility:</strong>Adopting a "assemble-first, modify-later" approach enhances the versatility of our system and allows it to accommodate various types of detection requirements. By simply changing the types of the "Tag" and "Catcher," our system can be adapted for different detection needs, such as nucleic acid testing.</p>
+            <p class="cn d-none"><strong>1）提高了我们系统的可延拓性：</strong>使用先组装后修饰的模式有助于使得我们的系统能够兼容更多种类的检测需求，通过改变“Tag”和“Catcher”的类别，我们的系统可以更好的适应多种的检测需求，例如核酸检测（Nucleic Acid Testing）。</p>
+            <p class="en"><strong>2. Modular production of the project:</strong> The separation of pili and antigens facilitates intensified and modular production in industrial settings. It also enables library construction and early approval processes. By maintaining a stockpile of Snooptag-modified e-pili, we can easily introduce Catchers with new detection receptors when faced with new, high-volume testing demands. This modular production approach is deemed beneficial for addressing sudden public health emergencies.</p>
+            <p class="cn d-none"><strong>2）项目得以模块化生产：</strong> 菌毛和抗原的分离有利于工业生产上的集约和模块化，也有利于建库和提前审批。我们只需要常态化的储备一些被Snooptag修饰的菌毛，在出现新的大量的检测需求的时候加入连接有新的标志物检测受体的Catcher，便能实现生产。这种模式被认为有利于突发的公共卫生事件。</p>
+
+            <h2 id="03" class="module">Module Three</h2>
+            <p class="en">Due to the modular design of our system, we can achieve detection of various disease biomarkers by replacing the connection system and the detection receptors. This enables us to perform different types of disease marker detection, such as antibody testing, antigen testing, and nucleic acid testing. By adapting the specific components of the system to the target biomarkers, we can expand its applicability to a wide range of diagnostic purposes.</p>
+            <p class="cn d-none">由于我们系统的模块化设计。通过对连接系统以及系统上所连接的疾病标志物检测受体进行替换，我们能够实现对于多种疾病标志物的检测，例如抗体检测，抗原检测以及核酸检测。</p>
+            <h3>Antibody Testing</h3>
+            <p class="en">Antibody testing is an essential tool for determining the presence of specific pathogens or
+                disease biomarkers in human or environmental samples. Antibody testing can be broadly classified into
+                qualitative and quantitative testing. Generally, quantitative testing provides more precise results with
+                better sensitivity and specificity compared to qualitative testing.
+                However, quantitative testing often requires stricter environmental conditions, more complex and
+                sophisticated equipment, and trained personnel. </p>
+            <p class="cn d-none">
+                抗体检测是确定人体或环境样本内是否存在特定病原体或疾病标志物的重要工具。抗体检测可以大致的分为定性检测和定量检测。一般地，相较于定性检测，定量检测往往更精确，具有更佳的敏感性和特异性。然而，定量检测往往需要更严格的环境，更复杂精密的设备，以及专业的操作人员。
             </p>
+            <p class="en">Our system offers a cost-effective, rapid, convenient, and sustainable alternative for
+                quantitative antibody testing. We have incorporated a Snooptag sequence at the C-terminus of the e-pili
+                and connected an antigen epitope tag to the Snoopcatcher. By mixing these components in vitro, the
+                e-pili gain the ability to selectively bind to the target antibody. Quantification of the antibody is
+                achieved by measuring changes in conductivity and comparing them to a predetermined standard curve.</p>
+            <p class="cn d-none">我们的系统可以为抗体的定量检测提供一种廉价，快速，便捷，可持续的替代方案。我们在导电菌毛的C端加入了一段Snooptag的序列。并在Snoopcatcher上连接一段抗原的表位标签。通过在体外将二者混合使得导电菌毛获得特异性结合抗体的能力，并最终通过检测电导率的变化并和预先测定好的标准曲线对比实现对于抗体的定量。</p>
+
+            <h3>Antigen Testing</h3>
+            <p class="en">Nanobodies are special antibodies found in the blood of camelid animals, which lack a light
+                chain and only consist of a heavy chain. Compared to regular antibodies, nanobodies have several
+                advantages such as being smaller in size, highly antigen-specific, and easy to genetically modify. In
+                addition, a particularly interesting feature is that nanobodies can be expressed in prokaryotic
+                expression systems[12].</p>
+            <p class="cn d-none">在抗体检测的基础上，对我的系统稍加修改我们就能实现对于指定种类抗原的检测。
+                纳米抗体是在骆驼科动物血液中发现的一种缺失轻链的特殊抗体，即重链抗体。和普通抗体相比，它只包含一个重链可变区（VHH）和两个常规的CH2与CH3区。纳米抗体具有体积小，效能稳定，抗原特异性好，且易于基因改造等优点。除此之外，一个非常吸引人的点是纳米抗体可以在原核表达体系内表达[12]。
+            </p>
+            <p class="en">By fusing the nanobody specific to a particular antigen with Snoopcatcher in a prokaryotic
+                system and connecting it to e-pili containing Snooptag, we can obtain a batch of e-pili capable of
+                detecting the specified antigen.</p>
+            <p class="cn d-none">通过将指定抗原的纳米抗体和Snoopcatcher在原核体系中融合表达，并与含有Snooptag的导电菌毛相连接，我们就能得到一批可以检测指定抗原的导电菌毛。</p>
+            <h3 class=>Nucleic Acid Testing</h3>
+            <p class="en">Furthermore, our system can be further expanded to detect single-stranded nucleic acid
+                fragments. Nucleic acid detection is considered the gold standard in epidemic diagnosis. Since nucleic
+                acids often carry a strong negative charge, their binding can significantly alter the surface charge
+                distribution of our system's pili, thereby changing the pili's conductivity.</p>
+            <p class="cn d-none">
+                除此之外，我们的系统还可以被进一步拓展，用于检测单链核酸片段。核酸检测被认为是大流行病诊断中的金标准。由于核酸往往带有较强的负电性，这意味核酸的结合可以显著的改变我们系统中菌毛的表面电荷分布情况进而改变菌毛的电导率。
+            </p>
+            <p class="en">The Halo Tag fusion protein is a genetically modified derivative of haloalkane dehalogenase,
+                which can covalently bind effectively with various synthetic Halo Tag ligands. This monomeric protein
+                with a molecular weight of 33 kDa can be fused at the N- or C-terminus of recombinant proteins and
+                expressed in both prokaryotic and eukaryotic systems. Proteins tagged with Halo Tag can be covalently
+                bound to an ester-chloroalkane ligand, which connects with amide-modified oligonucleotides[13].</p>
+            <p class="cn d-none">Halo Tag标签蛋白是一种脱卤素酶的遗传修饰衍生物，可与多种合成的Halo
+                Tag配基有效地共价结合。这个分子量为33KDa的单体蛋白能融合在重组蛋白的N端或C端，并在原核和真核系统中表达。带有Halo
+                Tag的蛋白可以与酯-氯烷烃配体共价结合，而该配体与酰胺修饰的寡核苷酸连接[13]。</p>
+            <p class="en">To achieve the connection between oligonucleotides and e-pili, we simply need to add a Halo
+                Tag sequence to the existing Snoopcatcher and introduce single-stranded oligonucleotides modified with
+                the Halo Tag ligand into the system.</p>
+            <p class="cn d-none">若将Snoopcatcher与Halo
+                Tag融合表达,使其与相应配体修饰的单链随机寡核苷酸反应，则最终有望实现寡核苷酸和导电菌毛的相连，并利用随机寡核苷酸与猎物核酸分子的分子杂交而引发的电导率变化检测该核酸分子。</p>
+            <h2 id="04" class="module">Chassis Microbes</h2>
+            <p class="en">The selection of chassis microbes is also a crucial issue in our project. G.metallireducdens.
+                is a strictly anaerobic that is challenging to industrially cultivate with existing technologies. In
+                addition, compared to commonly used engineering strains, G.metallireducdens has a slow growth rate, low
+                protein expression, and difficulties in regulation. These limitations clearly restrict the application
+                potential of this conductive pili.</p>
+            <p class="cn d-none">
+                底盘微生物的选择在我们的项目中同样也是一个非常重要的问题。金属还原地杆菌是一种严格厌氧的微生物，以现有的技术难以做到工业化的培养。除此之外，相较于目前常用的工程菌，金属还原地杆菌的生长速度慢、蛋白的表达量低且难以进行调控。这些缺点显然限制住了这种导电菌毛的应用潜力。
+            </p>
+            <p class="en">In the initial stage of our project, our team planned to use an engineering strain for
+                heterologous expression of this e-pili. The first engineering strain that came into our consideration
+                was Escherichia coli. As the most commonly used chassis microbes, E. coli has a well-characterized
+                genetic background, fast growth rate, and high expression of heterologous proteins. There have also been
+                reports of successful expression of e-pili from G.sulfurreducens using E. coli [14]. However, as we
+                conducted further literature research, we quickly discovered some challenges associated with using E.
+                coli for expression.</p>
+            <p class="cn d-none">
+                我们团队在项目的初期就准备使用工程菌来异源表达这种导电菌毛。第一个进入我们的视野的工程菌是大肠杆菌。作为在合成生物学中使用最多的工程菌，大肠杆菌的遗传背景清楚，生长速度快且外源蛋白的表达量大。目前也已有使用大肠杆菌成功表达硫还原地杆菌的导电菌毛的报道[14]。但随着文献调研的深入，我们很快就发现了使用大肠杆菌表达的一些问题。
+            </p>
+            <p class="en">The E. coli strain used in lab is non-pathogenic strain, and its Type IV pili are not
+                expressed, with the associated assembly system (T4aP) also not functioning properly [15]. This means
+                that if we want to express this pili in E. coli, we would need to include the complete assembly system
+                in the plasmid. In our design scheme, the complete plasmid consists of 11,032 base pairs. The large
+                plasmid size can negatively impact transformation efficiency, which is unfavorable for both our
+                experiments and future large-scale bioproduction. In the early stages of the project, our advisor also
+                suggested avoiding this approach.</p>
+            <p class="cn d-none">
+                在合成生物学中所使用到的大肠杆菌是非致病的大肠杆菌，这种大肠杆菌的Ⅳ型菌毛是不表达的，与其相关的组装系统（T4aP）也是无法正常工作的[15]。这就意味着如果我们需要在大肠杆菌体内表达这种导电菌毛，我们就需要在质粒中加入完整的组装系统，这就会导致我们的质粒变的巨大。在我们的设计方案中，完整的质粒足足有11032个碱基对。过大的质粒会影响到转化的成功率，这无论对我们实验还是对未来的大规模生物生产都是不利的。在项目的初期，我们的指导老师也建议我们尽量不要使用这个方案。
+            </p>
+            <p class="en">We started considering whether there might exist a strain with its own assembly system that
+                could meet the demands of large-scale industrial production. We quickly found the answer.</p>
+            <p class="cn d-none">我们就开始思考是否存在自身本来就有该组装系统且能适应大规模工业生产需求的工程菌。我们很快就找到了答案。</p>
+            <p class="en"><em>Vibrio natriegens</em> is a gram-negative marine bacterium known for its extremely fast
+                growth rate, with a generation time of less than 10 minutes, making it the fastest growing bacterium
+                known to date [15,16]. As a newly emerging chassis microbe, V. natriegens has numerous advantages such
+                as substrate versatility, high metabolic rates, lack of pathogenicity to humans, ease of genetic
+                manipulation, and efficient expression of heterologous proteins, demonstrating promising applications in
+                the field of synthetic biology [17,18].</p>
+            <p class="cn d-none">需钠弧菌是是一种革兰氏阴性海洋细菌，其在对数期的倍增时间小于10
+                min，是目前已知生长速度最快的细菌[15,16]。作为近几年发展起来的一种新型底盘细胞，其具有底物利用多样性、代谢速率快、对人体没有致病性危害、遗传操作简便和易于表达外源蛋白等优点，在合成生物学领域展现出良好的应用前景[17,18]。
+            </p>
+            <p class="en">In nature, a large amount of Vibrio species with Type IV pili can be found [19,20]. By using
+                NCBI Nucleotide BLAST, we searched the genome of V. natriegens ATCC 14048 (taxid:691) and found that it
+                does indeed possess a Type IV pilus assembly system (T4aP). This indicates that compared to E. coli, V.
+                natriegens may be a more suitable chassis microorganism for the production of conductive pili.</p>
+            <p class="cn d-none">在自然界中，我们可以找到很多存在Ⅳ型菌毛的弧菌[19,20]。我们利用NCBI Nucleotide BLAST在需钠弧菌的基因组（Vibro natriegens ATCC
+                14048 (taxid:691)）中进行了搜索，发现其确实具有Ⅳ型菌毛组装系统（T4aP）。这就意味着相较于大肠杆菌，需钠弧菌可能是一种更优良的生产导电菌毛的底盘微生物。</p>
+            <h2 id="05" class="module">CRISPRi System</h2>
+            <p class="en">The fact that Vibrio natriegens possesses Type IV pili (T4aP) is a major advantage for it to
+                be the microbial chassis of our project. However, it also presents new challenges. The assembly of the
+                pili in Vibrio parahaemolyticus may potentially conflict with the introduced T4aP of Geobacter
+                metallireducens, resulting in the failure in optimal production of conductive pili. Therefore, we have
+                decided to use the CRISPRi system to suppress the expression of the Vibrio parahaemolyticus’ pili gene
+                (V.PilA). </p>
+            <p class="cn d-none">
+                需钠弧菌具有T4aP是其作为我们项目地盘微生物的一大优势，但同时也带来了新的问题。需钠弧菌自身菌毛的组装很可能会与转入的金属还原地杆菌四型菌毛相冲突，从而导致无法实现导电菌毛的理想产出。因此，我们决定利用CRISPRi系统对需钠弧菌自身的菌毛基因（V.PilA）表达进行抑制。
+            </p>
+            <p class="en">The reason why CRISPR/Cas9 was not chosen for direct knockdown of Vibrio natriegens’ own pili
+                is that it has been reported in the literature that DNA double-stranded breaks caused by the CRISPR/Cas9
+                system can be extremely toxic to Vibrio spp because non-homologous end-joining (NHEJ) activity is almost
+                undetectable in the microorganism. Therefore, we chose the CRISPRi system which uses sgRNA to direct
+                spdCas9, which does not have endonuclease activity and serve as a repressor of gene expression by
+                preventing the binding of ranscription factors, to the vicinity of the transcriptional start site (TSS)
+                of Vibrio natriegens’ own bacterio gene, PilA. The pdCas9-sg plasmid contains the catalytically
+                inactivated Streptococcus pyogenes Cas9 protein (spdCas9) as well as sgRNA, controlled by the Ptrc
+                promoter and a constitutive promoter, BBa_J23100, respectively.</p>
+            <p class="cn d-none">
+                之所以不选用CRISPR/Cas9对其自身菌毛进行直接敲除，是因为有文献报道CRISPR/Cas9系统造成的DNA双链断裂会对需钠弧菌造成巨大的毒性，因为该微生物内几乎检测不到非同源末端连接（NHEJ）的活性[21]。因此我们选择了CRISPRi系统，利用sgRNA将不具有内切酶活性的spdCas9引导到需钠弧菌自身菌毛基因PilA的转录起始位点（TSS）附近，通过阻止转录因子结合来起到抑制基因表达的作用。pdCas9-sg质粒包含了催化失活的化脓链球菌Cas9蛋白（spdCas9）以及sgRNA，分别由Ptrc启动子和组成性启动子BBa_J23100控制。
+            </p>
+            <p class="en">We designed four different sgRNAs that direct to different sequences near the PilA
+                transcription start site. In order to select the sgRNA with the best inhibitory effect, we also designed
+                a sfGFP-based reporter plasmid. The N-terminal end of sfGFP in the reporter plasmid connects the
+                sequences near the TSS of V.PilA, including the promoter of V.PilA as well as part of the N-terminal
+                sequence of V.PilA.</p>
+            <p class="cn d-none">
+                我们设计了四种不同的sgRNA，分别导向到PilA转录起始位点附近的不同序列。为了选择出具有最佳抑制效果的sgRNA，我们还设计了基于sfGFP的报告质粒。报告质粒中sfGFP的N端连接了V.PilA的TSS附近序列，包括V.PilA的启动子以及V.PilA的N端部分序列。
+            </p>
+            <p class="en">The reporter plasmid is to be co-transfected with pdCas9-sg into Vibrio natriegens, and the
+                intensity of green fluorescence can be detected to determine the inhibitory effect of the sgRNA on
+                V.PilA. This reporter system avoids the need for repeated harvests of pilus to test the effect of
+                CRISPRi, and also experimental error scaused during the harvests of pilus.</p>
+            <p class="cn d-none">
+                将报告质粒与pdCas9-sg共同转入需钠弧菌当中，即可通过检测绿色荧光的强度来判断该sgRNA对于V.PilA的抑制效果。这一报告系统避免了测试CRISPRi工作效果时需反复收获菌毛的问题，同时也避免了菌毛收获过程中操作带来的误差。
+            </p>
+            <h2 id="06" class="module">The Work Flow</h2>
+            <p class="en">Our project plan is divided into the following five parts: establishment of CRISPRi testing
+                system and pilus expression system, optimization of CRISPRi, expression and harvest of Geobacter
+                metallireducens pilus, testing of the pilus’conductivity and concentration detection capabilities, and
+                optimization of pilus and enhancement of its detection ability. The following figure briefly summarizes
+                the workflow of the Plink project.</p>
+            <p class="cn d-none">
+                我们的项目计划主要分为CRISPRi测试系统及菌毛表达系统的建立，CRISPRi的优化，金属还原地杆菌菌毛的表达与收获，电导率以及浓度检测能力的测试，以及菌毛的优化和检测能力的提高。下图简要总结了Plink项目的工作流程。
+            </p>
+            <p class="en"><strong>Establishment of CRISPRi testing system and pilus expression system:</strong>  co-transfections of
+                pdCas9-sg and pPilin, and of pdCas9-sg and the reporter plasmid, into Vibrio natriegens, respectively.
+            </p>
+            <p class="cn d-none"><strong>系统建立：</strong> CRISPRi测试系统及菌毛表达系统的建立，将pdCas9-sg和pPilin，pdCas9-sg和报告质粒分别共转入需钠弧菌中</p>
+            <p class="en"><strong>CRISPRi optimization:</strong> construct pdCas9-sg plasmids with different sgRNAs by gibson assembly to
+                test the sgRNA with optimal effect.</p>
+            <p class="cn d-none"><strong>CRISPRi优化：</strong>通过gibson assembly构建不同sgRNA的pdCas9-sg质粒，测试效果最优的sgRNA</p>
+            <p class="en"><strong>Expression and harvest of pilus:</strong> induce the expression of dCas9 and pilus in Geobacter
+                metallireducens, and harvest the pilus.</p>
+            <p class="cn d-none"><strong>菌毛表达与收获：</strong>诱导dCas9与金属还原地杆菌的菌毛表达，并收获菌毛</p>
+            <p class="en"><strong>Conductivity and concentration detection capability test:</strong> construct pilus sheets and test
+                their conductivities at different pH, as well as their conductivities before and after the binding of
+                the analyte.</p>
+            <p class="cn d-none"><strong>测试：</strong>制作菌毛片，测试其在不同pH环境下，以及与待测物结合前后的电导率</p>
+            <p class="en"><strong>Pilus optimization: </strong>optimize the pili gene sequence based on modeling in order to enhance the
+                conductivity and detection sensitivity of the pilus.</p>
+            <p class="cn d-none"><strong>菌毛优化：</strong>根据建模结果优化菌毛序列结构，提高其电导率和检测灵敏度</p>
+            <h2 id="07" class="module">Vector Construction</h2>
+            <p class="en">In our Plink project, three major plasmids were designed to achieve the expression and harvest
+                of high-purity Geobacter metallireducens conductive pilus in Vibrio natriegens. Among them, pPilin is
+                the main plasmid used for pilus expression, pdCas9-sg is used to inhibit the expression of the type IV
+                pilus of Vibrio natriegens through the CRISPRi system, and sfGFP-based reporter plasmid is used to
+                optimize the inhibitory effect of the CRISPRi system. In addition, we also designed a backup plasmid for
+                expression in E. coli, which can be used for subsequent testing of the conductivity of different pili
+                mutants and the concentration detection ability of the corresponding pilus sheets, in case the
+                expression of conductive pilus in Vibrio natriegens is not satisfactory.</p>
+            <p class="cn d-none">
+                在我们Plink项目中，主要设计了三个不同的质粒来实现在需钠弧菌中表达并收获较高纯度的金属还原地杆菌导电菌毛。其中pPilin是用于菌毛表达的主要质粒，pdCas9-sg通过CRISPRi系统抑制需钠弧菌自身四型菌毛的表达，基于sfGFP的报告质粒用于对CRISPRi系统进行抑制效果的优化。除此之外，我们还设计了在大肠杆菌中表达的备用质粒，如果在需钠弧菌中表达导电菌毛效果不理想，备用质粒可以用于后续不同菌毛突变体电导率，以及对应制成菌毛片的浓度检测能力测试。
+            </p>
+            <h3 class="en">pilus producting plasmid—pPilin</h3>
+            <h3 class="cn d-none">菌毛表达质粒 pPilin </h3>
+            <p class="en">pPilin is the primary plasmid for the expression of conductive pilus. The plasmid uses pUC19
+                as a backbone and pBAD (BBa_I13453) to control the expression of PilA, the monomer of Geobacter
+                metallireducens type IV pilus.</p>
+            <p class="cn d-none">pPilin是表达导电菌毛的主要质粒。该质粒以pUC19作为骨架，并以pBAD（BBa_I13453）控制金属还原地杆菌四型菌毛单体PilA（简称为G.PilA）的表达。
+            </p>
+            <h3 class="en">CRISPRi plasmid—pdCas9-sg</h3>
+            <h3 class="cn d-none">CRISPRi质粒pdCas9-sg</h3>
+            <p class="en">pdCas9-sg uses pRSFDuet as a backbone and expresses both spdCas9 and sgRNA. spdCas9
+                transcription is controlled by Ptrc and induced by IPTG, and sgRNA is expressed under the control of the
+                constitutive promoter BBa_J23100.</p>
+            <p class="cn d-none">
+                pdCas9-sg以pRSFDuet作为骨架，同时表达spdCas9和sgRNA，其中spdCas9由Ptrc控制转录在IPTG的诱导下表达，sgRNA由组成性启动子BBa_J23100控制表达。</p>
+            <p class="en">We initially used pdCas9-sg1 expressing sgRNA1 ordered from AZENTA. Then to test the
+                inhibitory effect of different sgRNAs, we plan to construct CRISPRi plasmids expressing three other
+                sgRNAs using Gibson assembly. The sgRNA fragments for substitution were ordered from AZENTA, and then
+                pdCas9-sg was linearized and homology arms were added by reverse PCR, and the assembly was performed
+                using gibson assembly to obtain pdCas9-sg2, pdCas9-sg3 and pdCas9-sg4. </p>
+            <p class="cn d-none">我们最初使用的为表达sgRNA1的pdCas9-sg1，该质粒由AZENTA公司订购。然后为了测试不同sgRNA的抑制效果，我们计划利用Gibson
+                assembly构建表达另外三个sgRNA的CRISPRi质粒。替换用的sgRNA片段从AZENTA公司订购，然后通过反向PCR将pdCas9-sg进行线性化并添加同源臂，利用gibson
+                assembly进行组装获得pdCas9-sg2, pdCas9-sg3和pdCas9-sg4。</p>
+            <h3 class="en">reporter plasmid—pGFPmod2</h3>
+            <h3 class="cn d-none">报告质粒pGFPmod2</h3>
+            <p class="en">The reporter plasmid based on sfGFP uses pUC19 as the backbone. The expression of recombinant
+                sfGFP is controlled by the promoter of the monomer PilA (V.PilA) of Vibrio natriegens. Additionally, a
+                segment of the N-terminal sequence of V.PilA(start codon removed) is attached to the N-terminus of the
+                recombinant sfGFP. The four sgRNAs we have selected all target the transcription start site (TSS) region
+                near V.PilA, including the promoter and the N-terminal coding sequence. Therefore, the intensity of
+                green fluorescence from this reporter plasmid can indicate the effectiveness of the CRISPRi system. We
+                underwent a series of adjustments in the design of the reporter plasmid and finally obtained this
+                pGFPmod2 version, which has shown promising results. For detailed design process, please refer to the
+                engineering success (wet lab part) documentation.</p>
+            <p class="cn d-none">
+                基于sfGFP的报告质粒以pUC19作为骨架，由需钠弧菌菌毛单体PilA（V.PilA）的启动子控制重组sfGFP的表达，同时在重组sfGFP的N端连接了一段去除了起始密码子的V.PilA
+                N端序列。我们选择的四个sgRNA均靶向到这V.PilA转录起始位点（TSS）附近，即包括V.PilA的启动子和N端编码序列，因此这一报告质粒可以通过绿色荧光的强度来提示CRISPRi系统的工作效果。我们在设计报告质粒时经过了一系列调整，最终获得了具有较好效果的pGFPmod2版本。</p>
+            <h2 id="08" class="module">Purification</h2>
+            <p class="en">In order to test the conductivity of pilus and its ability to detect concentrations in the
+                laboratory, we need to harvest large quantities of conductivepilus and make them into conductive sheets.
+                Therefore, it is necessary to efficiently obtain a high-purity solution of pilus. We chose two methods
+                of harvesting pilus that allow for large batches with relatively low purity, and small batches with high
+                purity, respectively.</p>
+            <p class="cn d-none">
+                为了实现在实验室中对菌毛的导电能力，以及检测浓度的能力进行测试，我们需要对导电菌毛进行大批量收获并制作成导电菌毛片。因此，高效获得纯度较高的菌毛溶液是必要的。我们选择了两种菌毛的收获方式，分别可以进行大批量但纯度相对较低，和小批量但纯度高的菌毛收获。
+            </p>
+            <h3 class="en">Shear and filter</h3>
+            <h3 class="cn d-none">剪切过滤</h3>
+            <p class="en">This method acquires pilus by a purely physical means. We intend to refer to the harvesting method of conductive pilus of Geobacter sulfurreducens to harvest large quantities of conductive pilus assembled from G. pilA expressed by Vibrio natriegens. The pili were first cut from the bacterial surface by mechanical agitation in a waring blender, and the cellular debris was removed before the mixed solution was filtered under nitrogen aeration. Since the molecular weight of this conductive pilus is more than 100kDa, the use of 100kD cut-off PVDF membrane can separate the pili from other proteins with smaller molecular weights. Thus the final solution of pili is obtained. This method can treat a large number of bacteria in a single run, although the purity of the pili obtained is not high.</p>
+            <p class="cn d-none">该方法完全通过物理的方式对菌毛进行获取。我们打算参考硫还原地杆菌导电菌毛的收获方法[22]，对需钠弧菌表达的G.PilA组装成为的导电菌毛进行大批量收获。首先通过在waring blender中机械搅拌的方法将菌毛从细菌表面切割下来，去除细胞碎片后再在氮气通气和搅拌下对混合溶液进行过滤。由于该导电菌毛的分子量大于100kDa，利用100kDa截留的PVDF膜可以将菌毛和其他分子量较小的蛋白分开，最终得到菌毛溶液。该方法虽然获得的菌毛纯度不高，但单次可以处理大量的细菌。</p>
+            <h3 class="en">Ni-NTA purification</h3>
+            <h3 class="cn d-none">Ni-NTA树脂纯化</h3>
+            <p class="en">In addition to the efficient large-scale harvesting method, we have also opted for a
+                purification approach using Ni-NTA resin to purify the pili. Transition metals can form stable metal
+                chelates by interacting with electronegative elements(O, N) of carboxyl or amino groups of the electron
+                donor ligands. The NTA (nitrilotriacetic acid) moiety bound to the resin has four coordination sites to
+                bind with Ni2+. A Ni2+ ion has six coordination sites, and is bound to the adsorbent by ligands with 3,
+                4, or 5 electron donor groups, leaving the remaining unoccupied sites exposed to the solution. These
+                exposed sites can specifically bind to the side chains of histidine, cysteine, and tryptophan, or to
+                histidine tags on proteins. In our design of the pili expression plasmid, we added a 6×His tag at the
+                C-terminus of G.PilA, which can be used for the purification of pili. This method allows for obtaining a
+                high-purity solution of pili. The purification throughput is low, though, making it suitable for further
+                purification after the first method of harvest.</p>
+            <p class="cn d-none">
+                除了快捷的大批量收获方案，我们还选择了利用Ni-NTA树脂对菌毛进行纯化的方案。过渡金属通过与电子供体配基上，能与金属离子相互作用的羧基或氨基的电负性元素（O，N），形成较稳定的金属螯合物。树脂上结合的NTA（次氮基三乙酸）亚基，具有4个配位位点与
+                Ni2+ 结合。一个 Ni2+ 有六个配位位点，被含有 3、4 或 5
+                个电子供体基团（配位位点）的螯合物固定在吸附剂上而剩下未被占据的位点暴露于溶液中，能与组氨酸，半胱氨酸，和色氨酸的侧链或组氨酸标签的蛋白特异性结合。我们在设计菌毛表达质粒时，在G.PilA的C端添加了6×His标签，可以用于菌毛的纯化。通过这种方法可以获得高纯度的菌毛溶液，但纯化通量较低，可以用于第一种方法收获之后的进一步纯化。
+            </p>
+            <h2 id="09" class="module">Characterization</h2>
+            <h3 class="en">Influence of pH on the conductance of e-Pili</h3>
+            <h3 class="cn d-none">pH值对菌毛电导率的影响</h3>
+            <p class="en">Due to the lack of an instrument to measure the conductivity of individual pilus in our
+                laboratory, we have decided to construct pili solution into thin films and use a multimeter to measure
+                the conductivity between electrodes. The pili solution will be dropped between two electrodes and
+                air-dried at room temperature for 20 minutes. This process will be repeated multiple times to obtain the
+                pili thin films.</p>
+            <p class="cn d-none">
+                由于我们实验室缺乏对单根菌毛进行电导率的测量需要用到仪器，因此我们决定将获得的菌毛溶液制作为菌毛薄片在电极之间用万用表进行电导率的测量。将菌毛溶液滴加到两个电极之间，在室温下风干20min，重复多次即获得菌毛薄片。
+            </p>
+            <h3 class="en">Influence of Binding on the conductance of e-Pili</h3>
+            <h3 class="cn d-none">待测物结合对菌毛电导率的影响</h3>
+            <p class="en">pH has a significant impact on the conductivity of Geobacter metallireducens’ pili, so we want
+                to test whether the harvested pili meet the properties described in the literature by preparing pili
+                films in different pH environments. We will adjust the pH of the pili solution by adding an appropriate
+                amount of acid or alkali, and then measure the resistance between the electrodes after drying to
+                calculate the conductivity. In addition, we also plan to use the Vibrio natriegens’ own Type IV as a
+                control.</p>
+            <p class="cn d-none">
+                pH值对于金属还原地杆菌的电导率具有巨大影响，因此我们想通过在不同pH值环境下制备菌毛片来检验我们收获的菌毛是否符合文献所述的性质。在同一批次的菌毛溶液中分别加入适量的酸或碱来调节溶液pH值，待风干之后测量电极两端的电阻值从而换算出电导率。除此之外，我们还计划用需钠弧菌自身的四型菌毛来作为对照。
+            </p>
+            <div class="module" id="10" style="padding-top: 2rem;"></div>
+            <div class="accordion-container">
+                <button class="accordion">References</button>
+                <div class="panel">
+                    <p>[1] Lee K, Cho S, Park SH, Heeger AJ, Lee CW, Lee SH. 2006. Metallic transport in polyaniline.
+                        Nature 441:65– 68. http://dx.doi.org/10.1038/ nature04705.</p>
+                    <p>[2]Vargas M, Malvankar NS, Tremblay PL, Leang C, Smith JA, Patel P, Snoeyenbos-West O, Nevin KP,
+                        Lovley DR. 2013. Aromatic amino acids required for pili conductivity and long-range
+                        extracellular electron transport in Geobacter sulfurreducens. mBio 4(2):e00105-13.
+                        http://dx.doi.org/ 10.1128/mBio.00105-13/.</p>
+                    <p>[3]Liu X, Tremblay P-L, Malvankar NS, Nevin KP, Lovley DR, Vargas M. A Geobacter sulfurreducens
+                        strain expressing Pseudomonas aeruginosa type IV pili localizes OmcS on pili but is deficient in
+                        Fe(III) oxide reduction and current production. Appl Environ Microbiol 80:
+                        1219-1224.http://dx.doi.org/10.1128/AEM.02938-13.</p>
+                    <p>[4] Steidl RJ, Lampa-Pastirk S, Reguera G. 2016. Mechanistic stratification in electroactive
+                        biofilms of Geobacter sulfurreducens mediated by pilus nanowires. Nature Communications 7:12217.
+                    </p>
+                    <p>[5] Lampa-Pastirk S, Veazey JP, Walsh KA, Feliciano GT, Steidl RJ, Tessmer S, Reguera G. 2016.
+                        Thermally activated charge transport in microbial protein nanowires. Scientific Reports 6:23517.
+                    </p>
+                    <p>[6] Yang Tan , Ramesh Y. Adhikari , Nikhil S. Malvankar , Joy E. Ward , Trevor L. Woodard , Kelly
+                        P. Nevin , and Derek R. Lovley Expressing the Geobacter metallireducens PilA in Geobacter
+                        sulfurreducens Yields Pili with Exceptional Conductivity.</p>
+                    <p>[7] Yang Tan , Ramesh Y. Adhikari , Nikhil S. Malvankar , Shuang Pi , Joy E. Ward , Trevor L.
+                        Woodard , Kelly P. Nevin , Qiangfei Xia , Mark T. Tuominen , and Derek R. Lovley *Synthetic
+                        Biological Protein Nanowires with High Conductivity.</p>
+                    <p>[8] S. Samitsu , T. Shimomura , K. Ito , M. Fujimori , S. Heike , T. Hashizume , Appl. Phys. Lett
+                        2005 , 86 , 233103 . </p>
+                    <p>[9] Toshiyuki Ueki, David J.F. Walker, Pier-Luc Tremblay, Kelly P. Nevin, Joy E. Ward, Trevor L.
+                        Woodard, Stephen S. Nonnenmann, and Derek R. Lovley ACS Decorating the Outer Surface of
+                        Microbially Produced Protein Nanowires with PeptidesSynthetic Biology 2019 8 (8), 1809-1817
+                        DOI:10.1021/acssynbio.9b00131</p>
+                    <p>[10]Campos M, Cisneros D A, Nivaskumar M, et al. The type II secretion system - a dynamic fiber
+                        assembly nanomachine[J]. Res Microbiol. 2013, 164(6): 545-555</p>
+                    <p>[11] Daniel Hatlem , Thomas Trunk, Dirk Linke and Jack C. Leo *Catching a SPY: Using the
+                        SpyCatcher-SpyTag and Related Systems for Labeling and Localizing Bacterial Proteins</p>
+                    <p>[12]REZAEI Leila, SHOJAOSADATI Seyed Abbas, FARAHMAND Leila, et al. Enhancement of extracellular
+                        bispecific anti‐MUC1 nanobody expression in E. Coli BL21 (DE3) by optimization of temperature
+                        and carbon sources through an autoinduction condition[J]. Engineering in Life Sciences, 2020,
+                        20(8): 338-349.</p>
+                    <p>[13] Junshi Yazaki, Yusuke Kawashima, Taisaku Ogawa, Atsuo Kobayashi, Mayu Okoshi, Takashi
+                        Watanabe, Suguru Yoshida, Isao Kii, Shohei Egami, Masayuki Amagai, Takamitsu Hosoya, Katsuyuki
+                        Shiroguchi, Osamu Ohara, HaloTag-based conjugation of proteins to barcoding-oligonucleotides,
+                        Nucleic Acids Research, Volume 48, Issue 2, 24 January 2020, Page e8.</p>
+                    <p>[14]Hoffart E, Grenz S, Lange J, et al. High substrate uptake rates empower Vibrio natriegens as
+                        production host for industrial biotechnology.</p>
+                    <p>[15]Eagon RG. Pseudomonas natriegens, a marine bacterium with a generation time of less than 10
+                        minutes. J Bacteriol, 1962, 83: 736-737.</p>
+                    <p>[16]Weinstock MT, Hesek ED, Wilson CM, et al. Vibrio natriegens as a fast-growing host for
+                        molecular biology. Nat Methods, 2016, 13(10): 849-851</p>
+                    <p>[17]Dalia TN, Hayes CA, Stolyar S, et al. Multiplex genome editing by natural transformation
+                        (MuGENT) for synthetic biology in Vibrio natriegens. ACS Synth Biol, 2017, 6(9): 1650-1655.</p>
+                    <p>[18]Tschirhart T, Shukla V, Kelly EE, et al. Synthetic biology tools for the fast-growing marine
+                        bacterium Vibrio natriegens. ACS Synth Biol, 2019, 8(9): 2069-2079.</p>
+                    <p>[19]Aagesen, A.M., Häse, C.C. Sequence Analyses of Type IV Pili from Vibrio cholerae, Vibrio
+                        parahaemolyticus, and Vibrio vulnificus . Microb Ecol 64, 509–524 (2012). </p>
+                    <p>[20]J.J. Tercero-Alburo, H. González-Márquez, E. Bonilla-González, E.I. Quiñones-Ramírez, C.
+                        Vázquez-Salinas, Identification of capsule, biofilm, lateral flagellum, and type IV pili in
+                        Vibrio mimicus strains,Microbial Pathogenesis.</p>
+                    <p>[21]Lee HH, Ostrov N, Wong BG, Gold MA, Khalil AS, Church GM. Functional genomics of the rapidly
+                        replicating bacterium Vibrio natriegens by CRISPRi. Nat Microbiol. 2019 Jul;4(7):1105-1113.</p>
+                    <p>[22]Ueki T, Walker DJF, Woodard TL, Nevin KP, Nonnenmann SS, Lovley DR. An Escherichia coli
+                        Chassis for Production of Electrically Conductive Protein Nanowires. ACS Synth Biol. 2020 Mar
+                        20;9(3):647-654.</p>
+                </div>
+            </div>
         </div>
     </article>
     <!-- main page content end-->
