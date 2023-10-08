@@ -212,7 +212,7 @@
         </div>
 
         <div id="overview" class="section header" style="padding-top: 4rem;">
-            <div id="" class="" style="min-height: 40vh; margin-bottom: 0px;">
+            <div id="" class="" style="min-height: 12vh; margin-bottom: 0px;">
                 <div class="overview-bg">
                     <div class="overview-logo">
                         <img id="overview" src="../asserts/img/overview.png" class="overview-img">
@@ -228,10 +228,6 @@
                         modules:
                         e-Pili,Snooptag-Caycher system,and disease biomarkers X.</p>
                     <p class="cn d-none">我们在这个部分中详细的介绍了我们的系统的设计过程以及实现方案。</p>
-                    <div class="row">
-                        <div class="img-fluid col-md-2"></div>
-                        <img src="../asserts/img/design/design_f1.jpeg" alt="" class="img-fluid col-md-8">
-                    </div>
                 </div>
             </div>
             <!-- Header Section Content -->
@@ -272,7 +268,9 @@
                     alt="model">Model</a>）。通过查阅文献，我们整理得到了目前研究比较多的菌毛：
             </p>
             <div class="row">
-                <img src="../asserts/img/design/design_f2.PNG" alt="Figure 2" class="img-fluid myimg">
+                <div class="col-md-2"></div>
+                <img src="../asserts/img/design/design_f2.PNG" alt="Figure 2" class="img-fluid col-md-8">
+                <p class="center-aligned-text">Fig2.The Comparison of Four Types of e-pili：A.The conductivity(s/cm) of these four types of e-pili (G.s WT[5],G.s Y27A[5],G.s W51W57[6],G.m[6]). B.The structures(monomer structure, end view and side view) of these four e-pili with aromatic ring marked red. C.The amino acid sequences of these four e-pili with aromatic amino acids marked red.</p>
             </div>
             <p class="en">Due to variations in the methods used by different laboratories to measure the conductivity of e-pili, significant differences in the measured conductivity of the same type of e-pili have been observed [7,8]. Therefore, we aim to compare the highest reported conductivity of the same type of e-pili at pH 7.</p>
             <p class="cn d-none">由于不同的实验室使用的测量菌毛电导率的方法不同，且同一实验室不同批次间的同一种导电菌毛之间的电导率在测量时也往往会出现较大的差异[7,8]。在此我们使用了同一种菌毛在pH=7时被报道过的最高的电导率来进行比较。</p>
@@ -287,7 +285,11 @@
             <p class="en">After selecting the e-pili, our next step is to modify them to possess the ability to specifically bind to antibodies. Based on homology modeling predictions of the pili monomer structure, it is known that the C-terminal tail of the monomeric protein is located on the outer surface of the assembled pili. This suggests that the addition of short peptides at the C-terminus would likely have minimal interference with the structure and conductivity of the e-pili.</p>
             <p class="cn d-none">在确定了我们所选用的菌毛后，我们接下来需要通过对菌毛进行修饰使其拥有能够特异性结合抗体的能力。结合蛋白同源模建结构预测可知，该菌毛单体蛋白C端尾巴位于组装后菌毛的外部，这表明添加在C端的短肽可能对该导电菌毛的结构和导电性能干扰很小。有研究团队在菌毛单体蛋白的C端添加肽标签，合成了含有“His-tag”和“HA-tag”的导电菌毛，结果发现添加这些肽标签并没有破坏材料的导电能力但会改变菌毛的电导率[9]。受到这篇文章的启发，我们准备在菌毛的C端加入一段抗原的表位标签来赋予其特异性结合待测抗体的能力。</p>
             <p class="en">Previous research has demonstrated the addition of peptide tags at the C-terminus of the e-pili monomeric protein. Tags such as "His-tag" and "HA-tag" were successfully incorporated into the e-pili without disrupting their special ability in electric conduction but did affect its conductivity [9]. Inspired by this study, we plan to introduce an epitope tag at the C-terminus of the pili,  thus conferring the ability to selectively bind to the target antibody.</p>
-            
+            <div class="row">
+                <div class="col-md-2"></div>
+                <img src="../asserts/img/design/design_3.png" alt="Figure 3" class="img-fluid col-md-8">
+                <p class="center-aligned-text">Fig3.Epitope tag modification at the C-terminal of the e-pili (marked green)</p>
+            </div>
             <p class="en">As the project progressed, we soon discovered a problem with our original design. </p>
             <p class="cn d-none">随着项目的推进，我们很快发现原先的设计存在着一个问题。我们所选用的金属还原地杆菌的导电菌毛属于四型菌毛。而四型菌毛是由数千个相同的菌毛蛋白单体组装形成的纤维状聚合物。这种菌毛蛋白亚基的组装与其他四型菌毛和二型分泌系统相似，均遵循螺旋对称组装的特性，依赖于一套非常保守的ATP 驱动的组装系统[10]。菌毛蛋白亚基只有不到60个氨基酸，而一些种类的抗原表位标签的长度甚至可以超过菌毛蛋白亚基的长度。这就意味着在C端修饰过长的肽链可能使菌毛无法正常组装。这使得可被融合到菌毛蛋白的表位标签种类极为受限。</p>
             <p class="en">The e-pili belongs to the type IV pili family. Type IV pili are fibrous polymers assembled from thousands of identical pillus protein monomers. The assembly of these protein subunits follows the characteristics of helical symmetry and relies on a highly conserved ATP-driven assembly system [10].</p>
@@ -302,7 +304,11 @@
             <p class="cn d-none"><strong>1）提高了我们系统的可延拓性：</strong>使用先组装后修饰的模式有助于使得我们的系统能够兼容更多种类的检测需求，通过改变“Tag”和“Catcher”的类别，我们的系统可以更好的适应多种的检测需求，例如核酸检测（Nucleic Acid Testing）。</p>
             <p class="en"><strong>2. Modular production of the project:</strong> The separation of pili and antigens facilitates intensified and modular production in industrial settings. It also enables library construction and early approval processes. By maintaining a stockpile of Snooptag-modified e-pili, we can easily introduce Catchers with new detection receptors when faced with new, high-volume testing demands. This modular production approach is deemed beneficial for addressing sudden public health emergencies.</p>
             <p class="cn d-none"><strong>2）项目得以模块化生产：</strong> 菌毛和抗原的分离有利于工业生产上的集约和模块化，也有利于建库和提前审批。我们只需要常态化的储备一些被Snooptag修饰的菌毛，在出现新的大量的检测需求的时候加入连接有新的标志物检测受体的Catcher，便能实现生产。这种模式被认为有利于突发的公共卫生事件。</p>
-
+            <div class="row">
+                <div class="col-md-1"></div>
+                <img src="../asserts/img/design/design_4.png" alt="Figure 4" class="img-fluid col-md-10">
+                <p class="center-aligned-text">Fig 4.The Snooptag-Snoop catcher connection system</p>
+            </div>
             <h2 id="03" class="module">Module Three</h2>
             <p class="en">Due to the modular design of our system, we can achieve detection of various disease biomarkers by replacing the connection system and the detection receptors. This enables us to perform different types of disease marker detection, such as antibody testing, antigen testing, and nucleic acid testing. By adapting the specific components of the system to the target biomarkers, we can expand its applicability to a wide range of diagnostic purposes.</p>
             <p class="cn d-none">由于我们系统的模块化设计。通过对连接系统以及系统上所连接的疾病标志物检测受体进行替换，我们能够实现对于多种疾病标志物的检测，例如抗体检测，抗原检测以及核酸检测。</p>
@@ -322,7 +328,11 @@
                 e-pili gain the ability to selectively bind to the target antibody. Quantification of the antibody is
                 achieved by measuring changes in conductivity and comparing them to a predetermined standard curve.</p>
             <p class="cn d-none">我们的系统可以为抗体的定量检测提供一种廉价，快速，便捷，可持续的替代方案。我们在导电菌毛的C端加入了一段Snooptag的序列。并在Snoopcatcher上连接一段抗原的表位标签。通过在体外将二者混合使得导电菌毛获得特异性结合抗体的能力，并最终通过检测电导率的变化并和预先测定好的标准曲线对比实现对于抗体的定量。</p>
-
+            <div class="row">
+                <div class="col-md-3"></div>
+                <img src="../asserts/img/design/design_5.png" alt="Figure 5" class="img-fluid col-md-6">
+                <p class="center-aligned-text">Fig 5</p>
+            </div>
             <h3>Antigen Testing</h3>
             <p class="en">Nanobodies are special antibodies found in the blood of camelid animals, which lack a light
                 chain and only consist of a heavy chain. Compared to regular antibodies, nanobodies have several
