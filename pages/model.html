@@ -106,8 +106,8 @@
                         <a class="dropdown-item cn d-none" href="./protocols.html" i18n="protocos">实验方案</a>
                         <a class="dropdown-item en" href="./notebook.html" i18n="notebooks">Notebooks</a>
                         <a class="dropdown-item cn d-none" href="./notebook.html" i18n="notebooks">实验记录</a>
-                        <a class="dropdown-item en" href="./results.html">Results</a>
-                        <a class="dropdown-item d-none cn" href="./results.html">结果</a>
+                        <!-- <a class="dropdown-item en" href="./results.html">Results</a>
+                        <a class="dropdown-item d-none cn" href="./results.html">结果</a> -->
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -221,7 +221,7 @@
             <!-- Header Section Content -->
         </div>
         <div class="container">
-            <h2 id="00" class="module" style="padding-top: 4rem;">Introduction</h2>
+            <h2 id="00" class="module">Introduction</h2>
             <p class="en">In our system, the conductivity of the e-pili is the most important parameter. Higher
                 conductivity allows our detection system to become more stable and accurate. Additionally, higher
                 conductivity may also imply more possibilities for future applications of this bio-nanomaterial.</p>
@@ -303,8 +303,9 @@
             <div class="row">
                 <div class="col-md-3"></div>
                 <img src="../asserts/img/model/model_1.png " alt="" class="col-md-6">
-                    <p>Fig1. Schematic illustration of the principle of conductivity/electrical conductivity changes in e-pili.
-                    </p>
+                <p>Fig1. Schematic illustration of the principle of conductivity/electrical conductivity changes in
+                    e-pili.
+                </p>
                 </img>
             </div>
             <h2 id="02" class="module">Conductivity optimization model</h2>
@@ -318,108 +319,354 @@
             </p>
             <h3>Decision variables</h3>
             <p class="en">
-            <strong>The decision variables are factors that decision-makers can control.</strong><br>
-            In this model, the variables we can control are the amino acid sequences of the e-pili. By changing the types and positions of amino acids in the sequence, we can attempt to alter the overall conductivity of the pili. The most critical indicator affecting pili conductivity is the spacing of Π residues (aromatic amino acids capable of producing Π-Π interactions). There are two methods to modify this spacing:
+                <strong>The decision variables are factors that decision-makers can control.</strong><br>
+                In this model, the variables we can control are the amino acid sequences of the e-pili. By changing the
+                types and positions of amino acids in the sequence, we can attempt to alter the overall conductivity of
+                the pili. The most critical indicator affecting pili conductivity is the spacing of Π residues (aromatic
+                amino acids capable of producing Π-Π interactions). There are two methods to modify this spacing:
             </p>
             <p class="cn d-none">
-            <strong>决策变量是决策者可以控制的因素。</strong><br>
-            在这个模型中，我们能控制的变量是金属还原地杆菌的导电菌毛的氨基酸序列。我们可以通过改变序列中的氨基酸的种类和位置来尝试改变整体菌毛的电导率。影响菌毛电导率的最核心的指标是其中Π残基（能够产生ΠΠ相互作用的芳香族氨基酸称作Π残基）的间距。而改变其间距的方法有以下两种：
+                <strong>决策变量是决策者可以控制的因素。</strong><br>
+                在这个模型中，我们能控制的变量是金属还原地杆菌的导电菌毛的氨基酸序列。我们可以通过改变序列中的氨基酸的种类和位置来尝试改变整体菌毛的电导率。影响菌毛电导率的最核心的指标是其中Π残基（能够产生ΠΠ相互作用的芳香族氨基酸称作Π残基）的间距。而改变其间距的方法有以下两种：
             <h3 class="en">1.Altering the quantity and position of aromatic amino acids within e-pili.</h3>
             <h3 class="cn d-none">1.改变导电菌毛内芳香族氨基酸的数量和位置</h3>
             <div class="row">
                 <div class="col-md-2"></div>
                 <img src="../asserts/img/model/model_2.png " alt="" class="col-md-8">
-                    <p>Fig2. Alterations in the quantity and position of aromatic amino acids within the e-pili.
-                    </p>
+                <p>Fig2. Alterations in the quantity and position of aromatic amino acids within the e-pili.
+                </p>
                 </img>
             </div>
-            <p class="en">The quantity and positioning of aromatic amino acids within the e-pili are important factors determining their conductivity. For example, in comparison to the wild type G. sulfurreducens's e-pili, a mutant variant Y27A exhibits less than one-fifth of the conductivity. This is because in Y27A, tyrosine, an aromatic amino acid, is replaced by alanine, a non-aromatic amino acid, leading to an increased spacing between the Π residues in that specific region. This alteration impacts the transfer of electrons, resulting in reduced conductivity.</p>
-            <p class="cn d-none">芳香族氨基酸的在导电菌毛内部的数量和位置是决定其电导率的一个重要原因。例如相较于野生型的硫还原地杆菌的菌毛，其突变体Y27A的电导率只有其不到5分之一。这是因为Y27A用一个丙氨酸代替了芳香族氨基酸酪氨酸，使得局部的Π残基之间的间距变大，影响到了电子的传递。</p>
+            <p class="en">The quantity and positioning of aromatic amino acids within the e-pili are important factors
+                determining their conductivity. For example, in comparison to the wild type G. sulfurreducens's e-pili,
+                a mutant variant Y27A exhibits less than one-fifth of the conductivity. This is because in Y27A,
+                tyrosine, an aromatic amino acid, is replaced by alanine, a non-aromatic amino acid, leading to an
+                increased spacing between the Π residues in that specific region. This alteration impacts the transfer
+                of electrons, resulting in reduced conductivity.</p>
+            <p class="cn d-none">
+                芳香族氨基酸的在导电菌毛内部的数量和位置是决定其电导率的一个重要原因。例如相较于野生型的硫还原地杆菌的菌毛，其突变体Y27A的电导率只有其不到5分之一。这是因为Y27A用一个丙氨酸代替了芳香族氨基酸酪氨酸，使得局部的Π残基之间的间距变大，影响到了电子的传递。
+            </p>
             <h3 class="en">2.
-                Modifying the type of amino acids to alter the overall hydrophilicity and hydrophobicity of the e-pili:</h3>
+                Modifying the type of amino acids to alter the overall hydrophilicity and hydrophobicity of the e-pili:
+            </h3>
             <h3 class="cn d-none">2.改变氨基酸的种类以改变整个菌毛亲疏水性：</h3>
             <div class="row">
                 <div class="col-md-2"></div>
                 <img src="../asserts/img/model/model_3.png " alt="" class="col-md-8">
-                    <p>
-                        Fig3. Impact of amino acid type alteration on the electrical conductivity of e-pili.
-                    </p>
+                <p>
+                    Fig3. Impact of amino acid type alteration on the electrical conductivity of e-pili.
+                </p>
                 </img>
             </div>
-            <p class="en">In addition, the hydrophobicity of amino acids in the e-pili can also influence the overall structure and spacing of Π residues within the e-pili. For instance, in the mutant W51W57, replacing the phenylalanine and tyrosine at the c-terminal of the pili with tryptophan enhances the hydrophobicity of the pili and reduces the diameter of the pili. This results in a more compact structure, leading to a reduction in the spacing between internal Π residues. As a result, the conductivity of W51W57 has been shown to be approximately 2000 times higher than that of the wild type in some studies[6].</p>
-            <p class="cn d-none">除此之外，导电菌毛中氨基酸的亲疏水性可以影响到菌毛的整体结构从而导致内部的Π残基间距发生变化。例如在突变体W51W57中，通过用色氨酸替代导电菌毛羧基端的苯丙氨酸和酪氨酸，使得组装后菌毛的疏水性增强，菌毛的直径也变得更小。此时导电菌毛的结构变得更加紧凑，内部Π残基的间距也明显减小。这使得W51W57的电导率在一些研究中比野生型的电导率提高了大约2000倍[6]。</p>
-            <p class="en">Due to the complexity of the structural model for type IV pili assembly and the lack of suitable methods to predict the impact of hydrophobicity changes in individual pili subunits on the overall assembled pili structure, our focus in this model is primarily on <strong>method one:</strong> understanding the impact of introducing new aromatic amino acids or altering the positions of existing aromatic amino acids on the pili conductivity.</p>
-            <p class="cn d-none">由于Ⅳ型菌毛的结构模型构建相对复杂，且目前我们也没有找到合适的方法来预测菌毛单体的疏水性变化对于整个组装后菌毛结构的影响。在本模型中我们主要关注<strong>方法一:</strong>即增加新的芳香族氨基酸或者改变原有芳香族氨基酸的位置对于菌毛电导率的影响。</p>
-            <p class="en">Furthermore, it's worth noting that the assembly of e-pili requires a complex and conserved type IV pilus assembly system. This assembly system has certain requirements for the conservation of amino acid sequences within the pili[7]. Modifying too many amino acids may not only result in the collapse of the original pili structure but also prevent proper assembly within cells.</p>
-            <p class="cn d-none">除此之外，值得注意的是，金属还原地杆菌的导电菌毛需要一套复杂且保守的Ⅳ型菌毛组装系统来进行组装。而这套组装系统对于菌毛的氨基酸序列的保守性是有一定的要求的。如果修改的氨基酸过多不仅可能会导致原有菌毛结构的崩溃还可能导致其无法在工程菌体内正确组装。</p>
-            <p class="en">This implies that our algorithm needs to find the optimal modification strategy under the constraint of minimizing the number of modifications required.</p>
+            <p class="en">In addition, the hydrophobicity of amino acids in the e-pili can also influence the overall
+                structure and spacing of Π residues within the e-pili. For instance, in the mutant W51W57, replacing the
+                phenylalanine and tyrosine at the c-terminal of the pili with tryptophan enhances the hydrophobicity of
+                the pili and reduces the diameter of the pili. This results in a more compact structure, leading to a
+                reduction in the spacing between internal Π residues. As a result, the conductivity of W51W57 has been
+                shown to be approximately 2000 times higher than that of the wild type in some studies[6].</p>
+            <p class="cn d-none">
+                除此之外，导电菌毛中氨基酸的亲疏水性可以影响到菌毛的整体结构从而导致内部的Π残基间距发生变化。例如在突变体W51W57中，通过用色氨酸替代导电菌毛羧基端的苯丙氨酸和酪氨酸，使得组装后菌毛的疏水性增强，菌毛的直径也变得更小。此时导电菌毛的结构变得更加紧凑，内部Π残基的间距也明显减小。这使得W51W57的电导率在一些研究中比野生型的电导率提高了大约2000倍[6]。
+            </p>
+            <p class="en">Due to the complexity of the structural model for type IV pili assembly and the lack of
+                suitable methods to predict the impact of hydrophobicity changes in individual pili subunits on the
+                overall assembled pili structure, our focus in this model is primarily on <strong>method one:</strong>
+                understanding the impact of introducing new aromatic amino acids or altering the positions of existing
+                aromatic amino acids on the pili conductivity.</p>
+            <p class="cn d-none">
+                由于Ⅳ型菌毛的结构模型构建相对复杂，且目前我们也没有找到合适的方法来预测菌毛单体的疏水性变化对于整个组装后菌毛结构的影响。在本模型中我们主要关注<strong>方法一:</strong>即增加新的芳香族氨基酸或者改变原有芳香族氨基酸的位置对于菌毛电导率的影响。
+            </p>
+            <p class="en">Furthermore, it's worth noting that the assembly of e-pili requires a complex and conserved
+                type IV pilus assembly system. This assembly system has certain requirements for the conservation of
+                amino acid sequences within the pili[7]. Modifying too many amino acids may not only result in the
+                collapse of the original pili structure but also prevent proper assembly within cells.</p>
+            <p class="cn d-none">
+                除此之外，值得注意的是，金属还原地杆菌的导电菌毛需要一套复杂且保守的Ⅳ型菌毛组装系统来进行组装。而这套组装系统对于菌毛的氨基酸序列的保守性是有一定的要求的。如果修改的氨基酸过多不仅可能会导致原有菌毛结构的崩溃还可能导致其无法在工程菌体内正确组装。
+            </p>
+            <p class="en">This implies that our algorithm needs to find the optimal modification strategy under the
+                constraint of minimizing the number of modifications required.</p>
             <p class="cn d-none">这就意味着我们的算法需要能够在使用最少修改次数的条件下找到此时的最优修改方案。</p>
             <h3>Objective function</h3>
-            <p class="en"><strong>The objective function is a function used to describe the goals pursued by decision-makers.</strong></p>
+            <p class="en"><strong>The objective function is a function used to describe the goals pursued by
+                    decision-makers.</strong></p>
             <p class="cn d-none"><strong>目标函数是用于描述决策者所追求的目标的函数。</strong></p>
-            <p class="en">In our model, our ultimate goal is to obtain e-pili with higher conductivity characteristics. The conductivity characteristics of the e-pili are closely related to the distance between the centroid of the aromatic ring on the aromatic amino acid residues.</p>
+            <p class="en">In our model, our ultimate goal is to obtain e-pili with higher conductivity characteristics.
+                The conductivity characteristics of the e-pili are closely related to the distance between the centroid
+                of the aromatic ring on the aromatic amino acid residues.</p>
             <p class="cn d-none">在我们的模型中，我们最终的目标是得到具有更高的电导率特性的导电菌毛。而导电菌毛的电导率特性和其中芳香族氨基酸残基上的芳香环的质心之间的间距息息相关。</p>
             <p class="en">Based on this theory, we have designed the following two objective functions:</p>
             <p class="cn d-none">基于这个理论，我们设计了如下两个目标函数：</p>
-            <h3></h3>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <h3></h3>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <h3></h3>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <h2 id="03" class="module">Model Overview</h2>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <h2 id="04" class="module">Molecular Dynamics Simulations</h2>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <h2 id="05" class="module">Optimization Design</h2>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en">We can observe that adding new aromatic amino acids can significantly optimize both our
-                objective functions one and two.</p>
-            <p class="cn d-none"></p>
-            <p class="en"><strong>In objective function one</strong> ,we found that replacing serine with aromatic amino
-                acids at position 2 of the original amino acid sequence of the e-pili can reduce the average distance in
-                objective one from 5.28 Å to 4.72 Å. Furthermore, we found that adding more aromatic amino acids on top
-                of this does not further reduce this distance. In objective one, we can consider that the electric</p>
-            <p class="cn d-none"></p>
-            <p class="en">To verify the accuracy of the results, we attempted to iterate through all possible spacing
-                scenarios for adding 1, 2, and 3 pi-residues (Fig. 2) and found that only the modification at position 2
-                changes the original shortest electron transfer pathway, and adding more aromatic amino acids does not
-                alter this result.</p>
-            <p class="cn d-none"></p>
-            <p class="en"><strong>In objective function two</strong> , because the objective function we chose is used
-                to describe the distribution density of aromatic rings within the e-pili, this means that adding 1 or 2
-                pi-residues cannot yield an optimal result. Therefore, we started considering the addition of three
-                Π-residues, as shown in Fig. 1. Adding 5 aromatic amino acids can reduce the original spacing from 7.6 Å
-                to less than 5.5 Å.</p>
-            <p class="cn d-none"><strong>在优化目标二中</strong>
-                ，我们分别在原有的结构基础上，在由我们的优化算法得到的位点上分别加入3，4，5个苯丙氨酸。我们可以非常直观的发现加入的芳香族氨基酸明显提高了原有菌毛结构中的芳香族氨基酸的分布的均匀度，使得电子传递的核心从菌毛的中轴开始向外扩散。这就意味着
+            <h3 class="en">1. Average distance between the centroid of aromatic rings of Π residues on the shortest
+                electron transfer chain in e-pili:</h3>
+            <h3 class="cn d-none">1.导电菌毛中最短电子传递链上的Π残基芳香环质心平均间距：</h3>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <img src="../asserts/img/model/model_4.png " alt="" class="col-md-8">
+                <p>
+                    Fig4. Schematic representation of the shortest electron transfer chain.
+                </p>
+                </img>
+            </div>
+            <p class="en">This objective function is used to describe the maximum conductivity of conductive pili under
+                ideal conditions.</p>
+            <p class="cn d-none">该目标函数用于描述在理想状态下导电菌毛的最高电导率。</p>
+            <p class="en">We can assume that in an ideal state, electrons will move along the shortest propagation path
+                composed of Π residues in e-pili. At this point, the conductive pili has the highest conductivity within
+                this structure.</p>
+            <p class="cn d-none">
+                我们可以认为在理想状态下电子会沿着导电菌毛中由Π残基构成的最短传播路径移动。此时导电菌毛具有该结构下的最高的电导率。该函数描述了给定结构条件下菌毛电导率的上限。以该函数为目标的优化可以让我们得到具有更高电导率的菌毛。
             </p>
+            <p class="en">within this structure.
+                This function describes the upper limit of the conductivity of pili under given structural conditions.
+                Optimization based on this objective function may help us obtain the pili with higher conductivity.</p>
+            <h3 class="en">2.Average length between neighboring nodes of the Minimum Spanning Tree for all Π residues.
+            </h3>
+            <h3 class="cn d-none">2.所有Π残基节点最小生成树中的相邻节点平均间距：</h3>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <img src="../asserts/img/model/model_5.png " alt="" class="col-md-8">
+                <p>
+                    Fig5. Schematic illustration of the minimum aromatic amino acid node spanning tree.
+                </p>
+                </img>
+            </div>
+            <p class="en">This objective function is used to describe the overall conductivity of e-pili under the
+                influence of external environmental factors.</p>
+            <p class="cn d-none">该目标函数用于描述在受外界环境影响的条件下导电菌毛的综合电导率。</p>
+            <p class="en">Under the influence of environmental factors such as pH changes or surface adsorption, other
+                aromatic amino acids in e-pili, beyond the original shortest electron propagation path, may also
+                participate in the electron transfer process as the structure of the e-pili changes. </p>
+            <p class="cn d-none">
+                在环境因素（例如pH变化或者表面吸附）的影响下导电菌毛中原有的最短电子传播路径之外的其他芳香族氨基酸也可能随着菌毛结构的变化参与到电子传递的过程中。该目标函数描述了所有菌毛内部的Π残基之间的间隔情况，可以反应在不同环境因素影响下菌毛的综合导电能力。以该函数为目标的优化可能使得我们的菌毛在不同环境条件下的电导率表现更好，电导率曲线也可能变得更加平滑。
+            </p>
+            <p class="en">This objective function describes the spacing between all Π residues inside the pili,
+                reflecting the overall conductivity of the pili under different environmental influences. Optimization
+                based on this objective function may improve the conductivity performance of our pili under different
+                environmental conditions and make the conductivity curve smoother.</p>
+            <h3>Constraints</h3>
+            <p class="en"><strong>Constraints are the limitations that decision variables must satisfy.</strong></p>
+            <p class="cn d-none"><strong>约束条件是决策变量需要满足的限定条件。</strong></p>
+            <p class="en">In this model, the constraints are the possible coordinates of the centroid of aromatic rings
+                in aromatic amino acids. All decision variables (the added aromatic amino acids) can only occur at
+                specific positions determined by the structure of e-pili themselves. </p>
+            <p class="en">Since we only focus on the changes in conductivity caused by the quantity and position of
+                aromatic amino acids , we can initially assume that adding or modifying a small number of aromatic amino
+                acids has minimal impact on the overall structure of the e-pili. This means that we do not need to
+                rebuild the molecular dynamics model for each iteration. Instead, we can use the spatial coordinate
+                information of the original structure to roughly determine the range of the centroid coordinates for the
+                new aromatic rings.</p>
+            <p class="cn d-none">
+                在本模型中，约束条件是芳香族氨基酸的芳香环质心的可能坐标，所有的决策变量（新增的芳香族氨基酸）都只能出现在由导电菌毛结构本身决定的特定位置上。由于我们在本模型中我们只讨论芳香族氨基酸的数量和位置对于其电导率的影响（思路一），在此我们可以先假设添加或修改少量芳香族氨基酸对于菌毛整体结构的影响不大，这就意味着我们不需要每进行一次迭代就需要重新完成一遍分子动力学模型的构建，而是可以用原有结构的分子空间坐标信息来大致给出新的芳香环的质心坐标的范围。
+            </p>
+            <p class="en"><strong>In our model, we approximate the centroid coordinates of the newly added aromatic ring
+                    by using the average coordinates of all carbon atoms in the side chain at the modified
+                    position.</strong></p>
+            <p class="cn d-none"><strong>在我们的模型中，我们用所改动位置侧链上所有碳原子的平均坐标来近似预测新增的芳香环的质心坐标。</strong></p>
+            <p class="en">Since the purpose of constructing this model is to discover potential mutation sites, we can
+                combine the semi-rational directed evolution method to screen and obtain the actual optimal results.
+                Therefore, the accuracy requirement for this model is not as strict as that of rational protein design.
+            </p>
+            <p class="cn d-none">由于本模型的构建旨在发掘可能的突变位点，我们可以结合蛋白质半理性定向进化的方法来筛选得到实际的最优结果，故本模型中对于模型精度的要求并不如蛋白质理性设计那样严格。</p>
+            <p class="en">Since the purpose of constructing this model is to discover potential mutation sites, we can
+                combine the semi-rational directed evolution method to screen and obtain the actual optimal results.
+                Therefore, the accuracy requirement for this model is not as strict as that of rational protein design.
+            </p>
+            <p class="cn d-none">由于本模型的构建旨在发掘可能的突变位点，我们可以结合蛋白质半理性定向进化的方法来筛选得到实际的最优结果，故本模型中对于模型精度的要求并不如蛋白质理性设计那样严格。</p>
+
+            <h2 id="03" class="module">Model Overview</h2>
+            <div class="row">
+                <img src="../asserts/img/model/model_6.jpg " alt="" class="col-md-12">
+                </img>
+            </div>
+            <h2 id="04" class="module">Molecular Dynamics Simulations</h2>
+            <p class="en">Common methods to obtain pili protein structure include nuclear magnetic resonance imaging,
+                X-ray technology and homology prediction. These methods have some problems such as static snapshot,
+                signal interference and atomic position conflict. And when we use spiral symmetric assembly for pili
+                monomers, it is easy to overlook the flexibility of subunits. Therefore, we first use amber23 for
+                molecular dynamics optimization of the subunits, and then use Rosetta for helical symmetric assembly of
+                the optimized subunits with fuzzy constraints. To eliminate the effects of rigid docking, molecular
+                dynamics simulation (amber23) was used again to optimize the pili assembly structure to obtain the best
+                pili polymer structure. Finally, pymol was used to further verify the obtained pili structure, including
+                distance and electron transport chain. The use of molecular dynamics to optimize the assembly process
+                has obvious advantages: the protein is simulated in a real biological environment and the dynamic
+                effects of the organism are taken into account. Molecular dynamics simulation (MD) can be used to
+                optimize the structure of pili proteins and annotate the structural details.</p>
+            <p class="cn d-none">通常获得菌毛蛋白结构方法包括：核磁共振成像，X
+                射线技术和同源预测等。这些方法存在静态快照、信号干扰和原子位置冲突等问题。并且我们对于菌毛单体使用螺旋对称组装时，容易忽视亚基的柔性。所以，我们首先使用amber23对于亚基进行分子动力学优化，再使用Rosetta对优化后的亚基进行增加了模糊条件约束的螺旋对称组装。为了消除刚性对接的影响，我们再次运用分子动力学模拟(amber23）优化菌毛组装结构以获得最佳的菌毛聚合物结构。最终，使用pymol对于得到的菌毛结构进行进一步的验证，包括距离、电子传递链等。使用分子动力学去优化组装的过程是有很明显的优势：蛋白模拟在一个真实的生物学环境以及考虑了生物体的动力学效应。运用分子动力学模拟（MD)，可以优化菌毛蛋白的结构和注释结构细节。
+            </p>
+            <div class="row">
+                <img src="../asserts/img/model/model_7.png " alt="" class="col-md-12">
+                </img>
+            </div>
+            <h2 id="05" class="module">Optimization Design</h2>
+            <p class="en">The determination of the e-pili structure implies the establishment of constraints in our
+                optimization model. Next, we will design corresponding optimization functions for the optimization
+                objectives we previously proposed and use algorithms to optimize each of them separately.</p>
+            <p class="cn d-none">菌毛结构的确定意味着我们优化算法中的约束条件也随之确定，接下来我们要针对我们之前提出的优化的目标分别设计对应的优化函数，并使用算法分别进行优化。</p>
+            <h3>Graph structure construction</h3>
+            <p class="en">We create a new data class for pi-residues to store all their information, with the average of
+                the x, y, and z coordinates of all the carbon atoms in each pi-residue as its center-of-mass coordinates
+                in the three-dimensional space. We then construct a graph with each pi-residue as a vertex and obtain
+                the corresponding adjacency and distance matrices based on the center-of-mass coordinates. Among them,
+                we set a value k to constrain that only pi-residues with a distance less than k are capable of
+                transferring electrons, otherwise, we set their adjacency value to 0 and their distance to infinity.</p>
+            <p class="cn d-none">
+                我们首先创建新的数据结构并储存了全部的pi残基信息，将每个pi残基中碳原子x，y，z轴坐标的平均值视为该pi残基在三维空间中的质心坐标。我们将得到的pi残基结构视为以每一个pi残基为顶点的“图”，并基于所求的质心坐标得到相应的邻接矩阵和距离矩阵。其中，我们认为只有两个距离小于k的pi残基才是可以完成电子传递的，否则，我们设定其邻接值为0，距离为无穷。
+            </p>
+            <h3>For Objective function One</h3>
+            <p class="en">
+                Our first optimization target is <strong>the average distance between the centroids of Π-residue
+                    aromatic rings on the shortest electron transfer chain in e-pili</strong>. This optimization target
+                is used to describe the highest electrical conductivity of conductive pili under ideal conditions. To
+                obtain the shortest electron transfer chain within the e-pili, we can view the network composed of
+                Π-residue（aromatic amino acids capable of forming π-π interactions）nodes as a map and use an algorithm
+                for identifying the shortest paths between nodes in the map to explore possible electron transfer
+                pathways within a series of models.
+            </p>
+            <p class="cn d-none">
+                我们的第一个优化目标是导电菌毛中最短电子传递链上的Π-残基芳香环质心之间的平均间距，这一优化目标用于描述导电菌毛在理想条件下的最高电导率。为了获得菌毛内部的最短的电子传递链，我们可以将由Π-残基节点构成的网络看作是一张地图，并使用用于识别地图中各节点之间最短路径的算法来探索一系列的模型中存在的可能的电子传递路径。
+            </p>
+            <p class="en">
+                The <strong>Dijkstra algorithm</strong> is a commonly used graph search and shortest path algorithm in
+                computer science and mathematics. This algorithm aims to find the shortest paths between a starting node
+                (or vertex) and all other nodes in a weighted graph, where each edge has an associated numerical weight
+                or cost.
+            </p>
+            <p class="cn d-none">
+                Dijkstra算法是计算机科学和数学中常用的图搜索和最短路径算法。该算法旨在找到加权图中起始节点（或顶点）与所有其他节点之间的最短路径，其中每条边都有与其相关的数字权重或代价。</p>
+            <p class="en">
+                Based on the Dijkstra algorithm, we have designed an algorithm that can search for possible shortest
+                electron transfer chains within the e-pili. This algorithm consists of three steps: <strong>(1)
+                    Identifying Π-residues；(2) extracting the coordinates of Π-residues；(3) calculating the distances
+                    between Π-residues and searching and comparing to determine the shortest path.</strong>
+            </p>
+            <p class="cn d-none">我们基于Dijkstra 算法设计了一套可以搜索菌毛内部可能的最短电子传递链的算法，该算法由三个步骤组成：（1）识别 π-残基（能够形成 π-π
+                相互作用的芳香族氨基酸）（2）提取π-残基的坐标（3）计算π-残基之间的距离并搜索并比较得出最短路径。</p>
+
+            <div class="accordion-container" style="margin-top: 2rem;">
+                <button class="accordion">Dijkstra's Shortest Path Algorithm</button>
+                <div class="panel">
+                    <h3>Inputs:</h3>
+                    <p>
+                        Source node, Target node, Distance matrix, Adjacency matrix
+                    </p>
+                    <h3>Initialization:</h3>
+                    <p>
+                        Distance array: An array of distances from the source node, initialized as follows:
+                    </p>
+
+                    <p>
+                        Set the distance from the source node to itself (dist(source)) to 0.
+                    </p>
+
+                    <p>
+                        Set the distance from all other nodes (v) to infinity (∞) for nodes v not equal to the source
+                        node.
+                    </p>
+
+                    <p>
+                        Q: A queue of all nodes in the graph.
+                    </p>
+
+                    <p>
+                        S: An empty set to indicate which nodes the algorithm has visited.
+                    </p>
+                    <p></p>
+
+                    <h3>Proceeding:</h3>
+                    <p>
+                        While queue Q is not empty, follow these steps:
+                    </p>
+                    <p></p>
+
+                    <h3>Step1:</h3>
+                    <p>
+                        Pop the node v from the queue Q that is not already in set S and has the smallest dist(v) value.
+                    </p>
+                    <p></p>
+
+                    <h3>Step2:</h3>
+                    <p>
+                        Add node v to set S to indicate that it has been visited.
+                    </p>
+
+
+                    <h3>Step3:</h3>
+                    <p>
+                        Update the dist values of adjacent nodes of the current node v as follows:
+                    </p>
+
+                    <p>
+                        For each new adjacent node u, if dist(v) + Distance_matrix[u, v] < dist(u), then update dist(u)
+                            to the new minimal value. </p>
+
+
+                            <h3></h3>
+                            <p>
+                                The algorithm stops after the target node is visited.
+                            </p>
+
+
+                </div>
+            </div>
+            <h3 style="padding-top:4rem;">For Objective function Two</h3>
+            <p class="en"></p>
+            <p class="cn d-none"></p>
+            <p class="en"></p>
+            <p class="cn d-none"></p>
+            <div class="accordion-container" style="margin-top: 2rem;">
+                <button class="accordion">Prim's Minimum Spanning Tree Algorithm</button>
+                <div class="panel">
+                    <p>[1]Yang Tan , Ramesh Y. Adhikari , Nikhil S. Malvankar , Joy E. Ward , Trevor L. Woodard ,
+                        Kelly P. Nevin , and Derek R. Lovley Expressing the Geobacter metallireducens PilA in
+                        Geobacter sulfurreducens Yields Pili with Exceptional Conductivity.</p>
+                    <p>[2]Weinstock MT, Hesek ED, Wilson CM, et al. Vibrio natriegens as a fast-growing host for
+                        molecular biology. Nat Methods, 2016, 13(10): 849-851</p>
+                    <p>[3]Tschirhart T, Shukla V, Kelly EE, et al. Synthetic biology tools for the fast-growing
+                        marine bacterium Vibrio natriegens. ACS Synth Biol, 2019, 8(9): 2069-2079.</p>
+                    <p>[4]Aagesen, A.M., Häse, C.C. Sequence Analyses of Type IV Pili from Vibrio cholerae, Vibrio
+                        parahaemolyticus, and Vibrio vulnificus . Microb Ecol 64, 509–524 (2012). </p>
+                </div>
+            </div>
+            <h3 style="padding-top:4rem;">Particle Swarm Optimization</h3>
+            <p class="en"></p>
+            <p class="cn d-none"></p>
+            <p class="en"></p>
+            <p class="cn d-none"></p>
+
+
+            <p class="en"></p>
+            <p class="cn d-none"></p>
+            <h3>Model Evaluation</h3>
+            <p class="en">Based on the optimization results from the model described above, we reconstructed the structural models for single point mutants T2F and triple point mutants A31F, Q53F, and N59F to validate our conclusions:</p>
+            <p class="cn d-none">基于上述模型优化结果，我们重新构建了点突变体T2F和A31F，Q53F，N59F三位点突变体的结构模型来验证我们的结论：</p>
+            <p class="en"><strong>In optimization objective one</strong>, we replaced the threonine at position 2 of the wild-type metal-reducing rod bacterium pilin amino acid sequence with phenylalanine. We only selected the shortest electron transfer path in the pilus structure obtained by the Dijkstra algorithm (where the original aromatic rings are marked in red, and the newly added aromatic rings in mutant T2F are marked in yellow). The results are as follows: We observed several gaps in the electron transfer chain obtained by the algorithm, which is because the pilin monomers providing the aromatic rings for these gaps are not in our model. We counted the distances between the aromatic amino acids on the electron transfer chains inside the original wild-type pilus and the mutant pilus. We found that the newly added aromatic amino acids changed the original electron transfer chain to (F1p, Y27p+4, F24p+4) (electrons are transferred from position 1 of the first monomer to positions 27 and 24 of the fifth monomer, and finally to position 1 of the second monomer to complete the cycle), where the centroid distances between adjacent aromatic rings are (4.6 Å, 5.5 Å, 4.1 Å). In the mutant, according to our model prediction, the electron transfer chain would change to (F2p, Y27p+4, F24p+4). However, we can clearly observe that the centroid distance between the aromatic rings in the electron transfer chain of this mutant is significantly larger than that of the wild type, with distances of (7.1 Å, 5.5 Å, 9.5 Å). </p>
+            <p class="cn d-none"><strong>在优化目标一中</strong> ，我们将野生型金属还原地杆菌菌毛氨基酸序列上的2号位的苏氨酸替换成苯丙氨酸。我们只选中菌毛结构中的由Dijkstra算法得到的最短电子传递路径（其中原有的芳香环用红色标记，突变体T2F新增的芳香环用黄色标记）可以得到以下结果。</p>
+            <p class="cn d-none">我们可以发现由算法得到的电子传递链中存在若干缺口，这是由于提供缺口部分的芳香环的菌毛单体并不在我们的模型中。我们统计了原有的野生型菌毛和突变体菌毛内部的电子传递链和链上芳香族氨基酸的间距。我们可以发现新增的芳香族氨基酸将原有的电子传递链为（F1p，Y27p+4，F24p+4)（电子从第一个单体的1号位传递到第5个单体的27号位和24号位，最终传递给第二个单体的一号位实现循环）其中相邻芳香环的质心间距为（4.6埃，5.5埃，4.1埃）。而在突变体中，按照我们的模型预测的结果，电子传递链会变成（F2p，Y27p+4，F24p+4）。但我们可以明显的观察到，该突变体的电子传递链中芳香环质心间距较野生型明显变大，间距为（7.1埃，5.5埃，9.5埃）。</p>
+            <p class="en">This situation arose because, when determining the constraint conditions of the decision variables in the optimization model, to simplify the model, we used the average coordinates of all carbon atoms on the side chain of the modified position to approximately predict the centroid coordinates of the newly added aromatic ring. The error caused by simplifying the model ultimately led to incorrect optimization results. </p>
+            <p class="cn d-none">这种情况的出现是因为我们在确定优化模型中决策变量的约束条件的时候，为了简化模型，使用了所改动位置侧链上所有碳原子的平均坐标来近似预测新增的芳香环的质心坐标。简化模型导致的误差最终使得我们得到了错误的优化结果。</p>
+            <p class="en">This model illustrates that objective function one can no longer be optimized by adding new aromatic amino acids to the original amino acid sequence. Subsequent teams may try to optimize by changing the type of aromatic amino acids to affect the overall hydrophilicity and hydrophobicity of the pilus.</p>
+            <p class="cn d-none">这一模型可以很好的说明目标函数一已经无法通过在原有氨基酸的序列上添加新的芳香族氨基酸来进行优化。后续的团队可以尝试使用改变芳香族氨基酸的种类影响整体菌毛的亲疏水性这一思路来进行优化。</p>
+            <div class="row">
+                <img src="../asserts/img/model/model_10.jpg " alt="" class="col-md-12">
+                <p>Fig.8 The comparison in electron transport chain between the WT（yellow）and the T2F（orange）</p>
+                </img>
+            </div>
+            <p class="en"><strong>In objective function two</strong>we added 3, 4, and 5 phenylalanine residues at the
+                positions calculated by our optimization algorithm, respectively, on top of the original structure. We
+                can intuitively observe that the introduction of aromatic amino acids significantly improves the uniform
+                distribution of aromatic amino acids in the original pili structure, causing the core of electron
+                transfer to spread outward from the pili's central axis. This means that when the structure of
+                conductive pili changes under the influence of different environmental factors, there are more aromatic
+                rings involved in the electron transfer process, potentially leading to an increase in the overall
+                electrical conductivity of the pili.</p>
+            <p class="cn d-none"><strong>在优化目标二中</strong>
+                我们分别在原有的结构基础上，在由我们的优化算法计算得到的位点上分别加入3，4，5个苯丙氨酸。我们可以非常直观的发现加入的芳香族氨基酸明显提高了原有菌毛结构中的芳香族氨基酸的分布的均匀度，使得电子传递的核心从菌毛的中轴开始向外扩散。这就意味着此时的导电菌毛在不同环境因素影响下结构发生变化时，菌毛中有更多的芳香环可能参与到电子传递的过程中，这就意味着菌毛的综合电导率可能会增加。
+            </p>
+            <div class="row">
+                <img src="../asserts/img/model/model_11.jpg " alt="" class="col-md-12">
+                <p>Fig 9.Optimization results of objective function 2</p>
+                </img>
+            </div>
             <h2 id="06" class="module">Semi-rational Directed Evolution</h2>
             <p class="en">To reduce the computational workload in modeling, a common practice is to simplify the model
                 by introducing assumptions. For example, when determining constraints for optimizing, we approximate the
@@ -469,6 +716,12 @@
                 型燃料电池模型[8,9]，搭建生物电化学系统通过观察菌株在微生物燃料电池中的最大电流来初步筛选具有更高电导率的菌毛。
                 电池中使用石墨电极，使用稳压器保证阳极电势，电池阳极和阴极之间连接电阻。细胞被接种到阳极之后，在含有10mM 的乙酸钠（电子供体）和 40mM 延胡索酸钠（电子受体）的 freshwater培养基中生长。
             </p>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <img src="../asserts/img/model/model_12.jpg " alt="" class="col-md-10">
+                <p>Fig10.The Microbial Fuel Cell Model</p>
+                </img>
+            </div>
             <h2 id="07" class="module">Future work</h2>
             <p class="en">To validate our design, we still need to measure the electrical conductivity of individual
                 pili. However, due to project timelines and the unavailability of the necessary equipment (low-noise
@@ -478,9 +731,9 @@
                 要验证我们的设计，我们最终仍然需要测量单根菌毛的电导率，然而受限于项目的周期以及我们无法获得相关的仪器设备（低噪声纳米电极测量平台和原子力显微镜[10]），非常遗憾的是今年我们无法在湿实验中验证我们的建模结果。
             </p>
             <p class="en">We plan to continue our research after the competition ends, and we sincerely hope that future
-                iGEM teams can refer to the construction approach of our model to design proteins that meet their
+                iDEC teams can refer to the construction approach of our model to design proteins that meet their
                 project requirements.</p>
-            <p class="cn d-none">我们将在比赛结束后继续我们的研究，我们也衷心的希望未来的iGEM团队能够参考我们的模型的构建思路来设计符合他们的项目需求的蛋白质。</p>
+            <p class="cn d-none">我们将在比赛结束后继续我们的研究，我们也衷心的希望未来的iDEC团队能够参考我们的模型的构建思路来设计符合他们的项目需求的蛋白质。</p>
             <div class="module" id="08" style="padding-top: 2rem;"></div>
             <div class="accordion-container">
                 <button class="accordion">References</button>
