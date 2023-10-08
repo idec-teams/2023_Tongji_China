@@ -1617,6 +1617,40 @@ item .d-none {
     text-transform: uppercase;
 }
 
+
+
+
+
+
+
+#reports object {
+    height: 88vh;
+    width: 100%;
+}
+
+/* scroll bar 滚动条 */
+/* 设置滚动条的背景色 */
+ /* body::-webkit-scrollbar-track {
+    background-color: transparent !important;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: transparent !important;
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track{
+    background-color: transparent !important;
+} */
+
+
+.footer-b {
+    background-color: #001C28;
+    width: 100vw;
+    height: 50vh;
+    box-shadow: 0px 8px 16px 0px rgba(0.2, 0.2, 0.2, 0.2);
+}
+footer a:hover {
+    color: #A5F9F7 !important;
+}
 /* footer 页脚 */
 .footers {
     width: 100vw;
@@ -1637,10 +1671,6 @@ item .d-none {
     justify-content: center;
     justify-items: center;
 }
-
-
-
-
 /* Media Queries */
 @media screen and (max-width: 750px) {
 
@@ -1659,21 +1689,3 @@ item .d-none {
         display: block;
     }
 }
-
-#reports object {
-    height: 88vh;
-    width: 100%;
-}
-
-/* scroll bar 滚动条 */
-/* 设置滚动条的背景色 */
- /* body::-webkit-scrollbar-track {
-    background-color: transparent !important;
-}
-body::-webkit-scrollbar-thumb {
-    background-color: transparent !important;
-    border-radius: 10px;
-}
-body::-webkit-scrollbar-track{
-    background-color: transparent !important;
-} */
