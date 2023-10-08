@@ -203,7 +203,7 @@
         </div>
 
         <div id="overview" class="section header" style="padding-top: 4rem;">
-            <div id="" class="" style="min-height: 20vh; margin-bottom: 0px;">
+            <div id="" class="" style="min-height: 10vh; margin-bottom: 0px;">
                 <div class="overview-bg">
                     <div class="overview-logo">
                         <img id="overview" src="../asserts/img/overview.png" class="overview-img">
@@ -545,7 +545,7 @@
             <div class="accordion-container" style="margin-top: 2rem;">
                 <button class="accordion">Dijkstra's Shortest Path Algorithm</button>
                 <div class="panel">
-                    <h3>Inputs:</h3>
+                    <h3 style="margin-top: 2rem;">Inputs:</h3>
                     <p>
                         Source node, Target node, Distance matrix, Adjacency matrix
                     </p>
@@ -609,43 +609,300 @@
                 </div>
             </div>
             <h3 style="padding-top:4rem;">For Objective function Two</h3>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
+            <p class="en">
+                Our second optimization objective is <strong>the average distance between adjacent nodes in the minimum
+                    spanning tree formed by all Π-residue nodes.</strong> This optimization objective is used to
+                describe the comprehensive conductivity of e-pili under the influence of the external environment.
+                Similar to the approach for the first optimization objective, we only need to find the minimum spanning
+                tree within the map composed of Π-residue nodes, and then we can obtain the required value by summing
+                the weights of the edges in this tree and dividing it by the number of nodes.
+            </p>
+            <p class="cn d-none">
+                我们的第二个优化目标是由所有的Π残基节点构成的最小生成树中的相邻节点的平均间距，该优化目标用于描述受外界环境影响的条件下的导电菌毛的综合电导率。和第一个优化目标的处理方法类似，我们只用求解出由Π残基构成的地图中由各个结点构成的地图中的最小生成树，并将该生成树的中的权值之和除以节点数我们就能得到我们需要的值。
+            </p>
+
+            <h3>Prim's Algorithm</h3>
+            <p class="en">
+                We use Prim's algorithm here to solve this problem. Prim's algorithm is a well-known algorithm used in
+                computer science and graph theory to find the minimum spanning tree of a connected, undirected graph
+                with weighted edges. The algorithm starts with an initial node and then grows the minimum spanning tree
+                one edge at a time until all nodes are included while minimizing the total edge weight.
+            </p>
+            <p class="cn d-none">
+                我们在此使用Prim算法来解决问题，Prim算法是计算机科学和图论中使用的一种著名算法，用于寻找具有加权边的连通无向图的最小生成树。该算法从一个初始节点开始，然后一次一条边增长最小生成树，直到所有节点都被包括在内，同时最小化总边权重。
+            </p>
+
             <div class="accordion-container" style="margin-top: 2rem;">
                 <button class="accordion">Prim's Minimum Spanning Tree Algorithm</button>
                 <div class="panel">
-                    <p>[1]Yang Tan , Ramesh Y. Adhikari , Nikhil S. Malvankar , Joy E. Ward , Trevor L. Woodard ,
-                        Kelly P. Nevin , and Derek R. Lovley Expressing the Geobacter metallireducens PilA in
-                        Geobacter sulfurreducens Yields Pili with Exceptional Conductivity.</p>
-                    <p>[2]Weinstock MT, Hesek ED, Wilson CM, et al. Vibrio natriegens as a fast-growing host for
-                        molecular biology. Nat Methods, 2016, 13(10): 849-851</p>
-                    <p>[3]Tschirhart T, Shukla V, Kelly EE, et al. Synthetic biology tools for the fast-growing
-                        marine bacterium Vibrio natriegens. ACS Synth Biol, 2019, 8(9): 2069-2079.</p>
-                    <p>[4]Aagesen, A.M., Häse, C.C. Sequence Analyses of Type IV Pili from Vibrio cholerae, Vibrio
-                        parahaemolyticus, and Vibrio vulnificus . Microb Ecol 64, 509–524 (2012). </p>
+                    <h3 style="margin-top: 2rem;">Inputs:</h3>
+                    <p>
+                        Distance matrix
+                    </p>
+
+                    <h3>Initialization:</h3>
+                    <p>
+                        An arbitrary starting node.
+                    </p>
+                    <p>
+                        MST: Initialize an empty set to represent the Minimum Spanning Tree (MST).
+                    </p>
+                    <p>
+                        Key array: Create an array to keep track of the minimum edge weight from each node to the MST.
+                        Initialize all values with infinity except for the starting node, which is set to 0.
+                    </p>
+                    <p>
+                        Visited array: Create an array to keep track of visited nodes. Initialize all values to false.
+                    </p>
+
+                    <h3>Proceeding:</h3>
+                    <p>
+                        While the MST set does not include all nodes, follow these steps:
+                    </p>
+
+                    <h3>Step1:</h3>
+                    <p>
+                        Select a node (u) that is not yet in the MST but has the minimum key value.
+                    </p>
+
+                    <h3>Step2:</h3>
+                    <p>
+                        Add node (u) to the MST set.
+                    </p>
+
+                    <h3>Step3:</h3>
+                    <p>
+                        Update key values: For each node v adjacent to the newly added node u, if Distance_matrix[u,v] <
+                            Key(v), update the Key(v) with the new weight. </p>
+
+                            <h3>Note:</h3>
+                            <p>
+                                As a tree structure satisfies:
+                            </p>
+                            <p>
+                                Number of edges = Number of nodes - 1
+                            </p>
+                            <p>
+                                The final objective function is obtained from:
+                            </p>
+                            <p>
+                                (Total length of the MST) / (Number of nodes - 1).
+                            </p>
                 </div>
             </div>
+
             <h3 style="padding-top:4rem;">Particle Swarm Optimization</h3>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
-            <p class="en"></p>
-            <p class="cn d-none"></p>
+            <p class="en">Particle Swarm Optimization (PSO) is an optimization algorithm based on swarm intelligence,
+                which simulates the behavior of biological swarms, such as flocks of birds or schools of fish, in their
+                search for food or resources. </p>
+            <p class="cn d-none">粒子群优化算法（Particle Swarm
+                Optimization，简称PSO）是一种基于群体智能的优化算法，它模拟了鸟群或鱼群等生物群体在搜索食物或资源时的行为，通过个体之间的协作和信息共享来寻找最优解。</p>
+            <p class="en">Particle Swarm Optimization (PSO) can be described as follows: Suppose the search space is
+                L-dimensional and there are N particles in the population. The ith particle in the population can be
+                represented as an L-dimensional vector \(X_i=(x_{i1},x_{i2},\cdots , x_{il})\), and the best position it
+                experiences is denoted as \(P_{best}=(p_{1},p_{2},\cdots , p_{l})\).Each position of the particle
+                represents a potential solution to the requirement, which is substituted into the objective function to
+                obtain its fitness value. The optimal position searched so far by the whole population is denoted as
+                \(G_{best}=(g_{1},g_{2},\cdots , g_{l})\).</p>
+            <p class="cn d-none">粒子群优化（PSO）可以描述如下：假设搜索空间是 \(L\) 维的，群体中有 \(N\) 个粒子。群体中的第 \(i\) 个粒子可以表示为一个 \(L\) 维向量
+                \(X_i=(x_{i1},x_{i2},\cdots , x_{il})\)，它经历的最佳位置表示为 \(P_{best}=(p_{1},p_{2},\cdots ,
+                p_{l})\)。粒子的每个位置代表一个潜在的解决方案，代入目标函数得到其适应值。整个群体迄今为止搜索到的最佳位置表示为 \(G_{best}=(g_{1},g_{2},\cdots , g_{l})\)。
+            </p>
+            <p class="en">Next, we do the following iterations for each particle in the population :
 
+                $$V_i^{(t+1)} = \omega·V_i^{(t)} + c_1r_1(P_{best}^{(t)} - X_i^{(t)}) + c_2r_2(G_{best}^{(t)} -
+                X_i^{(t)})$$
 
-            <p class="en"></p>
-            <p class="cn d-none"></p>
+                $$X_i^{(t+1)} = X_i{(t)}+V_i{(t+1)}$$</p>
+            <p class="cn d-none">接下来，我们对群体中的每个粒子进行以下迭代：\[V_i^{(t+1)} = \omega V_i^{(t)} + c_1r_1(P_{best}^{(t)} -
+                X_i^{(t)}) + c_2r_2(G_{best}^{(t)} - X_i^{(t)})\]
+
+                \[X_i^{(t+1)} = X_i^{(t)}+V_i^{(t+1)}\]
+            </p>
+
+            <p class="en">The above formula consists of three parts. The first part is the current speed of the
+                particle, with the positive value \(\omega\) being the Inertia Weight, which indicates the current state
+                of the particle. The second part is the Cognition Modal, which indicates the cognition of this
+                generation of particles about their own state (\(c_1\) is Self-recognition Factor). The third part is
+                the Social Modal, which indicates the sharing of information between particles through generations
+                (\(c_2\) is Social-recognition Factor).</p>
+            <p class="cn d-none">上述公式由三部分组成。第一部分是粒子的当前速度，正值 \(\omega\) 是惯性权重，表示粒子的当前状态。第二部分是认知模式，表示这一代粒子对自己状态的认知（\(c_1\)
+                是自我识别因子）。第三部分是社交模式，表示粒子之间通过代代相传的信息共享（\(c_2\) 是社交识别因子）。</p>
+            <h3>Discrete Mapping</h3>
+            <p class="en">
+                In the optimization process, we defined the independent variable as the sequence number of regular
+                residues in a monomer that needs to be adjusted to pi-residues. Suppose there are \(N\) non-pi residues
+                in each monomer and the number that needs to be changed to pi-residues in each monomer is \(d\), then
+                our independent variable X can be denoted as
+
+                \[X=(x_1,x_2,\cdots x_d), x_i \in \{1,2,\cdots N\}\]
+
+                Before performing the optimization, we sorted all the residue sequences of each monomer according to
+                their L1 norm from the origin to ensure that the spatial distances of residues with similar sequence
+                numbers are also relatively closer spatially, ensuring sequence numbers and the geometrical positions
+                are consistent with each other. However, APSO still deals with only the continuous problem, so we need
+                to discretize the continuous particles \(Y=(y_1,y_2,\cdots y_d), y_i \in [0,1]\) to correspond to the
+                sequence number of residues in each monomer. The method we use is to stick to the continuous
+                optimization in the interval [0, 1] and divide [0, 1] into \(N\) equally spaced sub-intervals of length
+                \(\frac{1}{N}\). Therefore, we can map \(Y\) to \(X\) one on one by letting \(x_i=[y_i \times N]\),
+                which means keeping the integer part of \(Ny_i\).
+            </p>
+
+            <p class="cn d-none">
+                在优化过程中，我们将独立变量定义为需要调整为π残基的单体中的常规残基的序列号。假设每个单体中有\(N\)个非π残基，每个单体中需要改变为π残基的数量是\(d\)，那么我们的独立变量X可以表示为
+
+                \[X=(x_1,x_2,\cdots x_d), x_i \in \{1,2,\cdots N\}\]
+
+                在进行优化之前，我们根据它们从原点的L1范数对每个单体的所有残基序列进行了排序，以确保具有相似序列号的残基的空间距离也在空间上相对较近，确保序列号和几何位置彼此一致。然而，APSO仍然只处理连续问题，所以我们需要将连续粒子\(Y=(y_1,y_2,\cdots
+                y_d), y_i \in [0,1]\)离散化，以对应于每个单体中的残基的序列号。我们使用的方法是坚持在区间[0, 1]中的连续优化，并将[0,
+                1]划分为\(N\)个等间距的子区间，长度为\(\frac{1}{N}\)。因此，我们可以通过让\(x_i=[y_i \times
+                N]\)将\(Y\)一对一地映射到\(X\)，这意味着保持\(Ny_i\)的整数部分。
+            </p>
+
+            <div class="accordion-container" style=margin-top:2rem;">
+                <button class="accordion">Adaptive Particle Swarm Optimization</button>
+                <div class="panel">
+                    <p class="en"><strong>APSO</strong> makes three main improvements on the basis of PSO:</p>
+                    <h3>1.Evolutionary State Estimation </h3>
+                    <p>ESE calculates the distributional information of the population of each generation in the space
+                        of independent variables. We first calculate the average Euclidean distance from particle \(i\)
+                        to all the other particles.</p>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <img src="../asserts/img/model/gongshi_1.png " alt="" class="col-md-8">
+                        </img>
+                    </div>
+                    <p>Accordingly, we define the Evolutionary Factor \(f\) that measures the optimizing state of the
+                        population:</p>
+
+                    <p>\[f=\frac{d_g-d_{min}}{d_{max}-d_{min}} \in [0,1]\]</p>
+                    <p>The Evolutionary factor we calculated above can help to decide which evolutionary state the
+                        population is in. The different evolutionary states of the population affect our different
+                        adaptive control strategies for the parameters (here we are referring to \(\omega, c_1, c_2\)).
+                        We apply the obtained \(f\) to define four different evolutionary states \(S_1,S_2,S_3,S_4\) and
+                        their fuzzy membership function, representing the states of exploration, exploitation,
+                        convergence, and jumping out respectively.</p>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <img src="../asserts/img/model/model_b3_1.png " alt="" class="col-md-8">
+                        </img>
+                    </div>
+                    <h3>2.Parameters self-adaptive control strategy</h3>
+                    <p>We use a sigmoid mapping to allow \( \omega \) to change with the Evolutionary factor \( f \)</p>
+                    <p>\[ \omega(f)=\frac{1}{1+1.5e^{-2.6f}} \in [0.4,0.9] \]</p>
+
+                    <p>We know \( \omega(f) \) is a monotonically increasing function. Therefore, a larger \( f \) in \(
+                        S_1 \) and \( S_4 \) will result in a larger value of \( \omega \), which facilitates a global
+                        search. On the contrary, \( S_2 \) and \( S_3 \) are more suitable for a local search.</p>
+
+                    <p>\( c_1 \) represents self-recognition factor, which pulls the particles to their own historical
+                        optimal position; \( c_2 \) represents social-recognition factor, which pushes the population to
+                        converge to the current global optimal region and helps fast convergence. These coefficients are
+                        initialized to 2.0 and are adaptively controlled according to the evolutionary state with the
+                        following strategies:</p>
+                    <ol>
+                        <p>(1)\( S_1 \) - Increase \( c_1 \) and decrease \( c_2 \) in the exploration state, which
+                            helps
+                            particles to explore individually and achieve their own historical optimal positions, rather
+                            than crowding around the current best particles that may be associated with the local
+                            optimum.</p>
+                        <p>(2)\( S_2 \) - Slightly increase \( c_1 \) and slightly decrease \( c_2 \) in the
+                            exploitation
+                            state.</p>
+                        <p>(3)\( S_3 \) - Slightly increase \( c_1 \) and slightly increase \( c_2 \) in the convergence
+                            state.</p>
+                        <p>(4)\( S_4 \) - Decrease \( c_1 \) and increase \( c_2 \) in the jumping-out state.</p>
+                    </ol>
+
+                    <h3>3.Elitist Learning Stratrgy</h3>
+                    <p>The jumping out effect done by the ELS mechanism on \( G_{best} \) is necessary for the global
+                        optimal nature of this algorithm, which randomly selects a dimension of \( G_{best} \), which is
+                        represented by the \( g_d \) of the dth dimension:</p>
+                    <p>\[ g_d = g_d + (X_d^{max} - X_d^{min})\cdot Gaussian(\mu,\sigma^2) \]</p>
+
+                    <p>APSO's adaptive tuning of parameters can improve the performance of the PSO algorithm in terms of
+                        both accelerated convergence and global search. In addition, its ELS strategy will maintain the
+                        diversity of the population in order to allow the algorithm to jump out of potential local
+                        optima.</p>
+
+                </div>
+            </div>
+            <h3 style="padding-top:4rem;">Optimization Results</h3>
+            <p class="en">We can observe that adding new aromatic amino acids can significantly optimize both our
+                objective functions one and two.</p>
+            <p class="cn d-none">我们可以观察到，添加新的芳香族氨基酸可以显著的优化我们的目标函数一和目标函数二。</p>
+            <p class="en"><strong>In objective function one</strong> , we found that replacing serine with aromatic
+                amino acids at position 2 of the original amino acid sequence of the e-pili can reduce the average
+                distance in objective one from 4.72 Å to 4.63Å. Furthermore, we found that adding more aromatic amino
+                acids on top of this does not further reduce this distance. In objective one, we can consider that the
+                electrical conductivity of this mutant has reached its optimal point.</p>
+            <p class="cn d-none">
+                <strong>在目标函数一中</strong>，我们发现在导电菌毛原有氨基酸序列的2号位将苏氨酸替换成芳香族氨基酸可以将优化目标一中的平均间距从优化前的4.72埃降低到了4.63埃。且我们发现在此基础上加入更多的芳香族氨基酸不会再降低该间距，在优化目标一中，我们可以认为该突变体此时的电导率已经无法再被优化。
+            </p>
+            <p class="en">To verify the accuracy of the results, we attempted to iterate through all possible spacing
+                scenarios for adding 1, 2, and 3 pi-residues (Fig. 7) and found that only the modification at position 2
+                changes the original shortest electron transfer pathway, and adding more aromatic amino acids does not
+                alter this result.</p>
+            <p class="cn d-none">
+                为了验证结果的准确性，我们尝试遍历了添加1，2，3个Π残基所有可能的间距情况(Fig.7)，发现只有二号位的修改会改变原有的最短电子传递路径，且添加更多的芳香族氨基酸也不会改变该结果。</p>
+            <p class="en"><strong>In objective function two</strong> , because the objective function we chose is used
+                to describe the distribution density of aromatic rings within the e-pili, this means that adding 1 or 2
+                pi-residues cannot yield an optimal result. Therefore, we started considering the addition of three
+                Π-residues, as shown in Fig. 6. Adding 5 aromatic amino acids can reduce the original spacing from 7.6 Å
+                to less than 5.5 Å.</p>
+            <p class="cn d-none"><strong>在目标函数二中</strong>
+                ，由于我们所选用的目标函数用于描述导电菌毛内部芳香环的分布密度，这就意味着添加1，2个Π残基不可能出现最优结果。于是我们从添加三个Π残基开始考虑，结果如Fig6所示。添加5个芳香族氨基酸便可以将原有的间距从7.6埃优化到不到5.5埃。
+            </p>
+            <div class="row">
+                <img src="../asserts/img/model/model_8_1.png " alt="" class="col-md-5">
+                <img src="../asserts/img/model/model_8_2.jpg " alt="" class="col-md-7">
+                <p>Fig.6 Optimization Results.</p>
+                <div class="col-md-1"></div>
+                <img src="../asserts/img/model/model_9.png" alt="" class="col-md-10">
+                <p>Fig.7 Traversal results after adding 1, 2, and 3 Π-residues (where the x-axis represents the index of
+                    the list composed of non-aromatic amino acids, for example, list[0] corresponds to the residue at
+                    position 2).</p>
+            </div>
             <h3>Model Evaluation</h3>
-            <p class="en">Based on the optimization results from the model described above, we reconstructed the structural models for single point mutants T2F and triple point mutants A31F, Q53F, and N59F to validate our conclusions:</p>
+            <p class="en">Based on the optimization results from the model described above, we reconstructed the
+                structural models for single point mutants T2F and triple point mutants A31F, Q53F, and N59F to validate
+                our conclusions:</p>
             <p class="cn d-none">基于上述模型优化结果，我们重新构建了点突变体T2F和A31F，Q53F，N59F三位点突变体的结构模型来验证我们的结论：</p>
-            <p class="en"><strong>In optimization objective one</strong>, we replaced the threonine at position 2 of the wild-type metal-reducing rod bacterium pilin amino acid sequence with phenylalanine. We only selected the shortest electron transfer path in the pilus structure obtained by the Dijkstra algorithm (where the original aromatic rings are marked in red, and the newly added aromatic rings in mutant T2F are marked in yellow). The results are as follows: We observed several gaps in the electron transfer chain obtained by the algorithm, which is because the pilin monomers providing the aromatic rings for these gaps are not in our model. We counted the distances between the aromatic amino acids on the electron transfer chains inside the original wild-type pilus and the mutant pilus. We found that the newly added aromatic amino acids changed the original electron transfer chain to (F1p, Y27p+4, F24p+4) (electrons are transferred from position 1 of the first monomer to positions 27 and 24 of the fifth monomer, and finally to position 1 of the second monomer to complete the cycle), where the centroid distances between adjacent aromatic rings are (4.6 Å, 5.5 Å, 4.1 Å). In the mutant, according to our model prediction, the electron transfer chain would change to (F2p, Y27p+4, F24p+4). However, we can clearly observe that the centroid distance between the aromatic rings in the electron transfer chain of this mutant is significantly larger than that of the wild type, with distances of (7.1 Å, 5.5 Å, 9.5 Å). </p>
-            <p class="cn d-none"><strong>在优化目标一中</strong> ，我们将野生型金属还原地杆菌菌毛氨基酸序列上的2号位的苏氨酸替换成苯丙氨酸。我们只选中菌毛结构中的由Dijkstra算法得到的最短电子传递路径（其中原有的芳香环用红色标记，突变体T2F新增的芳香环用黄色标记）可以得到以下结果。</p>
-            <p class="cn d-none">我们可以发现由算法得到的电子传递链中存在若干缺口，这是由于提供缺口部分的芳香环的菌毛单体并不在我们的模型中。我们统计了原有的野生型菌毛和突变体菌毛内部的电子传递链和链上芳香族氨基酸的间距。我们可以发现新增的芳香族氨基酸将原有的电子传递链为（F1p，Y27p+4，F24p+4)（电子从第一个单体的1号位传递到第5个单体的27号位和24号位，最终传递给第二个单体的一号位实现循环）其中相邻芳香环的质心间距为（4.6埃，5.5埃，4.1埃）。而在突变体中，按照我们的模型预测的结果，电子传递链会变成（F2p，Y27p+4，F24p+4）。但我们可以明显的观察到，该突变体的电子传递链中芳香环质心间距较野生型明显变大，间距为（7.1埃，5.5埃，9.5埃）。</p>
-            <p class="en">This situation arose because, when determining the constraint conditions of the decision variables in the optimization model, to simplify the model, we used the average coordinates of all carbon atoms on the side chain of the modified position to approximately predict the centroid coordinates of the newly added aromatic ring. The error caused by simplifying the model ultimately led to incorrect optimization results. </p>
-            <p class="cn d-none">这种情况的出现是因为我们在确定优化模型中决策变量的约束条件的时候，为了简化模型，使用了所改动位置侧链上所有碳原子的平均坐标来近似预测新增的芳香环的质心坐标。简化模型导致的误差最终使得我们得到了错误的优化结果。</p>
-            <p class="en">This model illustrates that objective function one can no longer be optimized by adding new aromatic amino acids to the original amino acid sequence. Subsequent teams may try to optimize by changing the type of aromatic amino acids to affect the overall hydrophilicity and hydrophobicity of the pilus.</p>
-            <p class="cn d-none">这一模型可以很好的说明目标函数一已经无法通过在原有氨基酸的序列上添加新的芳香族氨基酸来进行优化。后续的团队可以尝试使用改变芳香族氨基酸的种类影响整体菌毛的亲疏水性这一思路来进行优化。</p>
+            <p class="en"><strong>In optimization objective one</strong>, we replaced the threonine at position 2 of the
+                wild-type metal-reducing rod bacterium pilin amino acid sequence with phenylalanine. We only selected
+                the shortest electron transfer path in the pilus structure obtained by the Dijkstra algorithm (where the
+                original aromatic rings are marked in red, and the newly added aromatic rings in mutant T2F are marked
+                in yellow). The results are as follows: We observed several gaps in the electron transfer chain obtained
+                by the algorithm, which is because the pilin monomers providing the aromatic rings for these gaps are
+                not in our model. We counted the distances between the aromatic amino acids on the electron transfer
+                chains inside the original wild-type pilus and the mutant pilus. We found that the newly added aromatic
+                amino acids changed the original electron transfer chain to (F1p, Y27p+4, F24p+4) (electrons are
+                transferred from position 1 of the first monomer to positions 27 and 24 of the fifth monomer, and
+                finally to position 1 of the second monomer to complete the cycle), where the centroid distances between
+                adjacent aromatic rings are (4.6 Å, 5.5 Å, 4.1 Å). In the mutant, according to our model prediction, the
+                electron transfer chain would change to (F2p, Y27p+4, F24p+4). However, we can clearly observe that the
+                centroid distance between the aromatic rings in the electron transfer chain of this mutant is
+                significantly larger than that of the wild type, with distances of (7.1 Å, 5.5 Å, 9.5 Å). </p>
+            <p class="cn d-none"><strong>在优化目标一中</strong>
+                ，我们将野生型金属还原地杆菌菌毛氨基酸序列上的2号位的苏氨酸替换成苯丙氨酸。我们只选中菌毛结构中的由Dijkstra算法得到的最短电子传递路径（其中原有的芳香环用红色标记，突变体T2F新增的芳香环用黄色标记）可以得到以下结果。
+            </p>
+            <p class="cn d-none">
+                我们可以发现由算法得到的电子传递链中存在若干缺口，这是由于提供缺口部分的芳香环的菌毛单体并不在我们的模型中。我们统计了原有的野生型菌毛和突变体菌毛内部的电子传递链和链上芳香族氨基酸的间距。我们可以发现新增的芳香族氨基酸将原有的电子传递链为（F1p，Y27p+4，F24p+4)（电子从第一个单体的1号位传递到第5个单体的27号位和24号位，最终传递给第二个单体的一号位实现循环）其中相邻芳香环的质心间距为（4.6埃，5.5埃，4.1埃）。而在突变体中，按照我们的模型预测的结果，电子传递链会变成（F2p，Y27p+4，F24p+4）。但我们可以明显的观察到，该突变体的电子传递链中芳香环质心间距较野生型明显变大，间距为（7.1埃，5.5埃，9.5埃）。
+            </p>
+            <p class="en">This situation arose because, when determining the constraint conditions of the decision
+                variables in the optimization model, to simplify the model, we used the average coordinates of all
+                carbon atoms on the side chain of the modified position to approximately predict the centroid
+                coordinates of the newly added aromatic ring. The error caused by simplifying the model ultimately led
+                to incorrect optimization results. </p>
+            <p class="cn d-none">
+                这种情况的出现是因为我们在确定优化模型中决策变量的约束条件的时候，为了简化模型，使用了所改动位置侧链上所有碳原子的平均坐标来近似预测新增的芳香环的质心坐标。简化模型导致的误差最终使得我们得到了错误的优化结果。
+            </p>
+            <p class="en">This model illustrates that objective function one can no longer be optimized by adding new
+                aromatic amino acids to the original amino acid sequence. Subsequent teams may try to optimize by
+                changing the type of aromatic amino acids to affect the overall hydrophilicity and hydrophobicity of the
+                pilus.</p>
+            <p class="cn d-none">
+                这一模型可以很好的说明目标函数一已经无法通过在原有氨基酸的序列上添加新的芳香族氨基酸来进行优化。后续的团队可以尝试使用改变芳香族氨基酸的种类影响整体菌毛的亲疏水性这一思路来进行优化。</p>
             <div class="row">
                 <img src="../asserts/img/model/model_10.jpg " alt="" class="col-md-12">
                 <p>Fig.8 The comparison in electron transport chain between the WT（yellow）and the T2F（orange）</p>

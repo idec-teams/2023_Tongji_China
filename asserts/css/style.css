@@ -615,12 +615,12 @@ p {
     word-spacing: 1px;
     padding: 3rem;
     color: #08766c;
-    font-weight: 300;
+    font-weight: 350;
     line-height:150%;
 }
 
 strong {
-    font-weight: 450;
+    font-weight: 500;
     font-size: 1.8rem;
     color: #001C28;
     font-family:UniversLTStd ;
@@ -1333,9 +1333,14 @@ body.dark-theme .accordion-container p {
     border-radius: 10px;
 }
 
-.accordion:hover,
-.accordion.active {
+.accordion:hover {
     background-color: #1F7A82;
+}
+.accordion:active {
+    background-color: #1F7A82 !important;
+}
+.accordion.active {
+    background-color: #1F7A82 !important;
 }
 
 .panel {
