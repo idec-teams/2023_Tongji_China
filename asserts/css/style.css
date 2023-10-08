@@ -416,7 +416,12 @@ body.dark-theme .translate-icon:hover path {
 .navbar-toggler-icon:hover {
     color: #114261;
 }
-
+.workflow {
+    width: 8rem;
+    height: auto;
+    text-align: center;
+    transform: translateY(-1rem);
+}
 /* 链接 hover下划线 */
 a {
     position: relative;
